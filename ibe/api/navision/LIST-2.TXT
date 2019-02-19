@@ -1,0 +1,166 @@
+feb 25th
+
+5115205493966 should be 2 adults 2 kids and on Navision was 1 adult
+
+I see We sent 2 Kids
+
+                <AD>2</AD>
+                <JR>0</JR>
+                <NI>2</NI>
+                <BB>0</BB>
+
+5115165033412 should be 2 adults 1 infant and on Navision was 1 adult, Reebook
+
+I see the correct data sent
+
+                <RESERVANH>2016#6001#1</RESERVANH>
+                <TIPO_HAB>FCFAMILYST</TIPO_HAB>
+                <REG>AI</REG>
+                <FECHA_ENTRADA>13/05/2016</FECHA_ENTRADA>
+                <FECHA_SALIDA>20/05/2016</FECHA_SALIDA>
+                <HOR_LLEG></HOR_LLEG>
+                <HOR_SAL></HOR_SAL>
+                <AD>2</AD>
+                <JR>0</JR>
+                <NI>2</NI>
+                <BB>1</BB>
+
+5115203829542 on navision add PROMOCODE FUN2016 AND FOR 2017 will not apply ????
+
+5115159829683 Not in Navision Reebook => Sent Again
+
+5115178873852 Not in Navision => Sent Again
+
+5115177039959 Not in Navision => Sent Again
+
+———
+
+Feb 24th
+
+5109085978184 - Mrs. Ann Albach – Rebook didn’t show in Nav => Sent Again
+
+5112432382291 - Mrs. Jessica Bartlett - Rebook didn’t show in Nav
+
+5115156422466 - Mrs. Susan Tuckman – Not in Nav
+
+5115157652790 - Mrs. Elit Kirschenbum – Not in Nav
+
+5114446942038 - Mr. Elisha Gray - Rebook didn’t show in Nav
+
+5115160824677 - Mr. HILARY AZA – Not in Nav
+
+5115162646210   - Mr. Nadeemali Yusufaly – Not in Nav
+
+5115163815060 - Mr. Zakir Esufali – Not in Nav
+
+5115164626666 - Mr. Nicole Fitzpatrick – Not in Nav
+
+5115165033412 - Mr. Rodyna Aboualy – Not in Nav
+
+5115166135709 - Mr. Shawn Cummings – Not in Nav == FECHAS NO VALIDAS
+
+5115168649878 - Mr. Shawn Cummings – Not in Nav == FECHAS NO VALIDAS
+
+5115169750481 - Mr. Miguel Castillero – Not in Nav
+
+5110322545748   - Mr. Jorge Cavero - Rebook didn’t show in Nav
+
+5115170453418 - Mr. Jon Worden – Not in Nav
+
+5115171247217 - Mr. Gerardo Juarez – Not in Nav
+
+5115172106312 - Mr. Nicole Rivera – Not in Nav
+
+5115173252770 - Mrs. Andria Lewis – Not in Nav
+
+5115174650250 - Mr. William Mura – Not in Nav
+
+5115175357433   - Mr. Frederick Samoskevich – Not in Nav
+
+5115176654522 - Mr. Timothy Kelly – Not in Nav
+
+——-
+
+
+feb 23
+
+5115133258356 - Mr. Justin Dourty – Not in NAV
+
+5115134811172    - Mr. Aviva Gottlieb – Not in Nav
+
+5115135935336 - Mr. Timothy Ressler – Not in Nav
+
+5114109928683 - Mr. Christopher Ocansey – Not in Nav
+
+5115137878067   - Sr. Leonardo Costa – Not in Nav
+
+5115140352855 - Mr. Kimina Chisolm – Not in Nav
+
+5115141255330 - Ms. Tram Luu – Not in Nav
+
+5113997833176- Mr. Marcelo Rodriguez Sada – Rebook, reservation didnt adjust
+
+5113997833176 - Mrs. Karla Rose – Not in Nav
+
+5115142281164   - Mr. Yakov Polowin – Not in Nav
+
+5115143769368 - Mrs. Cecilia Navarro – Not in Nav
+
+5115144523031 - Mr. Ceri Glowacki – Not in Nav
+
+5114350966735  - Mr. Elizabeth Ebrahimian – Not in Nav == RESVISAR ELIMINAR
+
+5115145831204 - Mr. Chad Fason – Not in Nav
+
+5113058606708 - Mrs. Lauren Burtis – Rebook, didnt adjust
+
+5113141222654 - Mrs. Lauren Burtis – Rebook, didnt adjust
+
+5115146909022  - Mrs. Temra Wollman – Not in Nav
+
+5115147779482-  Mr. Malek Neman – Not in Nav
+
+5115148297379 - Mr. Malek Neman – Not in Nav
+
+5115149043810   - Ms. Erin Ly – Not in Nav
+
+5115150573270 - Mr. Michelle Farhadi – Not in Nav
+
+5115151572626 - Mrs. Michelle Farhadi – Not in Nav
+
+5115153657739 - Mr. Hernan Welsh – Not in Nav
+
+5115154646535 - Mr. Sheetal Shah – Not in Nan
+
+5115155661001 - Ezinne Ubosi – Not in Nav
+
+5111442021826    - Mrs. Stephanie Judis – Rebook, didnt adjust in Nav
+
+------------
+
+5115207759918   - Mr. john kulish – Nav was just for 1 person and IBE was for 2 ad,1kid,1cu. I modified it.
+
+In the IBE we have
+
+No. of Rooms: 1
+No. of Adults: 2
+No. of Children: 1
+No. of Infants: 1
+
+and we sent:
+
+<AD>2</AD>
+<JR>0</JR>
+<NI>1</NI>
+<BB>1</BB>
+
+
+5115208085500 - Mr. andrea collier – 2 rooms for 2 people each, one of them in Nav was fo 1 ad. I modified it
+
+5113977636609 - Mrs. Shannon Civetta – Rebooked reservation. Didn’t show the new information. I modified it.
+
+5111578415939   - Mrs. Anna Lee - Rebooked reservation. Didn’t show the new information. I modified it.
+
+5113745658396 - Rebooked didnt get reflected. I modified previous reservation
+
+5113994045074    - Rebooked didnt get reflected. I modified previous reservation

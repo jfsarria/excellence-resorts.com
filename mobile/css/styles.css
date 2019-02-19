@@ -1,0 +1,338 @@
+.gallery { list-style: none; padding: 0; margin: 0; width: 240px; overflow:hidden; }
+.gallery:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+.gallery li { float: left; width: 240px; }
+.gallery li a { display: block; margin: 0px; }
+.gallery li img { display: block; width: 240px; height: auto; }
+
+a {
+    text-decoration:none;
+}
+.ui-bar-x {
+	border: 1px solid 		#B59C69 ;
+	background: 			#F9F5EC ;
+	color: 					#000000 ;
+	text-shadow: 0  1px  0  	#fff ;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #F9F5EC ), to( #DED1B7 )); 
+	background-image: -webkit-linear-gradient( #F9F5EC, #DED1B7 ); 
+	background-image:    -moz-linear-gradient( #F9F5EC, #DED1B7 ); 
+	background-image:     -ms-linear-gradient( #F9F5EC, #DED1B7 ); 
+	background-image:      -o-linear-gradient( #F9F5EC, #DED1B7 ); 
+	background-image:         linear-gradient( #F9F5EC, #DED1B7 );
+}
+.ui-bar-x,
+.ui-bar-x input,
+.ui-bar-x select,
+.ui-bar-x textarea,
+.ui-bar-x button {
+	font-family: Helvetica, Arial, sans-serif ;
+}
+.ui-bar-x .ui-link-inherit {
+	color: 	#333333 ;
+}
+.ui-bar-x .ui-link {
+	color: #8a6618 ;
+	font-weight: bold;
+}
+.ui-bar-x .ui-link:hover {
+	color: #8a6618 ;
+}
+.ui-bar-x .ui-link:active {
+	color: #8a6618 ;
+}
+.ui-bar-x .ui-link:visited {
+    color: #8a6618 ;
+}
+.ui-body-x,
+.ui-body-x,
+.ui-body-x input,
+.ui-body-x select,
+.ui-body-x textarea,
+.ui-body-x button {
+	font-family: Helvetica, Arial, sans-serif ;
+}
+.ui-body-x .ui-link-inherit {
+	color: 	#333333 ;
+}
+.ui-body-x .ui-link {
+	color: #8a6618 ;
+	font-weight: bold;
+}
+.ui-body-x .ui-link:hover {
+	color: #8a6618 ;
+}
+.ui-body-x .ui-link:active {
+	color: #8a6618 ;
+}
+.ui-body-x .ui-link:visited {
+    color: #8a6618 ;
+}
+.ui-btn-hover-x,
+.ui-btn-up-x {
+	border: 1px solid 		#7f5d17;
+	background: 			#a07b2c;
+	font-weight: bold;
+	color: 					#FFFFFF;
+	text-shadow: 0  1px  1px  	#7f5d17;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #f2dcaa ), to( #7f5d17 )); 
+	background-image: -webkit-linear-gradient( #f2dcaa , #7f5d17 ); 
+	background-image:    -moz-linear-gradient( #f2dcaa , #7f5d17 ); 
+	background-image:     -ms-linear-gradient( #f2dcaa , #7f5d17 ); 
+	background-image:      -o-linear-gradient( #f2dcaa , #7f5d17 ); 
+	background-image:         linear-gradient( #f2dcaa , #7f5d17 );
+}
+.ui-btn-down-x {
+	border: 1px solid 		#654708;
+	background: 			#a07b2c;
+	font-weight: bold;
+	color: 					#FFFFFF;
+	text-shadow: 0  1px  1px  	#654708;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #c5a054 ), to( #654708 )); 
+	background-image: -webkit-linear-gradient( #c5a054 , #654708 ); 
+	background-image:    -moz-linear-gradient( #c5a054 , #654708 ); 
+	background-image:     -ms-linear-gradient( #c5a054 , #654708 ); 
+	background-image:      -o-linear-gradient( #c5a054 , #654708 ); 
+	background-image:         linear-gradient( #c5a054 , #654708 );
+}
+
+.PROP_ID_4 .ui-bar-x {
+	border: 1px solid 		#000000;
+	background: 			#757575;
+	font-weight: bold;
+	color: 					#FFFFFF;
+	text-shadow: 0  1px  1px  	#333333;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #757575 ), to( #333333 )); 
+	background-image: -webkit-linear-gradient( #757575, #333333 ); 
+	background-image:    -moz-linear-gradient( #757575, #333333 ); 
+	background-image:     -ms-linear-gradient( #757575, #333333 ); 
+	background-image:      -o-linear-gradient( #757575, #333333 ); 
+	background-image:         linear-gradient( #757575, #333333 );
+}
+/*
+.PROP_ID_4 .ui-btn-up-c,
+.PROP_ID_4 .ui-btn-down-c,
+.PROP_ID_4 .ui-btn-hover-c,*/
+.PROP_ID_4 .ui-btn-up-x,
+.PROP_ID_4 .ui-btn-down-x,
+.PROP_ID_4 .ui-btn-hover-x {
+	border: 1px solid 		#373737;
+	background: 			#373737;
+	font-weight: bold;
+	color: 					#FFFFFF;
+	text-shadow: 0  1px  1px  	#000000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #373737 ), to( #000000 )); 
+	background-image: -webkit-linear-gradient( #373737, #000000 ); 
+	background-image:    -moz-linear-gradient( #373737, #000000 ); 
+	background-image:     -ms-linear-gradient( #373737, #000000 ); 
+	background-image:      -o-linear-gradient( #373737, #000000 ); 
+	background-image:         linear-gradient( #373737, #000000 );
+}
+.ui-btn-up-x a.ui-link-inherit {
+	color: 					#222 ;
+}
+.ui-btn-hover-x a.ui-link-inherit {
+	color: 					#333 ;
+}
+.ui-btn-down-x a.ui-link-inherit {
+	color: 					#333 ;
+}
+.ui-collapsible-box {
+    font-size: 14px;
+    line-height: 22px;
+    padding:7px;
+}
+.ui-collapsible-box table td {
+    color:#000000;
+}
+.ui-content {
+    background-color: #F5F2EA;
+}
+.PROP_ID_4 .ui-content {
+    background-color: #EAEAEA;
+}
+.ui-dialog-contain .ui-content {
+    background-color: #FFFFFF;
+}
+.ui-collapsible-box .ui-btn-inner {
+    padding: 3px 15px;
+}
+#room-list .ui-collapsible {
+    margin-bottom:0px;
+}
+#room-list h3.ui-collapsible-heading a {
+	-moz-border-radius: 				   0;
+	-webkit-border-radius: 				   0;
+	border-radius: 						   0;
+	-moz-border-radius-topleft: 		.6em ;
+	-webkit-border-top-left-radius: 	.6em ;
+	border-top-left-radius: 			.6em ;
+	-moz-border-radius-topright: 		.6em ;
+	-webkit-border-top-right-radius: 	.6em ;
+	border-top-right-radius: 			.6em ;
+    border-left:none;
+    border-right:none;
+    border-color:#e7e7e7;
+}
+#room-list .room-summary-bottom {
+    padding-left:41px;
+    margin-bottom:15px;
+}
+.ui-icon {
+    background-color: #000000;
+}
+.PROP_ID_4 .ui-icon {
+    background-color: #757575;
+}
+#room-list .ui-icon {
+    background-color: #BB994E;
+}
+.PROP_ID_4 #room-list .ui-icon {
+    background-color: #757575;
+}
+.ui-icon-shadow {
+	-moz-box-shadow: 1px 1px 5px #000000;
+	-webkit-box-shadow: 1px 1px 5px #000000;
+	box-shadow: 1px 1px 5px #000000 ;
+}
+#room-list .ui-collapsible-box,
+#room-list .ui-collapsible-content {
+    border-bottom: medium none;
+    border-left: medium none;
+    border-right: medium none;
+}
+.ui-body-b, .ui-overlay-b {
+    border:none;
+}
+.ui-icon-minus {
+    background-color: #666666 !important;
+}
+#room-list .ui-collapsible-noround .ui-collapsible-content {
+	-moz-border-radius: 				   0;
+	-webkit-border-radius: 				   0;
+	border-radius: 						   0;
+    border-bottom:solid 1px #e7e7e7;
+}
+.room-left {
+    text-align:center;
+    background-color:#f5f2ea;
+    font-size: 12px;
+}
+.crossed {
+    color:#979797;
+    text-decoration: line-through;
+    font-size: 16px;
+    margin-right:10px;
+}
+#room-list .AVG_FINAL {
+    color:#000000;
+    font-size: 20px;
+}
+.ui-header {
+    background-image:url("../img/bg-header.jpg");
+}
+.IS_VIP_LABEL {
+    color:#9e7b2f;
+}
+.PROP_ID_4 .IS_VIP_LABEL {
+    color:#000000;
+}
+.room-descr,
+.room-features {
+    margin:10px 0;
+    color:#747474;
+    font-size:12px;
+}
+#prop_name {
+        color:#9F7C32;
+        font-size: 16px;
+        margin:0px;
+        font-weight: normal;
+    }
+    .prop_color_XRC {
+        color:#F78214;
+    }
+    .prop_color_XPM {
+        color:#F00A82;
+    }
+    .prop_color_XPC {
+        color:#8FD526;
+    }
+    .PROP_ID_4 #prop_name {
+        color:#000000 !important;
+        font-family:helvetica !important;
+    }
+    .PROP_ID_4 h2#prop_name {
+        display:none;
+    }
+
+.ui-header .ui-title, .ui-footer .ui-title {
+    margin-left:0px;
+    margin-right:0px;
+}
+#room_summary {
+    padding: 0;
+}
+#room_summary .room {
+        padding: 20px;
+    }
+    #room_summary .room .qty {
+        padding-bottom:10px;
+        color:#000000;
+        font-weight: bold;
+    }
+    #room_summary .room .name {
+        color: #5A5A5A;
+        font-size: 16px;
+        padding-bottom:5px;
+    }
+    #room_summary .room .price {
+        color:#000000;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    #room_summary .divider {
+        border-bottom: 1px solid #aaaaaa;
+    }
+
+label.ui-select, .ui-controlgroup-label {
+    font-size:14px;
+    font-weight: bold;
+}
+.RES_ROOMS_QTY {
+    padding-top:5px;
+}
+#policy {
+    padding:0 30px 30px;
+}
+.ui-info-hdr {
+    font-weight: bold;
+    font-size:16px;
+    border-top:1px solid #AAAAAA;
+    margin-top:20px;;
+}
+.ui-opt-room-hdr {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+
+.room_box fieldset.ui-controlgroup {
+    margin: 0;
+}
+.room_box_children_age label.ui-select {
+    padding-right: 15px;
+}
+#room_qtys .ui-btn-inner {
+        padding-right: 28px;
+        padding-left: 8px;
+    }
+    #room_qtys .ui-select .ui-btn-text {
+        font-size: 13px;
+    }
+    #room_qtys .ui-icon {
+        right: 5px;
+    }
+
+.sd_container {
+    height: auto !important;
+}

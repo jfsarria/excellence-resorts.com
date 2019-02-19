@@ -1,0 +1,94 @@
+<ROOT>
+  <PROCESS_TYPE>ELIMINAR</PROCESS_TYPE>
+  <ID>1ETI9P</ID>
+  <HOTEL>RDXPC</HOTEL>
+  <LOCALIZADOR>1ETI9P</LOCALIZADOR>
+  <ORIGEN>WEB_EXC</ORIGEN>
+  <RESERVA>
+    <ID_RVA>1ETI9P</ID_RVA>
+    <FVENTA>09/01/2015</FVENTA>
+    <HOTEL>RDXPC</HOTEL>
+    <FI>15/04/2015</FI>
+    <FF>21/04/2015</FF>
+    <TTOO>WEBEXC-USD</TTOO>
+    <AGENCIA>CARRIBEAN</AGENCIA>
+    <CLIENTE>WEBEXC-USD</CLIENTE>
+    <CATALOGO />
+    <BONO>1ETI9P</BONO>
+    <PAGADO />
+    <DNI_PAGO />
+    <NOMBRE_PAGO>Nichole</NOMBRE_PAGO>
+    <AP1_PAGO>Hill-Chambers</AP1_PAGO>
+    <AP2_PAGO />
+    <EMAIL_PAGO />
+    <HAB_LIST>
+      <HAB>
+        <RESERVANH>2015#1435#1</RESERVANH>
+        <TIPO_HAB>JUNIORST</TIPO_HAB>
+        <REG>AI</REG>
+        <FECHA_ENTRADA>15/04/2015</FECHA_ENTRADA>
+        <FECHA_SALIDA>21/04/2015</FECHA_SALIDA>
+        <HOR_LLEG>04:00:00</HOR_LLEG>
+        <HOR_SAL />
+        <AD>2</AD>
+        <JR>0</JR>
+        <NI>0</NI>
+        <BB>0</BB>
+        <PROMOCION_LIST>
+          <COD_PROMOCION>PCU18 EXT</COD_PROMOCION>
+        </PROMOCION_LIST>
+        <COD_TARIFA>USARO</COD_TARIFA>
+        <DIVISA_PREC>USD</DIVISA_PREC>
+        <TIPO_PREC>M</TIPO_PREC>
+        <PRECIOS_LIST>
+          <PRECIOS>
+            <P_FEC>15/04/2015</P_FEC>
+            <P_PRE />
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>16/04/2015</P_FEC>
+            <P_PRE>,00</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>17/04/2015</P_FEC>
+            <P_PRE>,00</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>18/04/2015</P_FEC>
+            <P_PRE>,00</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>19/04/2015</P_FEC>
+            <P_PRE>,00</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>20/04/2015</P_FEC>
+            <P_PRE>,00</P_PRE>
+          </PRECIOS>
+        </PRECIOS_LIST>
+        <OCUPANTES_LIST>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE>Nichole</NOMBRE>
+            <APELLIDO1>Hill-Chambers</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>0</EDAD>
+          </OCUPANTES>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE />
+            <APELLIDO1>Hill-Chambers</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>0</EDAD>
+          </OCUPANTES>
+        </OCUPANTES_LIST>
+        <EXTRAS_LIST />
+        <OBSERVACIONES>
+          <TEXTO>CUSTROOMCODE 14091 Non-smoking</TEXTO>
+        </OBSERVACIONES>
+      </HAB>
+    </HAB_LIST>
+  </RESERVA>
+</ROOT>

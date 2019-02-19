@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<calendar>
+	<dates>
+		<date checkIn="2014-11-01" currency="EUR">
+			<rooms>
+				<room name="SINGLE" price="100.00"></room>
+				<room name="DOUBLE" price="200.00"></room>
+				<room name="QUEEN" price="300.00"></room>
+			</rooms>
+		</date>
+		<date checkIn="2014-11-02" currency="EUR">
+			<rooms>
+				<room name="SINGLE" price="100.00"></room>
+				<room name="DOUBLE" price="200.00"></room>
+				<room name="QUEEN" price="300.00"></room>
+			</rooms>
+		</date>
+		<date checkIn="2014-11-03" currency="EUR">
+			<rooms>
+				<room name="SINGLE" price="100.00"></room>
+				<room name="DOUBLE" price="200.00"></room>
+				<room name="QUEEN" price="300.00"></room>
+			</rooms>
+		</date>
+	</dates>
+</calendar>

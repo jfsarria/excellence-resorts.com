@@ -1,0 +1,80 @@
+Array
+(
+    [checkin_date] => 2016-07-16
+    [checkout_date] => 2016-07-18
+    [partner_hotel_code] => 1
+    [reference_id] => b2d7a8bb-2ef1-4f9f-9ad0-1de19398a64b
+    [partner_data] => Array
+        (
+            [code] => FPM
+            [url] => http://staging.finestresorts.com
+            [room_id] => 166258
+        )
+
+    [payment_method] => Array
+        (
+            [card_type] => Discover
+            [card_number] => 6011111111111117
+            [cardholder_name] => Gary Perez
+            [expiration_month] => 05
+            [expiration_year] => 2023
+            [cvv] => 507
+            [billing_address] => Array
+                (
+                    [address1] => 0565 Ramsey Point
+                    [address2] => 38 Vahlen Avenue
+                    [city] => Monterey
+                    [postal_code] => 78327
+                    [country] => GB
+                )
+
+        )
+
+    [customer] => Array
+        (
+            [first_name] => Gary
+            [last_name] => Perez
+            [phone_number] => 4-(244)069-4275
+            [email] => Billy.Jenkins@test.tripadvisor.com
+            [country] => US
+        )
+
+    [rooms] => Array
+        (
+            [0] => Array
+                (
+                    [party] => Array
+                        (
+                            [adults] => 2
+                        )
+
+                    [traveler_first_name] => Gary
+                    [traveler_last_name] => Perez
+                )
+
+            [1] => Array
+                (
+                    [party] => Array
+                        (
+                            [adults] => 2
+                        )
+
+                    [traveler_first_name] => Gary
+                    [traveler_last_name] => Perez
+                )
+
+        )
+
+    [final_price_at_booking] => Array
+        (
+            [amount] => 380
+            [currency] => USD
+        )
+
+    [final_price_at_checkout] => Array
+        (
+            [amount] => 0
+            [currency] => USD
+        )
+
+)

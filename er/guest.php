@@ -1,0 +1,3 @@
+<?
+FILE_PUT_CONTENTS('../../bw/t3lib/G.TXT', PRINT_R($BOOK, TRUE),FILE_APPEND);
+?>

@@ -1,0 +1,156 @@
+https://developer-tripadvisor.com/connectivity-solutions/instant-booking-api/documentation/booking_availability/
+
+http://hacapitest.developer.tripadvisor.com/ibviewer/
+
+http://hacapitest.developer.tripadvisor.com/viewer/
+
+****************************************************************************************************************************************************************************************************************************
+
+http://excellence-resorts.com/tripadvisor/config
+https://excellence-resorts.com/tripadvisor/config
+
+ 
+****************************************************************************************************************************************************************************************************************************
+
+GO TO PLEASK
+Web Server Settings for finestresorts.com
+
+****************************************************************************************************************************************************************************************************************************
+
+
+http://www.webdnstools.com/articles/plesk/apache_configuration
+1. SSH as root / Ru9or!27NewRt5
+
+2. /var/www/vhosts/fromps.com/conf
+   /var/www/vhosts/system/finestresorts.com/conf
+   /var/www/vhosts/system/staging.finestresorts.com/conf
+
+   /var/www/vhosts/system/fromps.com/conf
+   /var/www/vhosts/hoopsydoopsy.com/conf
+   /var/www/vhosts/locateandshare.com/conf
+   /var/www/vhosts/secure-laamadahotel.com/conf
+
+3. sudo vi vhost.conf
+   sudo vi vhost_ssl.conf ( httpd-ssl.conf ) 
+
+4. 
+
+Alias /instant_availability /var/www/vhosts/fromps.com/httpdocs/ibe/api/instant_book/availability/index.php
+Alias /hotel_availability /var/www/vhosts/fromps.com/httpdocs/ibe/api/hotel_availability/index.php
+
+Alias /tripadvisor/config /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/config.php
+Alias /tripadvisor/hotel_availability /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/hotel_availability.php
+Alias /tripadvisor/booking_availability /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/booking_availability.php
+Alias /tripadvisor/booking_submit /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/booking_submit.php
+Alias /tripadvisor/booking_verify /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/booking_verify.php
+Alias /tripadvisor/booking_cancel /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/booking_cancel.php
+Alias /tripadvisor/booking_sync /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/booking_sync.php
+
+
+
+
+   AliasMatch ^/tripadvisor/(.*) /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/$1.php
+
+--------------- finestresorts.com --------------------
+
+Alias /hotel_availability /var/www/vhosts/iskullny.com/finestresorts/ibe/api/hotel_availability/index.php
+AliasMatch ^/tripadvisor/(.*) /var/www/vhosts/iskullny.com/finestresorts/ibe/api/tripadvisor/$1.php
+
+--------------- fromps.com / excellence-resorts.com --------------------
+
+Alias /instant_availability /var/www/vhosts/fromps.com/httpdocs/ibe/api/instant_book/availability/index.php
+Alias /hotel_availability /var/www/vhosts/fromps.com/httpdocs/ibe/api/hotel_availability/index.php
+AliasMatch ^/tripadvisor/(.*) /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/$1.php
+
+Alias /tripadvisor/config /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/config.php
+
+Alias /hotel_availability /var/www/vhosts/fromps.com/httpdocs/ibe/api/hotel_availability/index.php
+Alias /tripadvisor /var/www/vhosts/fromps.com/httpdocs/ibe/api/tripadvisor/$1.php
+
+--------------- hoopsydoopsy.com --------------------
+
+Alias /tripadvisor/config /var/www/vhosts/hoopsydoopsy.com/httpdocs/ibe/api/tripadvisor/config.php
+
+AliasMatch ^/tripadvisor/(.*) /var/www/vhosts/hoopsydoopsy.com/httpdocs/ibe/api/tripadvisor/$1.php
+
+--------------- secure-laamadahotel.com --------------------
+
+Alias /hotel_availability /var/www/vhosts/secure-laamadahotel.com/httpdocs/ibe/api/hotel_availability/index.php
+AliasMatch ^/tripadvisor/(.*) /var/www/vhosts/secure-laamadahotel.com/httpdocs/ibe/api/tripadvisor/$1.php
+
+
+------------------------------------------------------
+
+5. all sites at once
+   /usr/local/psa/admin/sbin/httpdmng --reconfigure-all
+
+   /usr/local/psa/admin/sbin/httpdmng --reconfigure-domain domain.com
+
+   /usr/local/psa/admin/bin/websrvmng -a
+
+   sudo /usr/local/psa/admin/sbin/websrvmng -u --vhost-name=finestresorts.com
+   sudo /usr/local/psa/admin/sbin/websrvmng -u --vhost-name=staging.finestresorts.com
+
+   sudo /usr/local/psa/admin/sbin/httpdmng --reconfigure-domain finestresorts.com
+
+   sudo /usr/local/psa/admin/sbin/httpdmng --reconfigure-domain fromps.com
+   sudo /usr/local/psa/admin/sbin/httpdmng --reconfigure-domain http://excellence-resorts.com
+
+
+
+
+6. 
+
+apachectl -k graceful
+
+sudo /etc/init.d/httpd restart
+shutdown -h now
+reboot -h now
+
+****************************************************************************************************************************************************************************************************************************
+
+
+https://staging.finestresorts.com/ibe/api/instant_book/availability/?session_id=stress_test&hotels=[{%22partner_id%22:%221%22,%22partner_url%22:%22http://www.finestresorts.com%22}]&start_date=2015-07-01&end_date=2015-07-03&party=[2,2,1]
+
+https://staging.finestresorts.com/hotel_availability
+
+https://staging.finestresorts.com/instant_availability
+
+
+staging.finestresorts.com/ibe/api/tripadvisor/hotel_availability.php?api_version=7&hotels=[{"ta_id":97497,"partner_id":"1","partner_url":"http://www.finestresorts.com"}]&start_date=2016-08-01&end_date=2016-08-03&party=[{"adults": 2}]&lang=en_US&currency=USD&user_country=US&device_type=d&query_key=6167a22d1f87d2028bf60a8e5e27afa7_191_1360299600000_2_2
+
+
+http://staging.finestresorts.com/ibe/api/tripadvisor/booking_availability.php?hotel={"ta_id":1,"partner_hotel_code":"1","partner_url":"http://www.tripadvisor.com?param1\u003dtest\u0026param2\u003d1234"}&party=[{"adults":2,"children":[]}]&api_version=7&start_date=2016-07-16&end_date=2016-07-18&lang=en_US&currency=USD&user_country=US&device_type=d&query_key=TripAdvisorAPITest_5d52f0ce-15a2-4b7f-afd7-76a365a665c4&booking_session_id=TripAdvisorSherpaAPITestBookingSessionID&checkout_session_id=TripAdvisorSherpaAPITestCheckoutSessionID
+
+
+
+http://staging.finestresorts.com/ibe/api/tripadvisor/booking_submit.php?book={"checkin_date":"2016-07-23","checkout_date":"2016-07-25","partner_hotel_code":"1","reference_id":"7fc8b430-0329-44f0-9918-3516c8346bfa","partner_data":{"code":"FPM","id":"5","url":"http://staging.finestresorts.com","room_id":"ID_166258"},"payment_method":{"card_type":"MasterCard","card_number":"5555555555554444","cardholder_name":"Johnny Thomas","expiration_month":"04","expiration_year":"2019","cvv":"552","billing_address":{"address1":"8873 Petterle Lane","address2":"30 Prentice Terrace","city":"Murrieta","postal_code":"86788","country":"IE"}},"customer":{"first_name":"Johnny","last_name":"Thomas","phone_number":"9-(419)331-8461","email":"Douglas.Perkins@test.tripadvisor.com","country":"GB"},"rooms":[{"party":{"adults":2},"traveler_first_name":"Johnny","traveler_last_name":"Thomas"},{"party":{"adults":2},"traveler_first_name":"Johnny","traveler_last_name":"Thomas"}],"final_price_at_booking":{"amount":380.0,"currency":"RSD"},"final_price_at_checkout":{"amount":0.0,"currency":"RSD"}}
+
+
+https://hoopsydoopsy.com/ibe/api/tripadvisor/config.php
+
+http://hoopsydoopsy.com/tripadvisor/config
+
+https://secure-belovedhotels.com/tripadvisor/config
+
+http://excellence-resorts.com/tripadvisor/config
+
+http://locateandshare.com/ibe/api/tripadvisor/config.php
+
+http://excellence-resorts.com/ibe/api/tripadvisor/config.php
+
+http://excellence-resorts.com/ibe/api/tripadvisor/hotel_availability.php?party=[{"adults":2,"children":[]}]&api_version=7&hotels=[{"ta_id":1,"partner_id":"XRC","partner_url":"http://www.tripadvisor.com?ok=1"}]&start_date=2017-01-11&end_date=2017-01-12&lang=en_US&currency=USD&user_country=US&device_type=d&query_key=TripAdvisorAPITest_90d7a93b-d091-41ca-915d-c3ce4d8e0bbe
+
+http://excellence-resorts.com/ibe/api/tripadvisor/booking_availability.php?hotel={"ta_id":1,"partner_hotel_code":"XRC","partner_url":"http://www.tripadvisor.com?ok=1"}&party=[{"adults":2,"children":[]}]&api_version=7&start_date=2017-01-11&end_date=2017-01-12&lang=en_US&currency=USD&user_country=US&device_type=d&query_key=TripAdvisorAPITest_d550249f-d747-4b37-8ca3-6731f16d17dd&booking_session_id=TripAdvisorSherpaAPITestBookingSessionID&checkout_session_id=TripAdvisorSherpaAPITestCheckoutSessionID
+
+http://excellence-resorts.com/ibe/api/tripadvisor/booking_submit.php?book={%22checkin_date%22:%222017-01-11%22,%22checkout_date%22:%222017-01-12%22,%22partner_hotel_code%22:%22XRC%22,%22reference_id%22:%2258b40d68-e29a-454c-b631-a7a1e78f58af%22,%22partner_data%22:{%22code%22:%22XRC%22,%22id%22:1,%22url%22:%22http://excellence-resorts.com%22,%22room_id%22:%22ID_20%22},%22payment_method%22:{%22card_type%22:%22MasterCard%22,%22card_number%22:%225555555555554444%22,%22cardholder_name%22:%22Juan%20Sarria%22,%22expiration_month%22:%2209%22,%22expiration_year%22:%222022%22,%22cvv%22:%22552%22,%22billing_address%22:{%22address1%22:%222219%20Recto%20Ave,%20Sampaloc%22,%22city%22:%22General%20Santos%22,%22state%22:%22SIG%22,%22postal_code%22:%222613%22,%22country%22:%22PH%22}},%22customer%22:{%22first_name%22:%22Juan%22,%22last_name%22:%22Sarria%22,%22phone_number%22:%22+63-77-516-4693%22,%22email%22:%22jaunsarria@gmail.com%22,%22country%22:%22US%22},%22rooms%22:[{%22party%22:{%22adults%22:2},%22traveler_first_name%22:%22Juan%22,%22traveler_last_name%22:%22Sarria%22}],%22final_price_at_booking%22:{%22amount%22:550.0,%22currency%22:%22USD%22},%22final_price_at_checkout%22:{%22amount%22:0.0,%22currency%22:%22USD%22}}
+
+http://excellence-resorts.com/ibe/api/tripadvisor/booking_verify.php?partner_hotel_code=XRC&reference_id=58b40d68-e29a-454c-b631-a7a1e78f58af&reservation_id=116181540056998
+
+http://excellence-resorts.com/ibe/api/tripadvisor/booking_cancel.php?cancel={"partner_hotel_code":"XRC","reservation_id":"116181540056998"}
+
+http://excellence-resorts.com/ibe/api/tripadvisor/booking_sync.php?sync=[{"partner_hotel_code":"XRC","reservation_id":"116181546960646"}]
+
+****************************************************************************************************************************************************************************************************************************
+
+

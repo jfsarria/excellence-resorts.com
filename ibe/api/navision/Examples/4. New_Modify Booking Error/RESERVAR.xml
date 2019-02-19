@@ -1,0 +1,79 @@
+<ROOT>
+  <PROCESS_TYPE>RESERVAR</PROCESS_TYPE>
+  <ID>1697279-2</ID>
+  <HOTEL>MXXPM</HOTEL>
+  <LOCALIZADOR>1697279-2</LOCALIZADOR>
+  <ORIGEN>WEB_EXC</ORIGEN> 	
+  <RESERVA>
+    <ID_RVA>1697279-2</ID_RVA>
+    <FVENTA>16/01/2015</FVENTA>
+    <HOTEL>MXXPM</HOTEL>
+    <FI>13/03/2015</FI>
+    <FF>16/03/2015</FF>
+    <TTOO>WEBEXC</TTOO>
+    <AGENCIA>WEBEXC</AGENCIA>
+    <CLIENTE>WEBEXC</CLIENTE>
+    <CATALOGO />
+    <BONO>1697279-2</BONO>
+    <PAGADO />
+    <DNI_PAGO />
+    <NOMBRE_PAGO>Arturo Henriquez</NOMBRE_PAGO>
+    <AP2_PAGO />
+    <EMAIL_PAGO />
+    <HAB_LIST>
+      <HAB>
+        <RESERVANH />
+        <TIPO_HAB>JUNIORSW</TIPO_HAB>
+        <REG>AI</REG>
+        <FECHA_ENTRADA>13/03/2015</FECHA_ENTRADA>
+        <FECHA_SALIDA>16/03/2015</FECHA_SALIDA>
+        <HOR_LLEG>04:00:00</HOR_LLEG>
+        <HOR_SAL />
+        <AD>2</AD>
+        <JR>0</JR>
+        <NI>0</NI>
+        <BB>0</BB>
+        <PROMOCION_LIST />
+        <COD_TARIFA>UKRO</COD_TARIFA>
+        <DIVISA_PREC>USD</DIVISA_PREC>
+        <TIPO_PREC>M</TIPO_PREC>
+        <PRECIOS_LIST>
+          <PRECIOS>
+            <P_FEC>13/03/2015</P_FEC>
+            <P_PRE>423</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>14/03/2015</P_FEC>
+            <P_PRE>423</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>15/03/2015</P_FEC>
+            <P_PRE>423</P_PRE>
+          </PRECIOS>
+        </PRECIOS_LIST>
+        <OCUPANTES_LIST>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE />
+            <APELLIDO1>Arturo Henriquez</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>30</EDAD>
+          </OCUPANTES>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE />
+            <APELLIDO1>Arturo Henriquez</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>30</EDAD>
+          </OCUPANTES>
+        </OCUPANTES_LIST>
+        <EXTRAS_LIST />
+        <OBSERVACIONES>
+          <TEXTO>CUSTROOMCODE 1002009 la mejor zona clientes frecuentes </TEXTO>
+        </OBSERVACIONES>
+      </HAB>
+    </HAB_LIST>
+  </RESERVA>
+</ROOT>

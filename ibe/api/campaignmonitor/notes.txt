@@ -1,0 +1,55 @@
+4111111111111111
+
+https://studiomobile.createsend.com/triggered/reports/snapshot/a2bdd545-71b4-4143-bdc0-4b6d352ec18c
+
+
+The feature means that all of our Guest directed emails from reservations, per/post stay, rebookings, cancelations, changes and if possible from CCPS should be sent from Campaignmonitor API instead of our server.
+
+Here is a link to the general guide
+https://help.campaignmonitor.com/topic.aspx?t=1411
+
+and some API details
+https://www.campaignmonitor.com/api/transactional/
+
+
+API Key 	ba4a27ce26d981966be7e122066976d5
+
+Client ID: db8bd893bb8cea1420ea55d643201bc4
+API Key: 7d024234924c83681099369b885e9c2ba7b6d57c8f62f42c
+
+
+
+https://api.createsend.com/api/v3.1/clients.json
+use the key as username and nothing in pwd
+
+    "ClientID": "08f83597398bbe045f3c4c6ee86edca5",
+    "Name": "test"
+
+    "ClientID": "db8bd893bb8cea1420ea55d643201bc4",
+    "Name": "Excellence Resorts"
+
+    "ClientID": "b5b78256b349a9f2f60862e64894f53a",
+    "Name": "The Beloved Hotel Playa Mujeres"
+
+Getting subscriber lists
+
+https://api.createsend.com/api/v3.1/clients/{clientid}/lists.{xml|json}
+
+https://api.createsend.com/api/v3.1/clients/db8bd893bb8cea1420ea55d643201bc4/lists.json
+https://api.createsend.com/api/v3.1/lists/{listid}.{xml|json}
+https://api.createsend.com/api/v3.1/lists/f3825e3a9ec5c23352616c2bf5281247.json
+
+https://api.createsend.com/api/v3.1/clients/b5b78256b349a9f2f60862e64894f53a/lists.json
+
+https://studiomobile.createsend.com/admin/client/authentication/821ecd34ed78f34a
+
+
+
+staging.finestresorts.com/ibe/api/campaignmonitor/campaignmonitor-createsend-php/samples/transactional/classic_send.php
+
+staging.finestresorts.com/ibe/api/campaignmonitor/classicemail.php
+
+
+
+
+

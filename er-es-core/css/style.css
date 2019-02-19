@@ -1,0 +1,837 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	font: 12px/18px Georgia, "Times New Roman", Times, serif;
+	width: 100%;
+	height: 100%;
+}
+a {
+	color:#b28e4e;
+	outline: none;
+	text-decoration: underline;
+}
+a:hover {
+	color:#222;
+	text-decoration: none;
+}
+
+a.active { color:#222; text-decoration:none;}
+
+p {
+	margin: 0 0 18px
+}
+img {
+	border: none;
+}
+input {
+	vertical-align: middle;
+}
+
+table { border-collapse:collapse;}
+
+h1 {
+	font-size:20px;
+	font-weight:normal;
+	color:#222;
+	margin-bottom:20px;
+}
+
+h2 {
+	font-size:12px;
+	font-weight:normal;
+	text-transform:uppercase;
+	color:#222;
+	margin-bottom:12px;
+}
+
+h3 { font-size:14px; font-weight:bold; color:#222; margin-bottom:10px;}
+
+input, select, textarea {
+	font-size:13px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#333;
+}
+
+#wrapper {
+	width: 1048px;
+	margin: 0 auto;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+	width: 985px;
+	height: 44px;
+	padding:96px 0 0 62px;
+	position:relative;
+}
+
+	#logo {
+		width:330px;
+		height:51px;
+		display:block;
+		position:absolute;
+		top:22px;
+		left:0;
+		background:url(../img/logo_er.png) top left no-repeat;
+	}
+	
+	.top_menu {
+		position:absolute;
+		top:32px;
+		right:69px;
+		text-align:right;
+		color:#ede3d0;
+		
+	}
+		
+		.top_menu a {
+			font-size:11px;
+			text-transform:uppercase;
+			text-decoration:none;
+			color:#b28e4e;
+			letter-spacing:1px;
+			margin:0 3px;
+		}
+		
+		.top_menu a:hover, .top_menu a.active { color:#000;}
+	
+	#nav {
+	  height: 22px;
+    color:#ede3d0;
+}
+
+    #nav li {
+      display: block;
+      list-style: none;
+      float: left;
+      border-right:1px solid #ede3d0;
+      text-align: center;
+      line-height: 12px;
+    }
+    
+    #nav .nav_l_1 { width: 185px;}
+    #nav .nav_l_2 { width: 130px;}
+    #nav .nav_l_3 { width: 75px;}
+    #nav .nav_l_4 { width: 80px;}
+    #nav .nav_l_5 { width: 185px;}
+    #nav .nav_l_6 { width: 96px;}
+    #nav .nav_l_7 { width: 157px; border: none; text-align: right;}
+    
+    .spanish #nav .nav_l_1 { width: 191px;}
+    .spanish #nav .nav_l_2 { width: 100px;}
+    .spanish #nav .nav_l_3 { width: 79px;}
+    .spanish #nav .nav_l_4 { width: 142px;}
+    .spanish #nav .nav_l_5 { width: 167px;}
+    .spanish #nav .nav_l_6 { width: 101px;}
+    .spanish #nav .nav_l_7 { width: 126px; border: none; text-align: right;}
+		
+		#nav a {
+			text-transform:uppercase;
+			text-decoration:none;
+			color:#b28e4e;
+			letter-spacing:1px;
+
+		}
+		
+		#nav a:hover, #nav a.active { color:#000;}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#container {
+	padding: 0 0 10px;
+}
+
+#content {
+	width:689px;
+	float:left;
+	margin-left:70px;
+	padding-right:45px;
+}
+
+#sidebar {
+	width:175px;
+	float:left;
+}
+
+.tab_menu {
+	color:#b28e4e;
+	border-top:1px solid #D5C4A0;
+	border-bottom:1px solid #D5C4A0;
+	padding:7px 0 0 0;
+	height:25px;
+	margin-bottom:35px;
+}
+
+	.tab_menu a{
+		text-transform:uppercase;
+		text-decoration:none;
+		color:#b28e4e;
+		margin:0 4px;
+	}
+	
+	.tab_menu a:hover, .tab_menu a.active { color:#000;}
+	
+	.tab_menu span {margin-right:10px; color:#222; font-size:13px; text-transform:uppercase;}
+	
+	
+/*Content
+------------------------------------------------------------------------------*/
+.w95 {width:95px;}
+.w88 {width:88px;}
+.w238 {width:238px;}
+.w450 {width:450px;}
+.w216 {width:216px;}
+.w305 {width:305px;}
+
+.m95 { padding-left:95px;}
+.m65 { padding-left:65px;}
+
+.w88 input{width:75px;}
+.w238 input {width:203px;}
+.w450 input {width:440px;}
+.w216 input {width:188px;}
+.w305 input {width:290px;}
+
+.w95 select {width:75px;}
+.w238 select {width:213px;}
+.w450 select {width:450px;}
+.w216 select {width:200px;}
+
+.p10 { padding-top:10px;padding-bottom:10px;}
+.t50 { padding-top:50px }
+.t30 { padding-top:30px }
+
+#content .form-item {float:left; margin-bottom:18px; position:relative;}
+
+#content input,
+#content select,
+#content textarea {
+	color:#333;
+	font-size:13px;
+    line-height: 18px;
+}
+
+#content label {
+	font-size:13px;
+	color:#666666;
+}
+
+
+#guest_single_reservation_block label { padding: 0;}
+
+.form_required {
+	text-align:right;
+	color:#666;
+	clear:both;
+}
+
+/*------------------------------*/
+#account_form,
+#welcome_block,
+#login_form,
+#reservation_block,
+#payment_form,
+#opotional_form,
+#note_form,
+#payment_info_form,
+#guest_single_reservation_block,
+#vacation_form,
+#agency_info_block,
+#contact_form{
+	background:#f5f2eb;
+	border:1px solid #d5c4a0;
+	padding:22px 22px 16px 22px;
+	margin-bottom:30px;
+    position: relative;
+}
+
+#login_form {padding:22px 22px 16px 87px;}
+
+#content .gold { color:#B28E4E;}
+#content .red { color:#F00;}
+#content .blue {color:#002eff;}
+#welcome_block a { text-decoration:none;}
+
+#welcome_block .logout {
+	width:120px;
+	float:right;
+	text-align:right;
+}
+
+#welcome_block .client-list {margin:15px 0;}
+#welcome_block .client-list li {list-style:none; margin-bottom:8px; font-weight:bold;}
+
+#account_form label {
+	display:block;
+	font-size:13px;
+	color:#666666;
+	padding:1px 0 0 5px;
+}
+
+#account_form .form-submit {
+	width:533px;
+	padding:5px 0 0;
+	text-align:right;
+}
+
+#optionalPrefs .form-submit {
+  width:633px;
+	padding:5px 0 0;
+	text-align:right;  
+}
+
+#optionalPrefs .form-submit input, #account_form .form-submit input {
+	width:171px;
+	height:36px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:17px;
+	text-shadow:0 -1px 1px #222;
+	color:#fff;
+	border:none;
+	background:url(../img/form_btn.png) top left no-repeat;
+	cursor:pointer;
+}
+
+#account_form .form-submit input:hover {
+	background-position:0 -36px;
+}
+
+#login_form .form-submit input{
+	width:75px;
+	height:24px;
+	overflow:hidden;
+	color:#7e5d0b;
+	border:none;
+	font-size:11px;
+	text-shadow:0 1px 1px #fff;
+	text-transform:uppercase;
+	cursor:pointer;
+	float:none;
+	background:url(../img/button_login.png) top left no-repeat;
+}
+
+#login_form .form-submit input:hover {
+	background-position:0 -24px;
+}
+
+#reservation_block {font-size:15px; padding-bottom:160px;}
+#reservation_block th { text-align:left;}
+#reservation_block th, #reservation_block td { padding-bottom:10px;}
+#reservation_block td { color:#666;}
+#reservation_block span {color:#B28E4E;}
+#reservation_block a {text-decoration:none;}
+
+#content .column {
+	width:319px;
+	float:left;
+}
+
+
+/*#payment_form
+----------------------*/
+#payment_form  {
+	font-size:14px;
+	color:#666;
+}
+
+#payment_form p {
+	line-height:21px;
+}
+
+.l_right {
+	width:110px;
+	text-align:right;
+	display:block;
+	position:absolute;
+	top:26px;
+	right:0;
+}
+
+#content .l140 {
+	display:block;
+	width:120px;
+	float:left;
+	padding-top:4px;
+}
+
+#content .s92 {
+	width:82px;
+	float:left;
+}
+
+#content .s92_last {
+	margin-left:18px;
+}
+
+#content .ch input {
+	margin-left:7px;
+}
+
+/*#payment_info_form
+--------------------------*/
+#payment_info_form {color:#666;}
+#payment_info_form .form-item{float:none;}
+#payment_info_form .form-item label { width:120px; float:left; color:#999;}
+
+/*#vacation_form
+---------------------------*/
+#vacation_form {color:#666;}
+#vacation_form .form-item{	float:none; padding:12px 0 0;}
+
+#vacation_form .form-submit {text-align:right;}
+
+#vacation_form .form-submit input {
+	width:171px;
+	height:36px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:17px;
+	text-shadow:0 -1px 1px #222;
+	color:#fff;
+	border:none;
+	background:url(../img/form_btn.png) top left no-repeat;
+	cursor:pointer;
+}
+
+#vacation_form .form-submit input:hover {
+	background-position:0 -36px;
+}
+/*guest_single_reservation_block
+---------------------------*/
+#guest_single_reservation_block {color:#666;}
+#guest_single_reservation_block a {text-decoration:none;}
+.item-group { margin-bottom:16px; padding-right:10px}
+.item-group .item label{ width:115px; float:left;}
+.cancelled {color:#999;}
+
+.cancel_comment_block {padding:5px 30px 20px 0;}
+.cancel_comment_block textarea{	width:99%;}
+#guest_single_reservation_block .cancel_comment_block .form-submit{padding:5px 0 0; text-align:right;}
+#guest_single_reservation_block .cancel_comment_block .form-submit input {	
+	width:171px;
+	height:36px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:17px;
+	text-shadow:0 -1px 1px #222;
+	color:#fff;
+	border:none;
+	background:url(../img/form_btn.png) top left no-repeat;
+	cursor:pointer;
+}
+
+#guest_single_reservation_block .form-submit input:hover {
+	background-position:0 -36px;
+}
+
+.cancel_label {float:left;}
+/*opotional_form
+--------------------------*/
+.info{
+	font-size:12px;
+	color:#666;
+    margin-bottom: 15px;
+}
+
+#opotional_form .form-item {float:none;}
+#opotional_form .rooms-edit .form-item {float:left;}
+#content .l190 {
+	display:block;
+	width:190px;
+	float:left;
+}
+
+.w80 {margin-right:12px; width:80px;}
+
+.ch_first,
+.ch_second,
+.ch_last {margin:0 10px 0 5px;}
+
+.s212 {width:212px;}
+
+
+.form-textarea-item {
+	margin-bottom:18px;
+	border-top:1px solid #D5C4A0;
+	border-bottom:1px solid #D5C4A0;
+	padding:25px 0;
+}
+
+#opotional_form .form-textarea-item label.l190 {
+	font-size:15px;
+}
+
+.form-textarea-item textarea {
+	width:440px;
+	float:left;
+}
+
+.commision {
+    width: 250px;
+    position: absolute;
+    top:15px;
+    right:22px;
+	text-align:right;
+	font-size:17px;
+	color:#222;
+}
+
+#contact_form .form-submit {
+	text-align:center;
+}
+/*note_form
+----------------------------*/
+#note_form p { color:#666;}
+#note_form a {text-decoration:none;}
+#note_form .form-item { float:none;}
+#note_form .form-item input {margin-right:5px;}
+#note_form .form-submit {text-align:center;}
+
+#note_form .form-submit input,
+#contact_form .form-submit input{
+	width:171px;
+	height:36px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:17px;
+	text-shadow:0 -1px 1px #222;
+	color:#fff;
+	border:none;
+	background:url(../img/form_btn.png) top left no-repeat;
+	cursor:pointer;
+}
+
+#note_form .form-submit input:hover,
+#contact_form .form-submit input:hover {
+	background-position:0 -36px;
+}
+/* SIDEBAR
+-----------------------------------------------------------------------------*/
+.sb_block {
+	margin-bottom:24px;
+}
+
+#sidebar input,
+#sidebar select,
+#sidebar textarea {
+	border:1px solid #b08a2f;
+	color:#B28E4E;
+	font-size:12px;
+}
+
+#sidebar input{
+	line-height:18px;
+	padding:3px 5px;
+	width:93px;
+	float:left;
+}
+
+#sidebar select {
+	line-height:18px;
+	padding:3px 5px;
+}
+
+#sidebar select.sel_dest {
+	width:170px;
+}
+
+#sidebar .form-item {
+	margin-bottom:12px;
+}
+
+#sidebar label {
+	width:64px;
+	float:left;
+	padding-top:5px;
+}
+
+#sidebar li { list-style:none;}
+
+#sidebar #aviailability_form .sb_menu a {
+	text-transform:uppercase;
+	text-decoration:none;
+}
+
+#sidebar #aviailability_form .sb_menu {
+	height:25px;
+	margin-bottom:12px;
+}
+
+#sidebar #aviailability_form .sb_menu li {
+	display:block;
+	float:left;
+	height:21px;
+	padding-top:3px;
+}
+
+#sidebar #aviailability_form .sb_menu li.first {
+	width:112px;
+}
+
+#sidebar #aviailability_form .sb_menu li.last {
+	width:55px;
+	border-left:1px solid #b28e4e;
+	text-align:right;
+}
+
+#sidebar .sb_half {width:76px;}
+#sidebar .form-item .last {width:76px; margin-left:14px;}
+#sidebar .form-item .alone {width:76px; margin-left:93px;}
+
+#sidebar .l_min {
+  padding-top: 0;
+  line-height: 12px;
+	font-size:10px;
+  margin-top:-2px;
+	color:#b28e4e;
+}
+
+#sidebar .form-submit {	text-align:center;}
+
+#sidebar .form-submit input{
+	width:172px;
+	height:29px;
+	color:#7e5d0b;
+	overflow:hidden;
+	border:none;
+	text-shadow:0 1px 1px #fff;
+	text-transform:uppercase;
+	cursor:pointer;
+	float:none;
+	background:url(../img/button_check-availability.png) top left no-repeat;
+}
+
+#sidebar .form-submit input:hover {
+	background-position:0 -29px;
+}
+
+#sidebar .contacts {
+	font-size:11px;
+	line-height:16px;
+}
+
+#sidebar .calendar {
+	background:url(../img/input_calendar.png) center right no-repeat;
+}
+
+#sidebar .box {font-size:12px; 	line-height:19px; margin-bottom:15px; border-bottom:1px solid #e6dcc4; padding-bottom:10px;}
+#sidebar .box a {text-decoration:none;}
+#sidebar strong { margin-right:5px;}
+#sidebar .user {color:#df7c32; font-weight:bold;}
+#sidebar .total {display:block; text-transform:uppercase; font-size:15px; color:#555; margin-bottom:3px;}
+#sidebar .old {text-decoration:line-through; font-size:16px; color:#999;}
+#sidebar .new { font-weight:bold; font-size:20px; color:#222; margin-left:10px;}
+#sidebar .privacy { font-size:10px; line-height:12px; color:#555;}
+#sidebar .privacy p {margin-bottom:10px;}
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+	width: 910px;
+	margin:0 auto 0;
+	height: 65px;
+	color:#555;
+	font-size:10px;
+	padding-top:15px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+* html .clearfix { zoom: 1; } /* IE6 */
+*+html .clearfix { zoom: 1; } /* IE7 */
+
+.clear {
+    height: 0;
+    clear:both;
+}
+
+/*CANCEL
+------------------------------------------------------------------------------*/
+#login_form .form-item { margin-bottom:0;}
+
+
+/*MASK
+----------------------------------------*/
+#mask {
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:100;
+  display:none;
+}
+
+#popup {
+  display:none;
+	width:280px;
+	background:#fff;
+	border:1px solid #d5c4a0;
+	padding:50px 22px 22px 22px;
+	margin-bottom:30px;
+	position:absolute;
+	top:200px;
+	left:50%;
+	margin-left:-157px;
+	z-index:110;
+}
+
+#popup .form-item {	margin-bottom:12px;}
+
+#popup .form-item label {
+	display:block;
+	padding-top:2px;
+	color:#666;
+}
+
+.close_popup {
+	width:50px;
+	display:block;
+	position:absolute;
+	top:10px;
+	right:15px;
+	font-size:11px;
+}
+
+#popup .form-item input {
+	width:270px;
+	border:1px solid #b08a2f;
+	color:#333;
+	font-size:13px;
+	padding:3px 5px;
+}
+
+#popup .form-submit {text-align:center;}
+
+#popup .form-submit input{
+	width:155px;
+	height:29px;
+	color:#7e5d0b;
+	overflow:hidden;
+	border:none;
+	text-shadow:0 1px 1px #fff;
+	text-transform:uppercase;
+	cursor:pointer;
+	float:none;
+	background:url(../img/button_submit.png) top left no-repeat;
+}
+
+#popup .form-submit input:hover {
+	background-position:0 -29px;
+}
+
+#sidebar label.error {
+  width:auto;
+  color:#f00;
+  float:none;
+}
+#content label.error {
+  color:#f00;
+  display:none;
+}
+div.error {
+  font-size: 10px;
+  color:#f00;	
+}
+#content  #accountForm label.error {
+  font-size: 10px;
+}
+#content  #TAAccountForm label.error {
+  color:#f00;
+  font-size: 11px;
+  width: 100%;
+}
+
+select.error, input.error{ outline:1px solid #f00;}
+
+.loader-big {
+  padding: 40px;
+  background:url(../img/loading-loop.gif) center no-repeat;
+}
+
+.underline { border-bottom:1px solid #D5C4A0; margin-bottom: 20px; }
+#content .no-float { float:none !important; clear:both;}
+#content .input_wrapper {
+    float:left;
+    width:450px;
+    padding: 3px 0;
+    margin-bottom:18px ;
+}
+
+#content .input_wrapper input.w80 {padding:3px 5px !important;}
+
+#content .input_wrapper input { padding:0 !important; width: auto; height: auto;}
+
+#content .fh {height: 26px;}
+#content .fh .input_wrapper {padding: 0;}
+#content label.mr {margin-right: 10px;}
+#content table td {vertical-align: top;}
+
+#content .user-info .form-item { margin-bottom: 4px;}
+#content .user-info .form-item label { display: block;} 
+
+
+/*New Style
+--------------------------------------------------------------------------*/
+table td {vertical-align: top;}
+table.form_builder td {padding-bottom:10px;}
+form h4 {font-size: 15px; color:#666; font-weight: normal; margin-bottom: 20px;}
+table.form_builder select.w80 {padding: 2px 5px 2px 5px; width: 65px;}
+table.form_builder select.w85 {padding: 2px 5px 2px 5px; width: 85px;}
+table.form_builder input.w145 {padding: 3px 5px; width: 135px;}
+table.form_builder select.w145 {padding: 3px 5px 3px 5px; width: 147px;}
+table.form_builder input.w205 {padding: 3px 5px; width: 195px;}
+table.form_builder input.w_wide {padding: 3px 5px; width: 420px;}
+table.form_builder select.w205 {padding: 3px 5px 3px 5px; width: 205px;}
+table.form_builder textarea, .textarea {border:1px solid #b08a2f; padding: 5px;}
+td.td_80 { width: 80px;}
+td.td_100 { width: 100px;}
+td.td_150 { width: 150px;}
+td.td_180 { width: 180px;}
+td.td_200 { width: 200px;}
+td.td_205 {width: 205px;}
+td.td_210 { width: 210px;}
+td.td_220 { width: 220px;}
+td.td_250 {width: 250px;}
+td.td_320 {width: 320px;}
+td.td_95 label {display:block; padding: 4px 0 4px;}
+td.td_150 label {display:block; padding: 4px 0 4px;}
+td.td_180 label {display:block; padding: 4px 0 4px;}
+td.td_200 label {display:block; padding: 4px 0 4px;}
+td.td_210 label {display:block; padding: 4px 0 4px;}
+td.td_220 label {display:block; padding: 4px 0 4px;}
+table.form_builder td.td_slayed {padding: 0 0 20px 0px;}
+.am, .pm {line-height:26px;}
+
+/*inputs
+-------------*/
+input.w85, select.w85, input.w145, select.w145, input.w75, select.w75, input.w205, select.w205, input.w80, select.w80, input.w_wide
+ {
+	border:1px solid #b08a2f;
+}
+input.checkbox {margin-right: 5px; position: relative; top:-2px; z-index: 10;}
+input.radio {margin-right: 5px; position: relative; top:-2px; z-index: 10;}
+.mr10 { margin-right:10px;} 
+.ml10 { margin-left:10px;}
+.pr20 { padding-right: 20px;}
+.none {padding: 0 !important; display: inline !important;}
+.lh { position:relative; top:3px;}
+/*Other
+------------*/
+.form-item-how div{ margin-bottom: 4px;}
+.form-item-how textarea { margin: 5px 0; width: 290px;}
+.reg_list {margin-top: 25px;}
+.reg_list li {list-style: none; margin-bottom: 10px; color:#666; font-size: 13px;}
+textarea#cancellationNote { width: 280px padding:5px; border:1px solid #b08a2f;}
+#vacation_form textarea { width: 100%; padding:10px 0; margin: 15px 0;}

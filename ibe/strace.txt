@@ -1,0 +1,846 @@
+execve("/bin/php", ["php", "info.php"], [/* 19 vars */]) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libcrypt.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libedit.so.0", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libncurses.so.5", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libtinfo.so.5", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libgmp.so.10", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libbz2.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libpcre.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libnsl.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libxml2.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libgssapi_krb5.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libkrb5.so.3", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libk5crypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libcom_err.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libssl.so.10", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libcrypto.so.10", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libfreebl3.so", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libkrb5support.so.0", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libkeyutils.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8cfad0) = -1 ENOENT (No such file or directory)
+statfs("/sys/fs/selinux", 0x7ffe7b8cfd30) = -1 ENOENT (No such file or directory)
+statfs("/selinux", 0x7ffe7b8cfd30)      = -1 ENOENT (No such file or directory)
+open("/proc/filesystems", O_RDONLY)     = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8cfc10) = -1 ENOENT (No such file or directory)
+access("/etc/selinux/config", F_OK)     = -1 ENOENT (No such file or directory)
+access("/etc/system-fips", F_OK)        = -1 ENOENT (No such file or directory)
+getcwd("/var/www/vhosts/fromps.com/httpdocs/ibe", 4096) = 40
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+lstat("/usr/local/sbin/php", 0x7ffe7b8cc7a0) = -1 ENOENT (No such file or directory)
+lstat("/bin/php", {st_mode=S_IFREG|0755, st_size=4618048, ...}) = 0
+lstat("/bin", {st_mode=S_IFLNK|0777, st_size=7, ...}) = 0
+readlink("/bin", "usr/bin", 4096)       = 7
+lstat("/usr/bin", {st_mode=S_IFDIR|0555, st_size=20480, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+access("/usr/bin/php", X_OK)            = 0
+open("/usr/bin/php-cli.ini", O_RDONLY)  = -1 ENOENT (No such file or directory)
+open("/etc/php-cli.ini", O_RDONLY)      = -1 ENOENT (No such file or directory)
+open("/usr/bin/php.ini", O_RDONLY)      = -1 ENOENT (No such file or directory)
+open("/etc/php.ini", O_RDONLY)          = 3
+openat(AT_FDCWD, "/etc/php.d", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+stat("/etc/php.d/00-ioncube-loader.ini", {st_mode=S_IFREG|0644, st_size=129, ...}) = 0
+open("/etc/php.d/00-ioncube-loader.ini", O_RDONLY) = 3
+stat("/etc/php.d/curl.ini", {st_mode=S_IFREG|0644, st_size=49, ...}) = 0
+open("/etc/php.d/curl.ini", O_RDONLY)   = 3
+stat("/etc/php.d/dom.ini", {st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+open("/etc/php.d/dom.ini", O_RDONLY)    = 3
+stat("/etc/php.d/fileinfo.ini", {st_mode=S_IFREG|0644, st_size=57, ...}) = 0
+open("/etc/php.d/fileinfo.ini", O_RDONLY) = 3
+stat("/etc/php.d/gd.ini", {st_mode=S_IFREG|0644, st_size=45, ...}) = 0
+open("/etc/php.d/gd.ini", O_RDONLY)     = 3
+stat("/etc/php.d/imap.ini", {st_mode=S_IFREG|0644, st_size=49, ...}) = 0
+open("/etc/php.d/imap.ini", O_RDONLY)   = 3
+stat("/etc/php.d/json.ini", {st_mode=S_IFREG|0644, st_size=49, ...}) = 0
+open("/etc/php.d/json.ini", O_RDONLY)   = 3
+stat("/etc/php.d/mbstring.ini", {st_mode=S_IFREG|0644, st_size=57, ...}) = 0
+open("/etc/php.d/mbstring.ini", O_RDONLY) = 3
+stat("/etc/php.d/mysql.ini", {st_mode=S_IFREG|0644, st_size=51, ...}) = 0
+open("/etc/php.d/mysql.ini", O_RDONLY)  = 3
+stat("/etc/php.d/mysqli.ini", {st_mode=S_IFREG|0644, st_size=53, ...}) = 0
+open("/etc/php.d/mysqli.ini", O_RDONLY) = 3
+stat("/etc/php.d/pdo.ini", {st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+open("/etc/php.d/pdo.ini", O_RDONLY)    = 3
+stat("/etc/php.d/pdo_mysql.ini", {st_mode=S_IFREG|0644, st_size=59, ...}) = 0
+open("/etc/php.d/pdo_mysql.ini", O_RDONLY) = 3
+stat("/etc/php.d/pdo_sqlite.ini", {st_mode=S_IFREG|0644, st_size=61, ...}) = 0
+open("/etc/php.d/pdo_sqlite.ini", O_RDONLY) = 3
+stat("/etc/php.d/phar.ini", {st_mode=S_IFREG|0644, st_size=49, ...}) = 0
+open("/etc/php.d/phar.ini", O_RDONLY)   = 3
+stat("/etc/php.d/sqlite3.ini", {st_mode=S_IFREG|0644, st_size=55, ...}) = 0
+open("/etc/php.d/sqlite3.ini", O_RDONLY) = 3
+stat("/etc/php.d/wddx.ini", {st_mode=S_IFREG|0644, st_size=49, ...}) = 0
+open("/etc/php.d/wddx.ini", O_RDONLY)   = 3
+stat("/etc/php.d/xmlreader.ini", {st_mode=S_IFREG|0644, st_size=59, ...}) = 0
+open("/etc/php.d/xmlreader.ini", O_RDONLY) = 3
+stat("/etc/php.d/xmlwriter.ini", {st_mode=S_IFREG|0644, st_size=59, ...}) = 0
+open("/etc/php.d/xmlwriter.ini", O_RDONLY) = 3
+stat("/etc/php.d/xsl.ini", {st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+open("/etc/php.d/xsl.ini", O_RDONLY)    = 3
+stat("/etc/php.d/zend_extensions_psa.ini", {st_mode=S_IFREG|0644, st_size=175, ...}) = 0
+open("/etc/php.d/zend_extensions_psa.ini", O_RDONLY) = 3
+stat("/etc/php.d/zip.ini", {st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+open("/etc/php.d/zip.ini", O_RDONLY)    = 3
+open("/usr/lib64/php/modules/ioncube_loader_lin_5.4.so", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce2a0) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/php/modules/curl.so", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libcurl.so.4", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libidn.so.11", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libssh2.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libssl3.so", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libsmime3.so", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libnss3.so", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libnssutil3.so", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libplds4.so", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libplc4.so", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libnspr4.so", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/liblber-2.4.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libldap-2.4.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libsasl2.so.3", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce230) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce230) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce230) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce230) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce230) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce230) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce230) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce230) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/php/modules/dom.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/fileinfo.so", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce2a0) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/php/modules/gd.so", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libt1.so.5", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libfreetype.so.6", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libX11.so.6", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libXpm.so.4", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libpng15.so.15", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libjpeg.so.62", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libxcb.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libXau.so.6", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce260) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce260) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce260) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/php/modules/imap.so", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libc-client.so.2007", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libpam.so.0", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libaudit.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libcap-ng.so.0", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce280) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce280) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce280) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/php/modules/json.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/mbstring.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/mysql.so", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/mysql/libmysqlclient.so.18", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce290) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/php/modules/mysqli.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/pdo.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/pdo_mysql.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/pdo_sqlite.so", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libsqlite3.so.0", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/phar.so", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce2a0) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/php/modules/sqlite3.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/wddx.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/xmlreader.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/xmlwriter.so", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib64/php/modules/xsl.so", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libexslt.so.0", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libxslt.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libgcrypt.so.11", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+access("/etc/system-fips", F_OK)        = -1 ENOENT (No such file or directory)
+open("/usr/lib64/php/modules/zip.so", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libzip.so.2", O_RDONLY|O_CLOEXEC) = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8ce290) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/gconv/gconv-modules.cache", O_RDONLY) = 3
+stat("//.terminfo", 0x7f109b2c2c10)     = -1 ENOENT (No such file or directory)
+stat("/etc/terminfo", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/terminfo", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+access("/etc/terminfo/x/xterm-256color", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/share/terminfo/x/xterm-256color", R_OK) = 0
+open("/usr/share/terminfo/x/xterm-256color", O_RDONLY) = 3
+stat("/etc/cram-md5.pwd", 0x7ffe7b8ce7d0) = -1 ENOENT (No such file or directory)
+open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/host.conf", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib64/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/hosts", O_RDONLY|O_CLOEXEC)  = 3
+stat("/etc/krb5.conf", {st_mode=S_IFREG|0644, st_size=590, ...}) = 0
+open("/etc/krb5.conf", O_RDONLY)        = 3
+openat(AT_FDCWD, "/etc/krb5.conf.d/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+open("/dev/urandom", O_RDONLY)          = 3
+open("/dev/urandom", O_RDONLY)          = 3
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffe7b8cc110) = -1 ENOENT (No such file or directory)
+open("/etc/krb5.keytab", O_RDONLY)      = -1 ENOENT (No such file or directory)
+stat("/dev/urandom", {st_mode=S_IFCHR|0666, st_rdev=makedev(1, 9), ...}) = 0
+open("/etc/services", O_RDONLY|O_CLOEXEC) = 3
+open("info.php", O_RDONLY)              = 3
+getcwd("/var/www/vhosts/fromps.com/httpdocs/ibe", 4096) = 40
+lstat("/var/www/vhosts/fromps.com/httpdocs/ibe/info.php", {st_mode=S_IFREG|0644, st_size=33, ...}) = 0
+lstat("/var/www/vhosts/fromps.com/httpdocs/ibe", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/var/www/vhosts/fromps.com/httpdocs", {st_mode=S_IFDIR|0750, st_size=4096, ...}) = 0
+lstat("/var/www/vhosts/fromps.com", {st_mode=S_IFDIR|0710, st_size=4096, ...}) = 0
+lstat("/var/www/vhosts", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getcwd("/var/www/vhosts/fromps.com/httpdocs/ibe", 4096) = 40
+open("/dev/urandom", O_RDONLY)          = 3
+open("/tmp/sess_2ekshun26d2l63qtdmnemb5i37", O_RDWR|O_CREAT, 0600) = 3
+openat(AT_FDCWD, "/usr/share/zoneinfo/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo//Zulu", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//WET", {st_mode=S_IFREG|0644, st_size=1873, ...}) = 0
+stat("/usr/share/zoneinfo//W-SU", {st_mode=S_IFREG|0644, st_size=1518, ...}) = 0
+stat("/usr/share/zoneinfo//Universal", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//UTC", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//US", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//UCT", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//Turkey", {st_mode=S_IFREG|0644, st_size=2126, ...}) = 0
+stat("/usr/share/zoneinfo//Singapore", {st_mode=S_IFREG|0644, st_size=402, ...}) = 0
+stat("/usr/share/zoneinfo//ROK", {st_mode=S_IFREG|0644, st_size=557, ...}) = 0
+stat("/usr/share/zoneinfo//ROC", {st_mode=S_IFREG|0644, st_size=774, ...}) = 0
+stat("/usr/share/zoneinfo//Portugal", {st_mode=S_IFREG|0644, st_size=3439, ...}) = 0
+stat("/usr/share/zoneinfo//Poland", {st_mode=S_IFREG|0644, st_size=2679, ...}) = 0
+stat("/usr/share/zoneinfo//Pacific", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//PST8PDT", {st_mode=S_IFREG|0644, st_size=2294, ...}) = 0
+stat("/usr/share/zoneinfo//PRC", {st_mode=S_IFREG|0644, st_size=388, ...}) = 0
+stat("/usr/share/zoneinfo//Navajo", {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+stat("/usr/share/zoneinfo//NZ-CHAT", {st_mode=S_IFREG|0644, st_size=2031, ...}) = 0
+stat("/usr/share/zoneinfo//NZ", {st_mode=S_IFREG|0644, st_size=2434, ...}) = 0
+stat("/usr/share/zoneinfo//Mexico", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//MST7MDT", {st_mode=S_IFREG|0644, st_size=2294, ...}) = 0
+stat("/usr/share/zoneinfo//MST", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//MET", {st_mode=S_IFREG|0644, st_size=2102, ...}) = 0
+stat("/usr/share/zoneinfo//Libya", {st_mode=S_IFREG|0644, st_size=641, ...}) = 0
+stat("/usr/share/zoneinfo//Kwajalein", {st_mode=S_IFREG|0644, st_size=211, ...}) = 0
+stat("/usr/share/zoneinfo//Japan", {st_mode=S_IFREG|0644, st_size=333, ...}) = 0
+stat("/usr/share/zoneinfo//Jamaica", {st_mode=S_IFREG|0644, st_size=481, ...}) = 0
+stat("/usr/share/zoneinfo//Israel", {st_mode=S_IFREG|0644, st_size=8981, ...}) = 0
+stat("/usr/share/zoneinfo//Iran", {st_mode=S_IFREG|0644, st_size=1664, ...}) = 0
+stat("/usr/share/zoneinfo//Indian", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Iceland", {st_mode=S_IFREG|0644, st_size=1176, ...}) = 0
+stat("/usr/share/zoneinfo//Hongkong", {st_mode=S_IFREG|0644, st_size=1175, ...}) = 0
+stat("/usr/share/zoneinfo//HST", {st_mode=S_IFREG|0644, st_size=119, ...}) = 0
+stat("/usr/share/zoneinfo//Greenwich", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//GMT0", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//GMT-0", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//GMT+0", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//GMT", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//GB-Eire", {st_mode=S_IFREG|0644, st_size=3661, ...}) = 0
+stat("/usr/share/zoneinfo//GB", {st_mode=S_IFREG|0644, st_size=3661, ...}) = 0
+stat("/usr/share/zoneinfo//Europe", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Etc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Eire", {st_mode=S_IFREG|0644, st_size=3533, ...}) = 0
+stat("/usr/share/zoneinfo//Egypt", {st_mode=S_IFREG|0644, st_size=1946, ...}) = 0
+stat("/usr/share/zoneinfo//EST5EDT", {st_mode=S_IFREG|0644, st_size=2294, ...}) = 0
+stat("/usr/share/zoneinfo//EST", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo//EET", {st_mode=S_IFREG|0644, st_size=1876, ...}) = 0
+stat("/usr/share/zoneinfo//Cuba", {st_mode=S_IFREG|0644, st_size=2411, ...}) = 0
+stat("/usr/share/zoneinfo//Chile", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Canada", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//CST6CDT", {st_mode=S_IFREG|0644, st_size=2294, ...}) = 0
+stat("/usr/share/zoneinfo//CET", {st_mode=S_IFREG|0644, st_size=2102, ...}) = 0
+stat("/usr/share/zoneinfo//Brazil", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Australia", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Atlantic", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Asia", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Arctic", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Antarctica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//America", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo//Africa", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Africa", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Africa/Windhoek", {st_mode=S_IFREG|0644, st_size=1556, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Tunis", {st_mode=S_IFREG|0644, st_size=684, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Tripoli", {st_mode=S_IFREG|0644, st_size=641, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Timbuktu", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Sao_Tome", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Porto-Novo", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Ouagadougou", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Nouakchott", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Niamey", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Ndjamena", {st_mode=S_IFREG|0644, st_size=211, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Nairobi", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Monrovia", {st_mode=S_IFREG|0644, st_size=215, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Mogadishu", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Mbabane", {st_mode=S_IFREG|0644, st_size=245, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Maseru", {st_mode=S_IFREG|0644, st_size=245, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Maputo", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Malabo", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Lusaka", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Lubumbashi", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Luanda", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Lome", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Libreville", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Lagos", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Kinshasa", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Kigali", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Khartoum", {st_mode=S_IFREG|0644, st_size=669, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Kampala", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Juba", {st_mode=S_IFREG|0644, st_size=669, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Johannesburg", {st_mode=S_IFREG|0644, st_size=245, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Harare", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Gaborone", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Freetown", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/El_Aaiun", {st_mode=S_IFREG|0644, st_size=1445, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Douala", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Djibouti", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Dar_es_Salaam", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Dakar", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Conakry", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Ceuta", {st_mode=S_IFREG|0644, st_size=2049, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Casablanca", {st_mode=S_IFREG|0644, st_size=1615, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Cairo", {st_mode=S_IFREG|0644, st_size=1946, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Bujumbura", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Brazzaville", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Blantyre", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Bissau", {st_mode=S_IFREG|0644, st_size=194, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Banjul", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Bangui", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Bamako", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Asmera", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Asmara", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Algiers", {st_mode=S_IFREG|0644, st_size=734, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Addis_Ababa", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Accra", {st_mode=S_IFREG|0644, st_size=826, ...}) = 0
+stat("/usr/share/zoneinfo/Africa/Abidjan", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/America", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+open("/proc/meminfo", O_RDONLY|O_CLOEXEC) = 5
+stat("/usr/share/zoneinfo/America/Yellowknife", {st_mode=S_IFREG|0644, st_size=1966, ...}) = 0
+stat("/usr/share/zoneinfo/America/Yakutat", {st_mode=S_IFREG|0644, st_size=2288, ...}) = 0
+stat("/usr/share/zoneinfo/America/Winnipeg", {st_mode=S_IFREG|0644, st_size=2865, ...}) = 0
+stat("/usr/share/zoneinfo/America/Whitehorse", {st_mode=S_IFREG|0644, st_size=2067, ...}) = 0
+stat("/usr/share/zoneinfo/America/Virgin", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Vancouver", {st_mode=S_IFREG|0644, st_size=2875, ...}) = 0
+stat("/usr/share/zoneinfo/America/Tortola", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Toronto", {st_mode=S_IFREG|0644, st_size=3477, ...}) = 0
+stat("/usr/share/zoneinfo/America/Tijuana", {st_mode=S_IFREG|0644, st_size=2342, ...}) = 0
+stat("/usr/share/zoneinfo/America/Thunder_Bay", {st_mode=S_IFREG|0644, st_size=2185, ...}) = 0
+stat("/usr/share/zoneinfo/America/Thule", {st_mode=S_IFREG|0644, st_size=1514, ...}) = 0
+stat("/usr/share/zoneinfo/America/Tegucigalpa", {st_mode=S_IFREG|0644, st_size=264, ...}) = 0
+stat("/usr/share/zoneinfo/America/Swift_Current", {st_mode=S_IFREG|0644, st_size=560, ...}) = 0
+stat("/usr/share/zoneinfo/America/St_Vincent", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/St_Thomas", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/St_Lucia", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/St_Kitts", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/St_Johns", {st_mode=S_IFREG|0644, st_size=3638, ...}) = 0
+stat("/usr/share/zoneinfo/America/St_Barthelemy", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Sitka", {st_mode=S_IFREG|0644, st_size=2324, ...}) = 0
+stat("/usr/share/zoneinfo/America/Shiprock", {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+stat("/usr/share/zoneinfo/America/Scoresbysund", {st_mode=S_IFREG|0644, st_size=1911, ...}) = 0
+stat("/usr/share/zoneinfo/America/Sao_Paulo", {st_mode=S_IFREG|0644, st_size=2001, ...}) = 0
+stat("/usr/share/zoneinfo/America/Santo_Domingo", {st_mode=S_IFREG|0644, st_size=463, ...}) = 0
+stat("/usr/share/zoneinfo/America/Santiago", {st_mode=S_IFREG|0644, st_size=9283, ...}) = 0
+stat("/usr/share/zoneinfo/America/Santarem", {st_mode=S_IFREG|0644, st_size=612, ...}) = 0
+stat("/usr/share/zoneinfo/America/Santa_Isabel", {st_mode=S_IFREG|0644, st_size=2342, ...}) = 0
+stat("/usr/share/zoneinfo/America/Rosario", {st_mode=S_IFREG|0644, st_size=1103, ...}) = 0
+stat("/usr/share/zoneinfo/America/Rio_Branco", {st_mode=S_IFREG|0644, st_size=642, ...}) = 0
+stat("/usr/share/zoneinfo/America/Resolute", {st_mode=S_IFREG|0644, st_size=1916, ...}) = 0
+stat("/usr/share/zoneinfo/America/Regina", {st_mode=S_IFREG|0644, st_size=980, ...}) = 0
+stat("/usr/share/zoneinfo/America/Recife", {st_mode=S_IFREG|0644, st_size=714, ...}) = 0
+stat("/usr/share/zoneinfo/America/Rankin_Inlet", {st_mode=S_IFREG|0644, st_size=1916, ...}) = 0
+stat("/usr/share/zoneinfo/America/Rainy_River", {st_mode=S_IFREG|0644, st_size=2105, ...}) = 0
+stat("/usr/share/zoneinfo/America/Puerto_Rico", {st_mode=S_IFREG|0644, st_size=229, ...}) = 0
+stat("/usr/share/zoneinfo/America/Porto_Velho", {st_mode=S_IFREG|0644, st_size=574, ...}) = 0
+stat("/usr/share/zoneinfo/America/Porto_Acre", {st_mode=S_IFREG|0644, st_size=642, ...}) = 0
+stat("/usr/share/zoneinfo/America/Port_of_Spain", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Port-au-Prince", {st_mode=S_IFREG|0644, st_size=823, ...}) = 0
+stat("/usr/share/zoneinfo/America/Phoenix", {st_mode=S_IFREG|0644, st_size=327, ...}) = 0
+stat("/usr/share/zoneinfo/America/Paramaribo", {st_mode=S_IFREG|0644, st_size=294, ...}) = 0
+stat("/usr/share/zoneinfo/America/Pangnirtung", {st_mode=S_IFREG|0644, st_size=2094, ...}) = 0
+stat("/usr/share/zoneinfo/America/Panama", {st_mode=S_IFREG|0644, st_size=177, ...}) = 0
+stat("/usr/share/zoneinfo/America/Ojinaga", {st_mode=S_IFREG|0644, st_size=1508, ...}) = 0
+stat("/usr/share/zoneinfo/America/North_Dakota", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo/America/Noronha", {st_mode=S_IFREG|0644, st_size=714, ...}) = 0
+stat("/usr/share/zoneinfo/America/Nome", {st_mode=S_IFREG|0644, st_size=2350, ...}) = 0
+stat("/usr/share/zoneinfo/America/Nipigon", {st_mode=S_IFREG|0644, st_size=2105, ...}) = 0
+stat("/usr/share/zoneinfo/America/New_York", {st_mode=S_IFREG|0644, st_size=3519, ...}) = 0
+stat("/usr/share/zoneinfo/America/Nassau", {st_mode=S_IFREG|0644, st_size=2270, ...}) = 0
+stat("/usr/share/zoneinfo/America/Montserrat", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Montreal", {st_mode=S_IFREG|0644, st_size=3477, ...}) = 0
+stat("/usr/share/zoneinfo/America/Montevideo", {st_mode=S_IFREG|0644, st_size=1485, ...}) = 0
+stat("/usr/share/zoneinfo/America/Monterrey", {st_mode=S_IFREG|0644, st_size=1402, ...}) = 0
+stat("/usr/share/zoneinfo/America/Moncton", {st_mode=S_IFREG|0644, st_size=3137, ...}) = 0
+stat("/usr/share/zoneinfo/America/Miquelon", {st_mode=S_IFREG|0644, st_size=1670, ...}) = 0
+stat("/usr/share/zoneinfo/America/Mexico_City", {st_mode=S_IFREG|0644, st_size=1604, ...}) = 0
+stat("/usr/share/zoneinfo/America/Metlakatla", {st_mode=S_IFREG|0644, st_size=1392, ...}) = 0
+stat("/usr/share/zoneinfo/America/Merida", {st_mode=S_IFREG|0644, st_size=1442, ...}) = 0
+stat("/usr/share/zoneinfo/America/Menominee", {st_mode=S_IFREG|0644, st_size=2257, ...}) = 0
+stat("/usr/share/zoneinfo/America/Mendoza", {st_mode=S_IFREG|0644, st_size=1147, ...}) = 0
+stat("/usr/share/zoneinfo/America/Mazatlan", {st_mode=S_IFREG|0644, st_size=1550, ...}) = 0
+stat("/usr/share/zoneinfo/America/Matamoros", {st_mode=S_IFREG|0644, st_size=1402, ...}) = 0
+stat("/usr/share/zoneinfo/America/Martinique", {st_mode=S_IFREG|0644, st_size=231, ...}) = 0
+stat("/usr/share/zoneinfo/America/Marigot", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Manaus", {st_mode=S_IFREG|0644, st_size=602, ...}) = 0
+stat("/usr/share/zoneinfo/America/Managua", {st_mode=S_IFREG|0644, st_size=437, ...}) = 0
+stat("/usr/share/zoneinfo/America/Maceio", {st_mode=S_IFREG|0644, st_size=742, ...}) = 0
+stat("/usr/share/zoneinfo/America/Lower_Princes", {st_mode=S_IFREG|0644, st_size=194, ...}) = 0
+stat("/usr/share/zoneinfo/America/Louisville", {st_mode=S_IFREG|0644, st_size=2755, ...}) = 0
+stat("/usr/share/zoneinfo/America/Los_Angeles", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+stat("/usr/share/zoneinfo/America/Lima", {st_mode=S_IFREG|0644, st_size=395, ...}) = 0
+stat("/usr/share/zoneinfo/America/La_Paz", {st_mode=S_IFREG|0644, st_size=217, ...}) = 0
+stat("/usr/share/zoneinfo/America/Kralendijk", {st_mode=S_IFREG|0644, st_size=194, ...}) = 0
+stat("/usr/share/zoneinfo/America/Knox_IN", {st_mode=S_IFREG|0644, st_size=2411, ...}) = 0
+stat("/usr/share/zoneinfo/America/Kentucky", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo/America/Juneau", {st_mode=S_IFREG|0644, st_size=2336, ...}) = 0
+stat("/usr/share/zoneinfo/America/Jujuy", {st_mode=S_IFREG|0644, st_size=1119, ...}) = 0
+stat("/usr/share/zoneinfo/America/Jamaica", {st_mode=S_IFREG|0644, st_size=481, ...}) = 0
+stat("/usr/share/zoneinfo/America/Iqaluit", {st_mode=S_IFREG|0644, st_size=2032, ...}) = 0
+stat("/usr/share/zoneinfo/America/Inuvik", {st_mode=S_IFREG|0644, st_size=1914, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indianapolis", {st_mode=S_IFREG|0644, st_size=1649, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indiana", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo/America/Hermosillo", {st_mode=S_IFREG|0644, st_size=440, ...}) = 0
+stat("/usr/share/zoneinfo/America/Havana", {st_mode=S_IFREG|0644, st_size=2411, ...}) = 0
+stat("/usr/share/zoneinfo/America/Halifax", {st_mode=S_IFREG|0644, st_size=3424, ...}) = 0
+stat("/usr/share/zoneinfo/America/Guyana", {st_mode=S_IFREG|0644, st_size=256, ...}) = 0
+stat("/usr/share/zoneinfo/America/Guayaquil", {st_mode=S_IFREG|0644, st_size=177, ...}) = 0
+stat("/usr/share/zoneinfo/America/Guatemala", {st_mode=S_IFREG|0644, st_size=292, ...}) = 0
+stat("/usr/share/zoneinfo/America/Guadeloupe", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Grenada", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Grand_Turk", {st_mode=S_IFREG|0644, st_size=1261, ...}) = 0
+stat("/usr/share/zoneinfo/America/Goose_Bay", {st_mode=S_IFREG|0644, st_size=3193, ...}) = 0
+stat("/usr/share/zoneinfo/America/Godthab", {st_mode=S_IFREG|0644, st_size=8296, ...}) = 0
+stat("/usr/share/zoneinfo/America/Glace_Bay", {st_mode=S_IFREG|0644, st_size=2192, ...}) = 0
+stat("/usr/share/zoneinfo/America/Fortaleza", {st_mode=S_IFREG|0644, st_size=714, ...}) = 0
+stat("/usr/share/zoneinfo/America/Fort_Wayne", {st_mode=S_IFREG|0644, st_size=1649, ...}) = 0
+stat("/usr/share/zoneinfo/America/Fort_Nelson", {st_mode=S_IFREG|0644, st_size=2223, ...}) = 0
+stat("/usr/share/zoneinfo/America/Ensenada", {st_mode=S_IFREG|0644, st_size=2342, ...}) = 0
+stat("/usr/share/zoneinfo/America/El_Salvador", {st_mode=S_IFREG|0644, st_size=236, ...}) = 0
+stat("/usr/share/zoneinfo/America/Eirunepe", {st_mode=S_IFREG|0644, st_size=670, ...}) = 0
+stat("/usr/share/zoneinfo/America/Edmonton", {st_mode=S_IFREG|0644, st_size=2388, ...}) = 0
+stat("/usr/share/zoneinfo/America/Dominica", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Detroit", {st_mode=S_IFREG|0644, st_size=2202, ...}) = 0
+stat("/usr/share/zoneinfo/America/Denver", {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+stat("/usr/share/zoneinfo/America/Dawson_Creek", {st_mode=S_IFREG|0644, st_size=1033, ...}) = 0
+stat("/usr/share/zoneinfo/America/Dawson", {st_mode=S_IFREG|0644, st_size=2067, ...}) = 0
+stat("/usr/share/zoneinfo/America/Danmarkshavn", {st_mode=S_IFREG|0644, st_size=700, ...}) = 0
+stat("/usr/share/zoneinfo/America/Curacao", {st_mode=S_IFREG|0644, st_size=194, ...}) = 0
+stat("/usr/share/zoneinfo/America/Cuiaba", {st_mode=S_IFREG|0644, st_size=1973, ...}) = 0
+stat("/usr/share/zoneinfo/America/Creston", {st_mode=S_IFREG|0644, st_size=207, ...}) = 0
+stat("/usr/share/zoneinfo/America/Costa_Rica", {st_mode=S_IFREG|0644, st_size=315, ...}) = 0
+stat("/usr/share/zoneinfo/America/Cordoba", {st_mode=S_IFREG|0644, st_size=1103, ...}) = 0
+stat("/usr/share/zoneinfo/America/Coral_Harbour", {st_mode=S_IFREG|0644, st_size=319, ...}) = 0
+stat("/usr/share/zoneinfo/America/Chihuahua", {st_mode=S_IFREG|0644, st_size=1508, ...}) = 0
+stat("/usr/share/zoneinfo/America/Chicago", {st_mode=S_IFREG|0644, st_size=3559, ...}) = 0
+stat("/usr/share/zoneinfo/America/Cayman", {st_mode=S_IFREG|0644, st_size=177, ...}) = 0
+stat("/usr/share/zoneinfo/America/Cayenne", {st_mode=S_IFREG|0644, st_size=186, ...}) = 0
+stat("/usr/share/zoneinfo/America/Catamarca", {st_mode=S_IFREG|0644, st_size=1103, ...}) = 0
+stat("/usr/share/zoneinfo/America/Caracas", {st_mode=S_IFREG|0644, st_size=235, ...}) = 0
+stat("/usr/share/zoneinfo/America/Cancun", {st_mode=S_IFREG|0644, st_size=802, ...}) = 0
+stat("/usr/share/zoneinfo/America/Campo_Grande", {st_mode=S_IFREG|0644, st_size=2001, ...}) = 0
+stat("/usr/share/zoneinfo/America/Cambridge_Bay", {st_mode=S_IFREG|0644, st_size=2084, ...}) = 0
+stat("/usr/share/zoneinfo/America/Buenos_Aires", {st_mode=S_IFREG|0644, st_size=1061, ...}) = 0
+stat("/usr/share/zoneinfo/America/Boise", {st_mode=S_IFREG|0644, st_size=2377, ...}) = 0
+stat("/usr/share/zoneinfo/America/Bogota", {st_mode=S_IFREG|0644, st_size=231, ...}) = 0
+stat("/usr/share/zoneinfo/America/Boa_Vista", {st_mode=S_IFREG|0644, st_size=630, ...}) = 0
+stat("/usr/share/zoneinfo/America/Blanc-Sablon", {st_mode=S_IFREG|0644, st_size=281, ...}) = 0
+stat("/usr/share/zoneinfo/America/Belize", {st_mode=S_IFREG|0644, st_size=962, ...}) = 0
+stat("/usr/share/zoneinfo/America/Belem", {st_mode=S_IFREG|0644, st_size=574, ...}) = 0
+stat("/usr/share/zoneinfo/America/Barbados", {st_mode=S_IFREG|0644, st_size=330, ...}) = 0
+stat("/usr/share/zoneinfo/America/Bahia_Banderas", {st_mode=S_IFREG|0644, st_size=1574, ...}) = 0
+stat("/usr/share/zoneinfo/America/Bahia", {st_mode=S_IFREG|0644, st_size=1022, ...}) = 0
+stat("/usr/share/zoneinfo/America/Atka", {st_mode=S_IFREG|0644, st_size=2339, ...}) = 0
+stat("/usr/share/zoneinfo/America/Atikokan", {st_mode=S_IFREG|0644, st_size=319, ...}) = 0
+stat("/usr/share/zoneinfo/America/Asuncion", {st_mode=S_IFREG|0644, st_size=2036, ...}) = 0
+stat("/usr/share/zoneinfo/America/Aruba", {st_mode=S_IFREG|0644, st_size=194, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/share/zoneinfo/America/Araguaina", {st_mode=S_IFREG|0644, st_size=882, ...}) = 0
+stat("/usr/share/zoneinfo/America/Antigua", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Anguilla", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/America/Anchorage", {st_mode=S_IFREG|0644, st_size=2358, ...}) = 0
+stat("/usr/share/zoneinfo/America/Adak", {st_mode=S_IFREG|0644, st_size=2339, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/America/Argentina", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/America/Argentina/Ushuaia", {st_mode=S_IFREG|0644, st_size=1103, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/Tucuman", {st_mode=S_IFREG|0644, st_size=1131, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/San_Luis", {st_mode=S_IFREG|0644, st_size=1145, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/San_Juan", {st_mode=S_IFREG|0644, st_size=1117, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/Salta", {st_mode=S_IFREG|0644, st_size=1075, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/Rio_Gallegos", {st_mode=S_IFREG|0644, st_size=1103, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/Mendoza", {st_mode=S_IFREG|0644, st_size=1147, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/La_Rioja", {st_mode=S_IFREG|0644, st_size=1117, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/Jujuy", {st_mode=S_IFREG|0644, st_size=1119, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/Cordoba", {st_mode=S_IFREG|0644, st_size=1103, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/ComodRivadavia", {st_mode=S_IFREG|0644, st_size=1103, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/Catamarca", {st_mode=S_IFREG|0644, st_size=1103, ...}) = 0
+stat("/usr/share/zoneinfo/America/Argentina/Buenos_Aires", {st_mode=S_IFREG|0644, st_size=1061, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/America/Indiana", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/America/Indiana/Winamac", {st_mode=S_IFREG|0644, st_size=1761, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indiana/Vincennes", {st_mode=S_IFREG|0644, st_size=1677, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indiana/Vevay", {st_mode=S_IFREG|0644, st_size=1397, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indiana/Tell_City", {st_mode=S_IFREG|0644, st_size=1709, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indiana/Petersburg", {st_mode=S_IFREG|0644, st_size=1887, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indiana/Marengo", {st_mode=S_IFREG|0644, st_size=1705, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indiana/Knox", {st_mode=S_IFREG|0644, st_size=2411, ...}) = 0
+stat("/usr/share/zoneinfo/America/Indiana/Indianapolis", {st_mode=S_IFREG|0644, st_size=1649, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/America/Kentucky", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/America/Kentucky/Monticello", {st_mode=S_IFREG|0644, st_size=2335, ...}) = 0
+stat("/usr/share/zoneinfo/America/Kentucky/Louisville", {st_mode=S_IFREG|0644, st_size=2755, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/America/North_Dakota", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/America/North_Dakota/New_Salem", {st_mode=S_IFREG|0644, st_size=2363, ...}) = 0
+stat("/usr/share/zoneinfo/America/North_Dakota/Center", {st_mode=S_IFREG|0644, st_size=2363, ...}) = 0
+stat("/usr/share/zoneinfo/America/North_Dakota/Beulah", {st_mode=S_IFREG|0644, st_size=2363, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Antarctica", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Antarctica/Vostok", {st_mode=S_IFREG|0644, st_size=159, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/Troll", {st_mode=S_IFREG|0644, st_size=1148, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/Syowa", {st_mode=S_IFREG|0644, st_size=159, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/South_Pole", {st_mode=S_IFREG|0644, st_size=2434, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/Rothera", {st_mode=S_IFREG|0644, st_size=158, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/Palmer", {st_mode=S_IFREG|0644, st_size=8806, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/McMurdo", {st_mode=S_IFREG|0644, st_size=2434, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/Mawson", {st_mode=S_IFREG|0644, st_size=197, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/Macquarie", {st_mode=S_IFREG|0644, st_size=1508, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/DumontDUrville", {st_mode=S_IFREG|0644, st_size=188, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/Davis", {st_mode=S_IFREG|0644, st_size=283, ...}) = 0
+stat("/usr/share/zoneinfo/Antarctica/Casey", {st_mode=S_IFREG|0644, st_size=286, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Arctic", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Arctic/Longyearbyen", {st_mode=S_IFREG|0644, st_size=2225, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Asia", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Asia/Yerevan", {st_mode=S_IFREG|0644, st_size=1171, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Yekaterinburg", {st_mode=S_IFREG|0644, st_size=1253, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Yangon", {st_mode=S_IFREG|0644, st_size=259, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Yakutsk", {st_mode=S_IFREG|0644, st_size=1215, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Vladivostok", {st_mode=S_IFREG|0644, st_size=1216, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Vientiane", {st_mode=S_IFREG|0644, st_size=178, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Ust-Nera", {st_mode=S_IFREG|0644, st_size=1262, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Urumqi", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Ulan_Bator", {st_mode=S_IFREG|0644, st_size=1499, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Ulaanbaatar", {st_mode=S_IFREG|0644, st_size=1499, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Ujung_Pandang", {st_mode=S_IFREG|0644, st_size=266, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Tomsk", {st_mode=S_IFREG|0644, st_size=1227, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Tokyo", {st_mode=S_IFREG|0644, st_size=333, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Thimphu", {st_mode=S_IFREG|0644, st_size=195, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Thimbu", {st_mode=S_IFREG|0644, st_size=195, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Tel_Aviv", {st_mode=S_IFREG|0644, st_size=8981, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Tehran", {st_mode=S_IFREG|0644, st_size=1664, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Tbilisi", {st_mode=S_IFREG|0644, st_size=1040, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Tashkent", {st_mode=S_IFREG|0644, st_size=607, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Taipei", {st_mode=S_IFREG|0644, st_size=774, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Srednekolymsk", {st_mode=S_IFREG|0644, st_size=1216, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Singapore", {st_mode=S_IFREG|0644, st_size=402, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Shanghai", {st_mode=S_IFREG|0644, st_size=388, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Seoul", {st_mode=S_IFREG|0644, st_size=557, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Samarkand", {st_mode=S_IFREG|0644, st_size=591, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Sakhalin", {st_mode=S_IFREG|0644, st_size=1206, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Saigon", {st_mode=S_IFREG|0644, st_size=359, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Riyadh", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Rangoon", {st_mode=S_IFREG|0644, st_size=259, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Qyzylorda", {st_mode=S_IFREG|0644, st_size=1019, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Qatar", {st_mode=S_IFREG|0644, st_size=195, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Pyongyang", {st_mode=S_IFREG|0644, st_size=298, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Pontianak", {st_mode=S_IFREG|0644, st_size=361, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Phnom_Penh", {st_mode=S_IFREG|0644, st_size=178, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Oral", {st_mode=S_IFREG|0644, st_size=1003, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Omsk", {st_mode=S_IFREG|0644, st_size=1215, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Novosibirsk", {st_mode=S_IFREG|0644, st_size=1227, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Novokuznetsk", {st_mode=S_IFREG|0644, st_size=1169, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Nicosia", {st_mode=S_IFREG|0644, st_size=2002, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Muscat", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Manila", {st_mode=S_IFREG|0644, st_size=335, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Makassar", {st_mode=S_IFREG|0644, st_size=266, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Magadan", {st_mode=S_IFREG|0644, st_size=1230, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Macau", {st_mode=S_IFREG|0644, st_size=781, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Macao", {st_mode=S_IFREG|0644, st_size=781, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Kuwait", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Kuching", {st_mode=S_IFREG|0644, st_size=505, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Kuala_Lumpur", {st_mode=S_IFREG|0644, st_size=372, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Krasnoyarsk", {st_mode=S_IFREG|0644, st_size=1215, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Kolkata", {st_mode=S_IFREG|0644, st_size=265, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Khandyga", {st_mode=S_IFREG|0644, st_size=1283, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Katmandu", {st_mode=S_IFREG|0644, st_size=198, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Kathmandu", {st_mode=S_IFREG|0644, st_size=198, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Kashgar", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Karachi", {st_mode=S_IFREG|0644, st_size=389, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Kamchatka", {st_mode=S_IFREG|0644, st_size=1170, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Kabul", {st_mode=S_IFREG|0644, st_size=173, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Jerusalem", {st_mode=S_IFREG|0644, st_size=8981, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Jayapura", {st_mode=S_IFREG|0644, st_size=227, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Jakarta", {st_mode=S_IFREG|0644, st_size=344, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Istanbul", {st_mode=S_IFREG|0644, st_size=2126, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Irkutsk", {st_mode=S_IFREG|0644, st_size=1236, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Hovd", {st_mode=S_IFREG|0644, st_size=1499, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Hong_Kong", {st_mode=S_IFREG|0644, st_size=1175, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Ho_Chi_Minh", {st_mode=S_IFREG|0644, st_size=359, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Hebron", {st_mode=S_IFREG|0644, st_size=2297, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Harbin", {st_mode=S_IFREG|0644, st_size=388, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Gaza", {st_mode=S_IFREG|0644, st_size=2269, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Famagusta", {st_mode=S_IFREG|0644, st_size=1417, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Dushanbe", {st_mode=S_IFREG|0644, st_size=593, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Dubai", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Dili", {st_mode=S_IFREG|0644, st_size=295, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Dhaka", {st_mode=S_IFREG|0644, st_size=364, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Damascus", {st_mode=S_IFREG|0644, st_size=2306, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Dacca", {st_mode=S_IFREG|0644, st_size=364, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Colombo", {st_mode=S_IFREG|0644, st_size=373, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Chungking", {st_mode=S_IFREG|0644, st_size=388, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Chongqing", {st_mode=S_IFREG|0644, st_size=388, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Choibalsan", {st_mode=S_IFREG|0644, st_size=1571, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Chita", {st_mode=S_IFREG|0644, st_size=1229, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Calcutta", {st_mode=S_IFREG|0644, st_size=265, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Brunei", {st_mode=S_IFREG|0644, st_size=187, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Bishkek", {st_mode=S_IFREG|0644, st_size=1017, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Beirut", {st_mode=S_IFREG|0644, st_size=2149, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Barnaul", {st_mode=S_IFREG|0644, st_size=1227, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Bangkok", {st_mode=S_IFREG|0644, st_size=178, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Baku", {st_mode=S_IFREG|0644, st_size=1241, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Bahrain", {st_mode=S_IFREG|0644, st_size=195, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Baghdad", {st_mode=S_IFREG|0644, st_size=962, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Atyrau", {st_mode=S_IFREG|0644, st_size=989, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Ashkhabad", {st_mode=S_IFREG|0644, st_size=623, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Ashgabat", {st_mode=S_IFREG|0644, st_size=623, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Aqtobe", {st_mode=S_IFREG|0644, st_size=1019, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Aqtau", {st_mode=S_IFREG|0644, st_size=989, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Anadyr", {st_mode=S_IFREG|0644, st_size=1194, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Amman", {st_mode=S_IFREG|0644, st_size=8620, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Almaty", {st_mode=S_IFREG|0644, st_size=1003, ...}) = 0
+stat("/usr/share/zoneinfo/Asia/Aden", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Atlantic", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Atlantic/Stanley", {st_mode=S_IFREG|0644, st_size=1220, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/St_Helena", {st_mode=S_IFREG|0644, st_size=156, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/South_Georgia", {st_mode=S_IFREG|0644, st_size=139, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Reykjavik", {st_mode=S_IFREG|0644, st_size=1176, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Madeira", {st_mode=S_IFREG|0644, st_size=3452, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Jan_Mayen", {st_mode=S_IFREG|0644, st_size=2225, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Faroe", {st_mode=S_IFREG|0644, st_size=1815, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Faeroe", {st_mode=S_IFREG|0644, st_size=1815, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Cape_Verde", {st_mode=S_IFREG|0644, st_size=240, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Canary", {st_mode=S_IFREG|0644, st_size=1899, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Bermuda", {st_mode=S_IFREG|0644, st_size=1990, ...}) = 0
+stat("/usr/share/zoneinfo/Atlantic/Azores", {st_mode=S_IFREG|0644, st_size=3462, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Australia", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Australia/Yancowinna", {st_mode=S_IFREG|0644, st_size=2252, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/West", {st_mode=S_IFREG|0644, st_size=453, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Victoria", {st_mode=S_IFREG|0644, st_size=2197, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Tasmania", {st_mode=S_IFREG|0644, st_size=2309, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Sydney", {st_mode=S_IFREG|0644, st_size=2197, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/South", {st_mode=S_IFREG|0644, st_size=2216, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Queensland", {st_mode=S_IFREG|0644, st_size=426, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Perth", {st_mode=S_IFREG|0644, st_size=453, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/North", {st_mode=S_IFREG|0644, st_size=301, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/NSW", {st_mode=S_IFREG|0644, st_size=2197, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Melbourne", {st_mode=S_IFREG|0644, st_size=2197, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Lord_Howe", {st_mode=S_IFREG|0644, st_size=1833, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Lindeman", {st_mode=S_IFREG|0644, st_size=496, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/LHI", {st_mode=S_IFREG|0644, st_size=1833, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Hobart", {st_mode=S_IFREG|0644, st_size=2309, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Eucla", {st_mode=S_IFREG|0644, st_size=461, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Darwin", {st_mode=S_IFREG|0644, st_size=301, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Currie", {st_mode=S_IFREG|0644, st_size=2197, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Canberra", {st_mode=S_IFREG|0644, st_size=2197, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Broken_Hill", {st_mode=S_IFREG|0644, st_size=2252, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Brisbane", {st_mode=S_IFREG|0644, st_size=426, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/Adelaide", {st_mode=S_IFREG|0644, st_size=2216, ...}) = 0
+stat("/usr/share/zoneinfo/Australia/ACT", {st_mode=S_IFREG|0644, st_size=2197, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Brazil", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Brazil/West", {st_mode=S_IFREG|0644, st_size=602, ...}) = 0
+stat("/usr/share/zoneinfo/Brazil/East", {st_mode=S_IFREG|0644, st_size=2001, ...}) = 0
+stat("/usr/share/zoneinfo/Brazil/DeNoronha", {st_mode=S_IFREG|0644, st_size=714, ...}) = 0
+stat("/usr/share/zoneinfo/Brazil/Acre", {st_mode=S_IFREG|0644, st_size=642, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Canada", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Canada/Yukon", {st_mode=S_IFREG|0644, st_size=2067, ...}) = 0
+stat("/usr/share/zoneinfo/Canada/Saskatchewan", {st_mode=S_IFREG|0644, st_size=980, ...}) = 0
+stat("/usr/share/zoneinfo/Canada/Pacific", {st_mode=S_IFREG|0644, st_size=2875, ...}) = 0
+stat("/usr/share/zoneinfo/Canada/Newfoundland", {st_mode=S_IFREG|0644, st_size=3638, ...}) = 0
+stat("/usr/share/zoneinfo/Canada/Mountain", {st_mode=S_IFREG|0644, st_size=2388, ...}) = 0
+stat("/usr/share/zoneinfo/Canada/Eastern", {st_mode=S_IFREG|0644, st_size=3477, ...}) = 0
+stat("/usr/share/zoneinfo/Canada/East-Saskatchewan", {st_mode=S_IFREG|0644, st_size=980, ...}) = 0
+stat("/usr/share/zoneinfo/Canada/Central", {st_mode=S_IFREG|0644, st_size=2865, ...}) = 0
+stat("/usr/share/zoneinfo/Canada/Atlantic", {st_mode=S_IFREG|0644, st_size=3424, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Chile", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Chile/EasterIsland", {st_mode=S_IFREG|0644, st_size=8991, ...}) = 0
+stat("/usr/share/zoneinfo/Chile/Continental", {st_mode=S_IFREG|0644, st_size=9283, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Etc", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Etc/Zulu", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/Universal", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/UTC", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/UCT", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/Greenwich", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT0", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-9", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-8", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-7", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-6", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-5", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-4", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-3", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-2", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-14", {st_mode=S_IFREG|0644, st_size=122, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-13", {st_mode=S_IFREG|0644, st_size=122, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-12", {st_mode=S_IFREG|0644, st_size=122, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-11", {st_mode=S_IFREG|0644, st_size=122, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-10", {st_mode=S_IFREG|0644, st_size=122, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-1", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT-0", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+9", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+8", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+7", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+6", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+5", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+4", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+3", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+2", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+12", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+11", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+10", {st_mode=S_IFREG|0644, st_size=121, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+1", {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT+0", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+stat("/usr/share/zoneinfo/Etc/GMT", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Europe", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Europe/Zurich", {st_mode=S_IFREG|0644, st_size=1892, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Zaporozhye", {st_mode=S_IFREG|0644, st_size=2085, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Zagreb", {st_mode=S_IFREG|0644, st_size=1931, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Warsaw", {st_mode=S_IFREG|0644, st_size=2679, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Volgograd", {st_mode=S_IFREG|0644, st_size=1139, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Vilnius", {st_mode=S_IFREG|0644, st_size=2173, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Vienna", {st_mode=S_IFREG|0644, st_size=2211, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Vatican", {st_mode=S_IFREG|0644, st_size=2666, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Vaduz", {st_mode=S_IFREG|0644, st_size=1892, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Uzhgorod", {st_mode=S_IFREG|0644, st_size=2077, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Ulyanovsk", {st_mode=S_IFREG|0644, st_size=1253, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Tiraspol", {st_mode=S_IFREG|0644, st_size=2419, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Tirane", {st_mode=S_IFREG|0644, st_size=2084, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Tallinn", {st_mode=S_IFREG|0644, st_size=2161, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Stockholm", {st_mode=S_IFREG|0644, st_size=1892, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Sofia", {st_mode=S_IFREG|0644, st_size=2104, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Skopje", {st_mode=S_IFREG|0644, st_size=1931, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Simferopol", {st_mode=S_IFREG|0644, st_size=1464, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Saratov", {st_mode=S_IFREG|0644, st_size=1169, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Sarajevo", {st_mode=S_IFREG|0644, st_size=1931, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/San_Marino", {st_mode=S_IFREG|0644, st_size=2666, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Samara", {st_mode=S_IFREG|0644, st_size=1225, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Rome", {st_mode=S_IFREG|0644, st_size=2666, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Riga", {st_mode=S_IFREG|0644, st_size=2209, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Prague", {st_mode=S_IFREG|0644, st_size=2246, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Podgorica", {st_mode=S_IFREG|0644, st_size=1931, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Paris", {st_mode=S_IFREG|0644, st_size=2945, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Oslo", {st_mode=S_IFREG|0644, st_size=2225, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Nicosia", {st_mode=S_IFREG|0644, st_size=2002, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Moscow", {st_mode=S_IFREG|0644, st_size=1518, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Monaco", {st_mode=S_IFREG|0644, st_size=2927, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Minsk", {st_mode=S_IFREG|0644, st_size=1330, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Mariehamn", {st_mode=S_IFREG|0644, st_size=1883, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Malta", {st_mode=S_IFREG|0644, st_size=2603, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Madrid", {st_mode=S_IFREG|0644, st_size=2593, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Luxembourg", {st_mode=S_IFREG|0644, st_size=2960, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/London", {st_mode=S_IFREG|0644, st_size=3661, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Ljubljana", {st_mode=S_IFREG|0644, st_size=1931, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Lisbon", {st_mode=S_IFREG|0644, st_size=3439, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Kirov", {st_mode=S_IFREG|0644, st_size=1139, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Kiev", {st_mode=S_IFREG|0644, st_size=2071, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Kaliningrad", {st_mode=S_IFREG|0644, st_size=1492, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Jersey", {st_mode=S_IFREG|0644, st_size=3661, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Istanbul", {st_mode=S_IFREG|0644, st_size=2126, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Isle_of_Man", {st_mode=S_IFREG|0644, st_size=3661, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Helsinki", {st_mode=S_IFREG|0644, st_size=1883, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Guernsey", {st_mode=S_IFREG|0644, st_size=3661, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Gibraltar", {st_mode=S_IFREG|0644, st_size=3035, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Dublin", {st_mode=S_IFREG|0644, st_size=3533, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Copenhagen", {st_mode=S_IFREG|0644, st_size=2134, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Chisinau", {st_mode=S_IFREG|0644, st_size=2419, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Busingen", {st_mode=S_IFREG|0644, st_size=1892, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Budapest", {st_mode=S_IFREG|0644, st_size=2379, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Bucharest", {st_mode=S_IFREG|0644, st_size=2195, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Brussels", {st_mode=S_IFREG|0644, st_size=2944, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Bratislava", {st_mode=S_IFREG|0644, st_size=2246, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Berlin", {st_mode=S_IFREG|0644, st_size=2309, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Belgrade", {st_mode=S_IFREG|0644, st_size=1931, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Belfast", {st_mode=S_IFREG|0644, st_size=3661, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Athens", {st_mode=S_IFREG|0644, st_size=2245, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Astrakhan", {st_mode=S_IFREG|0644, st_size=1169, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Andorra", {st_mode=S_IFREG|0644, st_size=1725, ...}) = 0
+stat("/usr/share/zoneinfo/Europe/Amsterdam", {st_mode=S_IFREG|0644, st_size=2917, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Indian", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Indian/Reunion", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Mayotte", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Mauritius", {st_mode=S_IFREG|0644, st_size=239, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Maldives", {st_mode=S_IFREG|0644, st_size=178, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Mahe", {st_mode=S_IFREG|0644, st_size=157, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Kerguelen", {st_mode=S_IFREG|0644, st_size=159, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Comoro", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Cocos", {st_mode=S_IFREG|0644, st_size=143, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Christmas", {st_mode=S_IFREG|0644, st_size=140, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Chagos", {st_mode=S_IFREG|0644, st_size=187, ...}) = 0
+stat("/usr/share/zoneinfo/Indian/Antananarivo", {st_mode=S_IFREG|0644, st_size=269, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Mexico", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Mexico/General", {st_mode=S_IFREG|0644, st_size=1604, ...}) = 0
+stat("/usr/share/zoneinfo/Mexico/BajaSur", {st_mode=S_IFREG|0644, st_size=1550, ...}) = 0
+stat("/usr/share/zoneinfo/Mexico/BajaNorte", {st_mode=S_IFREG|0644, st_size=2342, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/Pacific", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/Pacific/Yap", {st_mode=S_IFREG|0644, st_size=144, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Wallis", {st_mode=S_IFREG|0644, st_size=141, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Wake", {st_mode=S_IFREG|0644, st_size=144, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Truk", {st_mode=S_IFREG|0644, st_size=144, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Tongatapu", {st_mode=S_IFREG|0644, st_size=949, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Tarawa", {st_mode=S_IFREG|0644, st_size=144, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Tahiti", {st_mode=S_IFREG|0644, st_size=160, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Samoa", {st_mode=S_IFREG|0644, st_size=250, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Saipan", {st_mode=S_IFREG|0644, st_size=199, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Rarotonga", {st_mode=S_IFREG|0644, st_size=548, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Port_Moresby", {st_mode=S_IFREG|0644, st_size=163, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Ponape", {st_mode=S_IFREG|0644, st_size=144, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Pohnpei", {st_mode=S_IFREG|0644, st_size=144, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Pitcairn", {st_mode=S_IFREG|0644, st_size=177, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Palau", {st_mode=S_IFREG|0644, st_size=140, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Pago_Pago", {st_mode=S_IFREG|0644, st_size=250, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Noumea", {st_mode=S_IFREG|0644, st_size=300, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Norfolk", {st_mode=S_IFREG|0644, st_size=263, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Niue", {st_mode=S_IFREG|0644, st_size=200, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Nauru", {st_mode=S_IFREG|0644, st_size=240, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Midway", {st_mode=S_IFREG|0644, st_size=250, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Marquesas", {st_mode=S_IFREG|0644, st_size=162, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Majuro", {st_mode=S_IFREG|0644, st_size=171, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Kwajalein", {st_mode=S_IFREG|0644, st_size=211, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Kosrae", {st_mode=S_IFREG|0644, st_size=204, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Kiritimati", {st_mode=S_IFREG|0644, st_size=204, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Johnston", {st_mode=S_IFREG|0644, st_size=250, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Honolulu", {st_mode=S_IFREG|0644, st_size=250, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Guam", {st_mode=S_IFREG|0644, st_size=199, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Guadalcanal", {st_mode=S_IFREG|0644, st_size=158, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Gambier", {st_mode=S_IFREG|0644, st_size=159, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Galapagos", {st_mode=S_IFREG|0644, st_size=197, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Funafuti", {st_mode=S_IFREG|0644, st_size=141, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Fiji", {st_mode=S_IFREG|0644, st_size=1059, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Fakaofo", {st_mode=S_IFREG|0644, st_size=171, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Enderbury", {st_mode=S_IFREG|0644, st_size=204, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Efate", {st_mode=S_IFREG|0644, st_size=464, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Easter", {st_mode=S_IFREG|0644, st_size=8991, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Chuuk", {st_mode=S_IFREG|0644, st_size=144, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Chatham", {st_mode=S_IFREG|0644, st_size=2031, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Bougainville", {st_mode=S_IFREG|0644, st_size=253, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Auckland", {st_mode=S_IFREG|0644, st_size=2434, ...}) = 0
+stat("/usr/share/zoneinfo/Pacific/Apia", {st_mode=S_IFREG|0644, st_size=1080, ...}) = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo/US", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 4
+stat("/usr/share/zoneinfo/US/Samoa", {st_mode=S_IFREG|0644, st_size=250, ...}) = 0
+stat("/usr/share/zoneinfo/US/Pacific-New", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+stat("/usr/share/zoneinfo/US/Pacific", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+stat("/usr/share/zoneinfo/US/Mountain", {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+stat("/usr/share/zoneinfo/US/Michigan", {st_mode=S_IFREG|0644, st_size=2202, ...}) = 0
+stat("/usr/share/zoneinfo/US/Indiana-Starke", {st_mode=S_IFREG|0644, st_size=2411, ...}) = 0
+stat("/usr/share/zoneinfo/US/Hawaii", {st_mode=S_IFREG|0644, st_size=250, ...}) = 0
+stat("/usr/share/zoneinfo/US/Eastern", {st_mode=S_IFREG|0644, st_size=3519, ...}) = 0
+stat("/usr/share/zoneinfo/US/East-Indiana", {st_mode=S_IFREG|0644, st_size=1649, ...}) = 0
+stat("/usr/share/zoneinfo/US/Central", {st_mode=S_IFREG|0644, st_size=3559, ...}) = 0
+stat("/usr/share/zoneinfo/US/Arizona", {st_mode=S_IFREG|0644, st_size=327, ...}) = 0
+stat("/usr/share/zoneinfo/US/Aleutian", {st_mode=S_IFREG|0644, st_size=2339, ...}) = 0
+stat("/usr/share/zoneinfo/US/Alaska", {st_mode=S_IFREG|0644, st_size=2358, ...}) = 0
+open("/usr/share/zoneinfo/zone.tab", O_RDONLY) = 4
++++ exited with 0 +++

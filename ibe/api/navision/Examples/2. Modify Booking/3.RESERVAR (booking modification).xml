@@ -1,0 +1,94 @@
+<ROOT>
+  <PROCESS_TYPE>RESERVAR</PROCESS_TYPE>
+  <ID>12RTR2</ID>
+  <HOTEL>RDXPC</HOTEL>
+  <LOCALIZADOR>12RTR2</LOCALIZADOR>
+  <ORIGEN>WEB_EXC</ORIGEN> 	
+  <RESERVA>
+    <ID_RVA>12RTR2</ID_RVA>
+    <FVENTA>18/03/2015</FVENTA>
+    <HOTEL>RDXPC</HOTEL>
+    <FI>27/05/2015</FI>
+    <FF>31/05/2015</FF>
+    <TTOO>WEBEXC-USD</TTOO>
+    <AGENCIA>CARRIBEAN</AGENCIA>
+    <CLIENTE>WEBEXC-USD</CLIENTE>
+    <CATALOGO />
+    <BONO>12RTR2</BONO>
+    <PAGADO />
+    <DNI_PAGO />
+    <NOMBRE_PAGO>Kelly</NOMBRE_PAGO>
+    <AP1_PAGO>Senn</AP1_PAGO>
+    <AP2_PAGO />
+    <EMAIL_PAGO />
+    <HAB_LIST>
+      <HAB>
+        <RESERVANH>2015#8793#1</RESERVANH>
+        <TIPO_HAB>JUNIORST</TIPO_HAB>
+        <REG>AI</REG>
+        <FECHA_ENTRADA>27/05/2015</FECHA_ENTRADA>
+        <FECHA_SALIDA>31/05/2015</FECHA_SALIDA>
+        <HOR_LLEG>04:00:00</HOR_LLEG>
+        <HOR_SAL />
+        <AD>3</AD>
+        <JR>0</JR>
+        <NI>0</NI>
+        <BB>0</BB>
+        <PROMOCION_LIST>
+          <COD_PROMOCION>PCU21</COD_PROMOCION>
+        </PROMOCION_LIST>
+        <COD_TARIFA>USARO</COD_TARIFA>
+        <DIVISA_PREC>USD</DIVISA_PREC>
+        <TIPO_PREC>M</TIPO_PREC>
+        <PRECIOS_LIST>
+          <PRECIOS>
+            <P_FEC>27/05/2015</P_FEC>
+            <P_PRE>395,25</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>28/05/2015</P_FEC>
+            <P_PRE>395,25</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>29/05/2015</P_FEC>
+            <P_PRE>395,25</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>30/05/2015</P_FEC>
+            <P_PRE>395,25</P_PRE>
+          </PRECIOS>
+        </PRECIOS_LIST>
+        <OCUPANTES_LIST>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE>Kelly</NOMBRE>
+            <APELLIDO1>Senn</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>0</EDAD>
+          </OCUPANTES>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE />
+            <APELLIDO1>Senn</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>0</EDAD>
+          </OCUPANTES>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE />
+            <APELLIDO1>Senn</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>0</EDAD>
+          </OCUPANTES>
+        </OCUPANTES_LIST>
+        <EXTRAS_LIST />
+        <OBSERVACIONES>
+          <TEXTO>CUSTROOMCODE 14091 Non-smoking</TEXTO>
+        </OBSERVACIONES>
+      </HAB>
+    </HAB_LIST>
+  </RESERVA>
+</ROOT>

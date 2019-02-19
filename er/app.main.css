@@ -1,0 +1,811 @@
+body {
+	margin:0;
+	padding:0;
+	font-family: 'Campton-Book';
+	font-style: normal;
+	font-weight: normal;
+}
+a {
+	color:#000001;
+	text-decoration:none;
+}
+.CC_DETAILS a,
+.tdlabel a {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
+}
+.hide {
+	display:none;
+}
+#wrapper {
+	margin:0 auto;
+	width:768px;
+	background-color:#ffffff;
+}
+#wrap-top {
+	height:122px;
+  padding-top:1px;
+}
+#top-logo {
+	float:left;
+	background-image:url(top-logo-tablet.png);
+	background-repeat:no-repeat;
+	width:186px;
+	height:122px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  #top-logo {
+  	background-image:url(top-logo-tablet@2x.png);
+    background-size: 186px 80px;
+  }    
+}
+#top-nav {
+	float:left;
+	text-align: right;
+	width:373px;
+	height:122px;
+  white-space:nowrap;
+}
+#top-nav ul {
+    list-style-type: none;
+    margin: 57px 0 0 0;
+    padding: 0;
+} 
+#top-nav li {
+	display: inline;
+	font-size:11px;
+  font-weight: bold;
+}
+#top-nav li.selected {
+	border-bottom:1px solid #000;
+  padding-bottom: 4px;
+}
+#top-nav li.step-2 {
+	margin: 0 15px;
+}
+#top-back {
+	float:right;
+	width:209px;
+}
+#top-back a {
+	display:block;
+	font-size:12px;
+	text-align:right;
+	padding-top:32px;
+	padding-right:18px;
+  font-weight: bold;
+}
+#wrap-bottom {
+	clear:both;
+}
+#wrap-bottom .footer {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	margin:30px 0;
+	text-align:center;
+}
+#col-left {
+	float:left;
+	width:569px;
+
+}
+#content {
+	clear:both;
+}
+#totals {
+	padding-bottom:20px;	
+}
+#lbl_total_usd,
+#conv_lbl_total_usd {
+    padding-bottom: 15px;
+}
+#total_was, #conv_total_was {
+	float:left;
+	font-size:12px;
+	text-decoration: line-through;
+}
+#total_is, #conv_total_is {
+	float:left;
+	font-size:25px;
+	padding-left: 10px;
+}
+.right-side-box {
+	background-color:#eceded;
+	padding:12px 20px 0;
+	font-size:11px;
+  line-height:16px;
+}
+#col-right {
+	float:right;
+	width:199px;
+}
+#wrap-right {
+	overflow-x:hidden;
+	width:181px;
+  margin-top:-3px;
+}
+#room-tabs {
+	display: table;
+	list-style-type: none;
+	margin:0;
+	padding:10px 0;	
+}
+#room-tabs li {
+	cursor:pointer;
+	cursor:hand;
+	float: left;
+	padding: 10px;
+	background-color:#e1e1e1;
+}
+#room-tabs li.selected {
+	background-color:#808080;
+	color:#FFFFFF;
+}
+.room-selection-header {
+	text-align:center;
+	font-size: 14px;
+	margin-bottom:5px;
+}
+.hidden {
+	display:none;
+}
+.room-rate-details .dailyDetailsTbl {
+	border-top:solid 1px #d1cccc;
+	border-bottom:solid 1px #d1cccc;
+	padding:10px 0;
+	margin-bottom: 20px;
+	width:100%;
+}
+.inner .dailyDetailsTbl {
+	width:95%;
+}
+.dowTbl {
+	font-size:14px;
+	text-transform: uppercase;
+}
+.GROSS.crossed {
+	font-size:10px;
+	text-decoration: line-through;
+}
+.ratesSpecialsTbl {
+	font-size:14px;
+}
+#select-rooms,
+#guest-info,
+#confirmation-page,
+#wrap-bottom {
+	width:531px;
+	margin:0 auto;
+}
+.list-rooms .wrap-room-picture {
+	float:left;
+	width:172px;
+	overflow:hidden;
+}
+.list-rooms .room-image {
+	display:none;
+}
+.list-rooms .see-more .room-image {
+	display:block;
+	margin-bottom: 15px;
+}
+.list-rooms .see-more .room-thumbnail {
+	display:none;
+}
+.list-rooms .room-thumbnail img {
+	height:125px;
+}
+.list-rooms .see-more .room-image img {
+	width:100%;
+}
+.list-rooms .wrap-room-description {
+	float:left;
+	width:282px;
+}
+.list-rooms .wrap-room-description .description {
+	display:none;
+}
+.list-rooms .see-more .wrap-room-description .description {
+	display:inline;
+}
+.list-rooms .wrap-room-description .room-features {
+	display:none;
+}
+.list-rooms .see-more .wrap-room-description .room-features {
+	display:block;
+	font-size:12px;
+	margin-bottom:16px;
+}
+.list-rooms .room-rate-details {
+	display:none;
+}
+.list-rooms .see-more .room-rate-details {
+	display:block;
+	font-size:12px;
+	padding: 10px 25px 10px 17px;
+	margin-bottom:16px;
+}
+.list-rooms .see-more .wrap-room-description {
+	width:454px;
+}
+.list-rooms .wrap-room-description .room-name {
+	font-size:14px;
+	line-height:20px;
+	margin-top:-4px;
+	margin-bottom:16px;
+	text-transform: uppercase;
+}
+.list-rooms .wrap-room-description .room-name a {
+  text-decoration: none;
+  color:#000;
+}
+.list-rooms .wrap-room-description img {
+  vertical-align:text-bottom;
+} 
+.list-rooms .wrap-room-description .room-description {
+	font-size:14px;
+  line-height:20px;
+	margin-bottom:16px;
+}
+.list-rooms .wrap-room-description .box {
+	padding-left:14px;
+	padding-right:6px;
+}
+.list-rooms .see-more .wrap-room-description .box {
+	padding-left:17px;
+	padding-right:25px;
+}
+.list-rooms .wrap-room-price {
+	float:right;
+	width:77px;
+}
+.list-rooms .room {
+	padding-top:16px;
+}
+.list-rooms .room.selected {
+	background-color: #eceded;
+}
+.list-rooms .room-gap {
+	clear:both;
+	height:16px;
+	border-bottom:solid 1px #d1cccc;
+}
+.list-rooms .wrap-room-details {
+	clear:both;
+}
+.list-rooms .sep-line {
+	height:1px;
+	border-bottom:solid 1px #d1cccc;
+}
+.list-rooms .sep-line.prev,
+.list-rooms .selected .room-gap,
+.list-rooms .prev .room-gap {
+	border-bottom:solid 1px transparent;
+}
+.list-rooms .last-in-list .room-gap {
+  border-bottom:solid 1px #d1cccc !important;
+}
+.list-rooms .selected .room-gap {
+  border-bottom:solid 1px transparent !important;
+}
+.list-rooms .room-more {
+	display:inline;
+}
+.list-rooms .see-more .room-more {
+	display:none;
+}
+.list-rooms .room-more a {
+	color:#000001;
+	font-size:12px;
+}
+.btn-booking {
+  padding:8px 0;
+  display:block;
+  text-transform: uppercase;
+  font-size:15px;
+  line-height: 15px;
+  background: #000001;
+  text-align: center;
+	width:100%;
+  color:#fff;
+}
+.btn-booking.hidden {
+  display:none;
+}
+.btn-booking:hover {
+  text-decoration:none;
+  background: #b99b48;
+}
+
+.room .btn-select {
+  padding:6px 0;
+  font-size:13px;
+  line-height: 13px;
+  text-align: center;
+	width:100%;
+  text-transform: uppercase;
+	color:#fff;
+	background:#b99b48;
+	cursor:pointer;
+	margin-bottom:15px;
+  font-family: 'Campton-Book';
+}
+.room .btn-select:hover {
+  background:#b99b48;
+}
+.room.selected .btn-select {
+	background-image:url(btn-select-on.jpg);
+	background-color:#eceded;
+	background-position:right 0;
+  background-repeat: no-repeat;
+  font-size:0;
+	margin-top: -16px;
+  height:25px;
+}
+.price-was {
+	text-decoration: line-through;
+	font-size:14px;
+}
+.price-is {
+	font-size:24px;
+  white-space: nowrap;
+}
+.price-descr {
+	font-size:12px;
+	margin:15px 0;
+}
+.rooms-left {
+	font-size:12px;
+}
+.room-not-available {
+	font-size:12px;
+}
+.fc_logo {
+	width:100%;
+	height:42px;
+	background-image:url(lbl-finest-club-tablet.jpg);
+	background-repeat:no-repeat;
+	border-bottom:solid 1px #d1cccc;
+	margin-top:15px;
+}
+.ec_logo {
+	width:100%;
+	height:42px;
+	background-image:url(lbl-excellence-club-tablet.jpg);
+	background-repeat:no-repeat;
+	border-bottom:solid 1px #d1cccc;
+	margin-top:15px;
+}
+.summary_room {
+	padding-bottom:10px;
+}
+.hand {
+	cursor:pointer;
+	cursor:hand;
+}
+.room_rate {
+	padding: 20px 0;
+}
+#wrap-buttons {
+	margin-top:20px;
+	background-color:#000001;
+	text-align:center;
+}
+#loading-making-booking {
+	margin-top:20px;
+	text-align:center;
+}
+#popover_rate {
+    background: url("popup_rate_bot.png") no-repeat scroll left bottom transparent;
+    padding-bottom:10px;
+    position:absolute;
+    width:530px;
+}
+#popover_rate .inner {
+    background: url("popup_rate_top.png") no-repeat scroll left top #fff;
+    color: #090808;
+    font-size: 13px;
+    overflow: hidden;
+    padding: 20px 0 10px 20px;
+}
+#wrap-modify {
+	display:none;
+	margin-bottom: 20px;
+}
+
+.form_block {
+  overflow: hidden;
+  padding-bottom:3px;
+  background-color:#eee;
+	font-size:14px;
+  line-height: 20px;
+}
+.form_block .inner {
+	width:500px;
+	margin:0 auto;
+	padding:15px 0 20px;
+}
+.form_block .inner .descr {
+	padding-left: 60px;
+}
+
+#login_box {
+	padding:15px 0 0 60px;
+}
+.lbl-required {
+	text-align:right;
+}
+.required {
+	border-color:#ff0000;
+}
+.sec-lbl {
+	font-size:16px;
+	color:#b99b48;
+	margin-top:30px;
+	margin-bottom:5px;
+	text-align:center;
+	text-transform: uppercase;
+}
+.w470 {
+	width:470px;
+}
+.w60 {
+	width:60px;
+}
+.w60 input,
+.w60 select {
+	width:44px
+}
+.w190 {
+	width:190px;
+}
+.w150 {
+  width:150px;
+}
+.w205 {
+	width:205px;
+}
+.w205 input,
+.w205 select {
+	width:180px
+}
+
+.w410 {
+	width:410px;
+}
+.w410 input,
+.w410 select {
+	width:385px
+}
+
+table input,
+table select {
+	margin-top:15px;
+	margin-bottom:4px;
+	border:solid 1px #c9c9ca;
+	height:22px;
+  font-size:14px;
+}
+
+td.w235 {
+	width:235px;
+	padding-left:15px;
+}
+.w163 {
+	width:163px;
+	margin-right:15px;
+}
+.w57 {
+	width:57px;
+	margin-right:15px;
+}
+.w235 {
+	width:235px;
+	margin-right:15px;
+}
+
+.tdlabel {
+	padding-top:10px;
+}
+
+.hr {
+	border-top:1px solid #d1cccc;
+	margin-bottom:20px;
+}
+
+#popover_pwd {
+    width: 300px;
+    height: 202px;
+    position: absolute;
+    border: 1px solid #666666;
+    background: #fff;
+
+    display: none;
+    
+    z-index: 10;
+}
+    #popover_pwd .close {
+        text-align: right;
+        margin: 10px 0px 0px 0px;
+    }
+        #popover_pwd .close a {
+            font-size: 13px;
+            color: #666666;
+            padding-right: 36px;
+            text-decoration: underline;
+            background: url("cross.png") no-repeat scroll 40px 1px transparent;
+        }
+    #popover_pwd p{    
+        color: #090808;
+        font-size: 13px;
+        line-height: 20px;
+        margin-left: 19px;
+        margin-top: 20px;
+    }
+    #popover_pwd input {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #666666;
+        display: block;
+        height: 22px;
+        margin: 16px 0 0 20px;
+        width: 264px;
+    }
+    #popover_pwd span {
+        display: block;
+        color: #666;
+        font-size: 14px;    
+        line-height: 18px;
+        margin-left: 23px;
+        
+    }
+    #popover_pwd .submit a {    
+        /*background: url("img/but_submit.png") no-repeat scroll 0 0 transparent;*/
+        display: block;
+        height: 26px;
+        width: 100px;    
+        float: right;
+        margin: 4px 12px 0 0;
+    }
+    #popover_pwd .submit a:hover { 
+		background-position: 0px -29px;
+	}
+
+.popover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #666666;
+    position: absolute;
+    display: none;
+    z-index: 10;
+}
+    .popover .close {
+        text-align: right;
+        margin: 10px 0px 0px 0px;
+    }
+        .popover .close a {
+            font-size: 13px;
+            color: #666666;
+            padding-right: 36px;
+            text-decoration: underline;
+            background: url("cross.png") no-repeat scroll 40px 1px transparent;
+        }
+
+#popover_cards {
+    height: 317px;
+    width: 274px;
+}
+    #popover_cards img {    
+        margin-left: 14px;
+        margin-top: 3px;
+    }
+
+#popover_terms {
+    height: 364px;
+    width: 344px;
+}
+    #popover_terms .text {    
+        overflow: auto;
+        height: 310px;
+        font-size: 13px;
+        color: #090808;    
+        margin-left: 19px;
+        margin-right: 10px;
+    }
+    #popover_terms .text p {
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
+
+#popover_transfer_rules,
+#popover_cancellation_policy {
+    height: 250px;
+    width: 344px;
+
+}
+    #popover_transfer_rules .text,
+	#popover_cancellation_policy .text {
+        overflow: auto;
+        height: 196px;
+        font-size: 13px;
+        color: #090808;    
+        margin-left: 19px;
+        margin-right: 10px;
+    }
+    #popover_transfer_rules .text p,
+	#popover_cancellation_policy .text p, {
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
+
+.room_pref_box {
+	margin-bottom:30px;
+}
+.pref_room_name {
+	font-size:14px;
+}
+.to_the_left {
+	float:left;
+	padding-right:25px;
+}
+
+#summary_bottom {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	margin-top:30px;
+}
+#summary_bottom .hdr {
+	text-align:center;
+}
+#summary_bottom .phones {
+	margin:0 auto;
+	width: 140px;
+	padding-top:10px;
+}
+#summary_bottom .policy {
+	text-align:center;
+	margin-top:20px;
+}
+
+
+
+@media (min-width: 800px) { /* More than 768px Desktop view */
+	#wrapper {
+		width:1024px;
+	}
+	#wrap-top {
+		height:92px;
+	}
+
+	#top-logo {
+		background-image:url(top-logo-desktop.png);
+		width:256px;
+		height:93px;
+	}
+	#top-nav {
+		width:501px;
+		height:93px;
+	}
+	#top-nav ul {
+		margin-top:34px;
+	} 
+	#top-nav li {
+		font-size: 12px;
+	}
+	#top-back {
+		width:265px;
+	}
+	#top-back a {
+		padding-top:39px;
+		padding-right:40px;
+	}
+
+	#col-left {
+		width:784px;
+	}
+	#col-right {
+		width:240px;
+	}
+	#wrap-right {
+		width:200px;
+	}
+	.right-side-box {
+		padding:10px 20px 0;
+	}
+	#select-rooms,
+	#guest-info,
+	#confirmation-page,
+	#wrap-bottom {
+		width:702px;
+	}
+	.fc_logo {
+		height:63px;
+		background-image:url(lbl-finest-club-desktop.jpg);
+	}
+	.ec_logo {
+		height:63px;
+		background-image:url(lbl-excellence-club-desktop.jpg);
+	}
+	.list-rooms .wrap-room-picture {
+		width:216px;
+	}
+	.list-rooms .wrap-room-description {
+		width:405px;
+	}
+	.list-rooms .wrap-room-price {
+		width:81px;
+	}
+	.list-rooms .wrap-room-description .box {
+		padding-left:20px;
+		padding-right:20px;
+	}
+	.list-rooms .see-more .wrap-room-description {
+		width:621px;
+	}
+	.list-rooms .room-thumbnail img {
+		width:100%;
+		height:auto;
+    display:block;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 800px), 
+(min-resolution: 192dpi) and (min-width: 800px) { 
+  #top-logo {
+  	background-image:url(top-logo-desktop@2x.png);
+    background-size: 188px 95px;
+  }    
+}
+
+.block-title {
+  color:#b99b48;
+  font-size:13px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin:0 0 12px;
+}
+.section-title {
+  color:#b99b48;
+  font-size:20px;
+  text-transform: uppercase;
+  margin:30px 0 0;
+}
+.overview_price {
+  margin-top:10px;
+  clear:right;
+}
+.total_charge_usd {
+  margin-top:10px;
+  display:block;
+}
+.room_name a {
+	color:#000 !important;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+#col-right a,
+#hello-guest a,
+#login-guest a {
+	color:#b99b48;
+}
+#wrap-buttons a {
+	color:#FFFFFF;
+}
+
+#RES_PROP_ID {
+	width:100%;
+	font-size: 12px;
+	padding-left:5px;
+}
+
+#RES_PROP_ID option {
+	padding-left:5px;
+}
+
+.room-image {height:315px;}
+.slideshow {position: relative;}
+.list-rooms .see-more .room-image img {width: 579px;}
+.slideshow > div {position: absolute;}

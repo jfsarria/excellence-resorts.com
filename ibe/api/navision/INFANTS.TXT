@@ -1,0 +1,969 @@
+{
+  "ACTION": "SUBMIT",
+  "RES_SRC": "CC",
+  "RES_LANGUAGE": "EN",
+  "RES_IN_THE_FUTURE": 0,
+  "RES_DATE": "2016-04-20",
+  "RES_PROP_ID": 5,
+  "RES_USERTYPE": [
+    "2",
+    "1",
+    "3"
+  ],
+  "RES_COUNTRY_CODE": "US",
+  "RES_STATE_CODE": "",
+  "RES_SPECIAL_CODE": "",
+  "RES_CHECK_IN": "2016-06-21",
+  "RES_CHECK_OUT": "2016-06-23",
+  "RES_NIGHTS": 2,
+  "RES_ROOMS_QTY": 1,
+  "RES_ROOM_1_ADULTS_QTY": "2",
+  "RES_ROOM_1_CHILDREN_QTY": "2",
+  "RES_ROOM_1_CHILD_AGE_1": "1",
+  "RES_ROOM_1_CHILD_AGE_2": "10",
+  "RES_ROOM_1_CHILD_AGE_3": "0",
+  "RES_ROOM_1_CHILD_AGE_4": "0",
+  "RES_ROOM_1_CHILD_AGE_5": "0",
+  "RES_REBOOKING": {
+    "RES_ID": "",
+    "RES_NUM": "",
+    "RES_CODE": "",
+    "RES_YEAR": "",
+    "PROP_ID": "",
+    "CHECK_IN": "",
+    "ROOMS": "",
+    "TOTAL_CHARGE": "",
+    "NIGHTS": "",
+    "TO_WHOM": "",
+    "GUEST_ID": "",
+    "TA_ID": "",
+    "CC_COMMENTS": "",
+    "TRANSFER_FEE": "",
+    "TRANSFER_CAR": ""
+  },
+  "BLOCKED_IPs": [
+    "201.144.205.86",
+    "201.144.205.87",
+    "201.144.212.114",
+    "187.157.138.146",
+    "187.141.65.250",
+    "190.167.195.186",
+    "196.3.81.37",
+    "196.3.85.37",
+    "187.157.139.167",
+    "187.210.89.82",
+    "190.167.195.188",
+    "187.210.89.81",
+    "187.217.120.227"
+  ],
+  "RES_ROOM_1_GUESTS_QTY": 3,
+  "RES_ROOM_1_IGNORE_QTY": 1,
+  "RES_ROOM_1_ROOMS": {
+    "166258": {
+      "NAME": "Junior Suite Spa or Pool View",
+      "AVAILABLE_NIGHTS": 2,
+      "TOTAL": {
+        "GROSS_PP": 0,
+        "FINAL_PP": 0,
+        "AVG_GROSS_PN": 475,
+        "AVG_FINAL_PN": 475,
+        "GROSS": 950,
+        "FINAL": 950,
+        "ROOMS_LEFT": 100
+      },
+      "AVG_PER_NIGHT": 0,
+      "NIGTHS": {
+        "2016-06-21": {
+          "CLASS": {
+            "ID": "170191",
+            "REFERENCE": "",
+            "SPECIAL": "X",
+            "RATE": {
+              "FULL": {
+                "PER_PERSON": 150,
+                "NET": 150,
+                "MARKUP_%": 26.59,
+                "MARKUP_$": 40,
+                "GROSS": 190,
+                "QTY": 2
+              },
+              "CHILDREN": {
+                "1": {
+                  "AGE": 1,
+                  "PER_PERSON": 150,
+                  "PERCENTAGE": 0,
+                  "NET": 0,
+                  "MARKUP_%": 26.59,
+                  "MARKUP_$": 0,
+                  "GROSS": 0
+                },
+                "2": {
+                  "AGE": 10,
+                  "PER_PERSON": 150,
+                  "PERCENTAGE": 50,
+                  "NET": 75,
+                  "MARKUP_%": 26.59,
+                  "MARKUP_$": 20,
+                  "GROSS": 95
+                }
+              }
+            }
+          },
+          "RATE": {
+            "GROSS": 475,
+            "FINAL": 475
+          },
+          "INVENTORY": {
+            "ROOMS": 100,
+            "OVERRIDE": 0,
+            "LEFT": 100,
+            "SOLD": 0
+          }
+        },
+        "2016-06-22": {
+          "CLASS": {
+            "ID": "170191",
+            "REFERENCE": "",
+            "SPECIAL": "X",
+            "RATE": {
+              "FULL": {
+                "PER_PERSON": 150,
+                "NET": 150,
+                "MARKUP_%": 26.59,
+                "MARKUP_$": 40,
+                "GROSS": 190,
+                "QTY": 2
+              },
+              "CHILDREN": {
+                "1": {
+                  "AGE": 1,
+                  "PER_PERSON": 150,
+                  "PERCENTAGE": 0,
+                  "NET": 0,
+                  "MARKUP_%": 26.59,
+                  "MARKUP_$": 0,
+                  "GROSS": 0
+                },
+                "2": {
+                  "AGE": 10,
+                  "PER_PERSON": 150,
+                  "PERCENTAGE": 50,
+                  "NET": 75,
+                  "MARKUP_%": 26.59,
+                  "MARKUP_$": 20,
+                  "GROSS": 95
+                }
+              }
+            }
+          },
+          "RATE": {
+            "GROSS": 475,
+            "FINAL": 475
+          },
+          "INVENTORY": {
+            "ROOMS": 100,
+            "OVERRIDE": 0,
+            "LEFT": 100,
+            "SOLD": 0
+          }
+        }
+      },
+      "CLASS_NAMES": {
+        "170191": ""
+      },
+      "SPECIAL_NAMES": "X"
+    },
+    "166260": {
+      "NAME": "Pool Junior Swim-up Suite",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166259": {
+      "NAME": "Pool Junior Suite",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166263": {
+      "NAME": "Two-Story Rooftop Terrace Suite W/ Plunge Pool",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166262": {
+      "NAME": "Family Suite",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166261": {
+      "NAME": "Pool Family Suite",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166266": {
+      "NAME": "Finest Club Junior Suite Ocean Front",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166267": {
+      "NAME": "Finest Club Pool Junior Swim Up Suite",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166269": {
+      "NAME": "Finest Club Family Suite",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166264": {
+      "NAME": "Finest Club Two-Story Rooftop Terrace Suite W/Plunge Pool",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166270": {
+      "NAME": "Finest Club Imperial Suite With Pool ",
+      "AVAILABLE_NIGHTS": 0
+    },
+    "166271": {
+      "NAME": "Finest Club Imperial Suite Two-Story Rooftop Terrace W/Plunge Pool",
+      "AVAILABLE_NIGHTS": 0
+    }
+  },
+  "RES_ROOM_1_ROOMS_ORDER": {
+    "1": 166258,
+    "2": 166260,
+    "3": 166259,
+    "4": 166263,
+    "5": 166262,
+    "6": 166261,
+    "7": 166266,
+    "8": 166267,
+    "9": 166269,
+    "10": 166264,
+    "11": 166270,
+    "12": 166271
+  },
+  "RES_ROOM_1_INFANTS_QTY": 1,
+  "RES_ROOMS_INFANTS_QTY": 1,
+  "RES_ITEMS": {
+    "MESSAGES": [
+      
+    ],
+    "166258": {
+      "ID": "166258",
+      "PROP_ID": "5",
+      "NAME_EN": "Junior Suite Spa or Pool View",
+      "NAME_SP": "Junior Suite Vista al Spa o Piscina",
+      "DESCR_EN": "All our spacious Junior Suites (800 sq ft) are King or two Double beds ",
+      "INCLU_EN": "*** Extra-wide sofa bed * Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46&quot; flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery * Concierge service from 7am through 11pm  ",
+      "DESCR_SP": "Todas nuestras amplias suites junior (800 pies cuadrados) son King o dos camas dobles",
+      "INCLU_SP": "*** Extra ancha sof&aacute; cama * balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de vanidad, VIP art&iacute;culos de tocador y tel&eacute;fono inal&aacute;mbrico * Albornoz y zapatillas para su uso durante su estancia * medios interactivos 46 &quot;TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * electr&oacute;nica en la habitaci&oacute;n caja de seguridad (tama&ntilde;o ordenador port&aacute;til) * Cafetera / tetera * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio de 24 horas para el servicio de habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y papel del hotel * Servicio de consejer&iacute;a de 7am a trav&eacute;s 23:00",
+      "CLAVE": "JUNIORST",
+      "IS_VIP": "0",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7,8",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "2",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "100",
+      "ORDER": "1",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2016-03-11 14:44:25",
+      "ROOM_ORDER": null
+    },
+    "166260": {
+      "ID": "166260",
+      "PROP_ID": "5",
+      "NAME_EN": "Pool Junior Swim-up Suite",
+      "NAME_SP": "Pool Junior Swim-up Suite",
+      "DESCR_EN": "Perfect for couples or families with children with swiming skills. All amenities and size as per Junior Suite Spa or Pool View (950 sq ft) but located on the ground floor. Furnished terrace with a lounge bed, 2 sun beds and private garden. Due to direct access to the pool, not recommended for younger children.  King Bed.  ",
+      "INCLU_EN": "Extra-wide sofa bed * Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46&quot; flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery * Concierge service from 7am through 11pm  ",
+      "DESCR_SP": "Ideal para parejas o familias con ni&ntilde;os con habilidades notan. Todas las comodidades y tama&ntilde;o seg&uacute;n J&uacute;nior Suite con acceso directo a la piscina (950 pies cuadrados), pero se encuentra en la planta baja. Terraza amueblada con una cama de sala de estar, 2 hamacas y jard&iacute;n privado. Debido al acceso directo a la piscina, no es recomendable para los ni&ntilde;os m&aacute;s peque&ntilde;os. Cama King.",
+      "INCLU_SP": "Extra ancha sof&aacute; cama * balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de aumento, art&iacute;culos de tocador VIP e inal&aacute;mbrico tel&eacute;fono * Albornoz y zapatillas para su uso durante su estancia * medios interactivos 46 &quot;TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * Electronic caja de seguridad (laptop tama&ntilde;o) * Cafetera / tetera * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio 24 horas de servicio a la habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y papel del hotel * Servicio de consejer&iacute;a de 7am a trav&eacute;s 23:00",
+      "CLAVE": "JUNIORSW",
+      "IS_VIP": "0",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "25",
+      "ORDER": "5",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-06-27 16:08:31",
+      "ROOM_ORDER": null
+    },
+    "166259": {
+      "ID": "166259",
+      "PROP_ID": "5",
+      "NAME_EN": "Pool Junior Suite",
+      "NAME_SP": "Pool Junior Suite",
+      "DESCR_EN": "Our 1.600 sq ft pool suites are perfect for families looking for a private pool and garden just for them. All amenities as per Junior Suite Spa or Pool View but located on the ground floor. Offers a private 140 sq ft pool, furnished terrace with a lounge bed, 2 sun beds and private garden. King Bed ",
+      "INCLU_EN": "Extra-wide sofa bed * Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46&quot; flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery * Concierge service from 7am through 11pm  ",
+      "DESCR_SP": "Nuestros 1,600 sq ft suites de la piscina son perfectas para familias que buscan un jard&iacute;n y piscina privada s&oacute;lo para ellos. Todos los servicios como por Suite Junior Spa o Piscina pero situado en la planta baja. Ofrece una piscina privada de 140 metros cuadrados, terraza amueblada con una cama de sala de estar, 2 hamacas y jard&iacute;n privado. King Bed",
+      "INCLU_SP": "Extra ancha sof&aacute; cama * balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de aumento, art&iacute;culos de tocador VIP e inal&aacute;mbrico tel&eacute;fono * Albornoz y zapatillas para su uso durante su estancia * medios interactivos 46 &quot;TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * Electronic caja de seguridad (laptop tama&ntilde;o) * Cafetera / tetera * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio 24 horas de servicio a la habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y papel del hotel * Servicio de consejer&iacute;a de 7am a trav&eacute;s 23:00",
+      "CLAVE": "JUNIORPL",
+      "IS_VIP": "0",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "28",
+      "ORDER": "10",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-06-27 16:08:43",
+      "ROOM_ORDER": null
+    },
+    "166263": {
+      "ID": "166263",
+      "PROP_ID": "5",
+      "NAME_EN": "Two-Story Rooftop Terrace Suite W/ Plunge Pool",
+      "NAME_SP": "Two-Story Rooftop Terrace Suite W/ Plunge Pool",
+      "DESCR_EN": "Our romantic Two-Story Rooftop Terrace Suites offers 1.600 sq ft divided in two floors (800 sq. ft each.) with a private Rooftop terrace with Plunge Pool and confortable lounge furniture. King bed. Due to the stairs to the second floor, not recommended for children. ",
+      "INCLU_EN": "Extra-wide sofa bed * Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46&quot; flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery * Concierge service from 7am through 11pm  ",
+      "DESCR_SP": "Nuestro rom&aacute;ntico de dos pisos en la azotea Terraza Suites ofrece 1.600 metros cuadrados divididos en dos plantas (800 sq. Ft.) Cada uno con una terraza en la azotea con piscina de inmersi&oacute;n privada y muebles de sal&oacute;n confortable. Cama King. Debido a las escaleras hasta el segundo piso, no se recomienda para ni&ntilde;os.",
+      "INCLU_SP": "Extra ancha sof&aacute; cama * balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de aumento, art&iacute;culos de tocador VIP e inal&aacute;mbrico tel&eacute;fono * Albornoz y zapatillas para su uso durante su estancia * medios interactivos 46 &quot;TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * Electronic caja de seguridad (laptop tama&ntilde;o) * Cafetera / tetera * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio 24 horas de servicio a la habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y papel del hotel * Servicio de consejer&iacute;a de 7am a trav&eacute;s 23:00",
+      "CLAVE": "JUNIORTR",
+      "IS_VIP": "0",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "5",
+      "ORDER": "20",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-06-27 16:08:56",
+      "ROOM_ORDER": null
+    },
+    "166262": {
+      "ID": "166262",
+      "PROP_ID": "5",
+      "NAME_EN": "Family Suite",
+      "NAME_SP": "Suite Familiar",
+      "DESCR_EN": "Our 950 sq ft family suites are perfect for families looking for a separate bedroom for the children. All amenities as per Junior Suite, featuring a separate bedroom with 2 individual beds. King Bed and two individual beds at children bedroom ",
+      "INCLU_EN": "Extra-wide sofa bed * Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46&quot; flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery * Concierge service from 7am through 11pm  ",
+      "DESCR_SP": "Nuestros 950 sq ft suites familiares son perfectas para familias que buscan una habitaci&oacute;n separada para los ni&ntilde;os. Todos los servicios como por Suite Junior, que ofrecen un dormitorio independiente con 2 camas individuales. Cama King y dos camas individuales en dormitorio de los ni&ntilde;os",
+      "INCLU_SP": "Extra ancha sof&aacute; cama * balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de aumento, art&iacute;culos de tocador VIP e inal&aacute;mbrico tel&eacute;fono * Albornoz y zapatillas para su uso durante su estancia * medios interactivos 46 &quot;TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * Electronic caja de seguridad (laptop tama&ntilde;o) * Cafetera / tetera * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio 24 horas de servicio a la habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y papel del hotel * Servicio de consejer&iacute;a de 7am a trav&eacute;s 23:00",
+      "CLAVE": "FAMILYST",
+      "IS_VIP": "0",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "5",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "3",
+      "MAX_ROOMS": "16",
+      "ORDER": "25",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-08-05 16:51:13",
+      "ROOM_ORDER": null
+    },
+    "166261": {
+      "ID": "166261",
+      "PROP_ID": "5",
+      "NAME_EN": "Pool Family Suite",
+      "NAME_SP": "Suite Familiar con Piscina",
+      "DESCR_EN": "Our 1.750 sq ft Pool Family Suites are a perfect option for families looking for a separate bedroom for the children and a private pool with garden. King Bed and two individual beds at children bedroom ",
+      "INCLU_EN": "Extra-wide sofa bed * Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46&quot; flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery * Concierge service from 7am through 11pm  ",
+      "DESCR_SP": "Nuestra 1,750 pies cuadrados piscina Family Suites son una opci&oacute;n perfecta para las familias que buscan una habitaci&oacute;n separada para los ni&ntilde;os y una piscina privada con jard&iacute;n. Cama King y dos camas individuales en dormitorio de los ni&ntilde;os",
+      "INCLU_SP": "Extra ancha sof&aacute; cama * balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de aumento, art&iacute;culos de tocador VIP e inal&aacute;mbrico tel&eacute;fono * Albornoz y zapatillas para su uso durante su estancia * medios interactivos 46 &quot;TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * Electronic caja de seguridad (laptop tama&ntilde;o) * Cafetera / tetera * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio 24 horas de servicio a la habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y papel del hotel * Servicio de consejer&iacute;a de 7am a trav&eacute;s 23:00",
+      "CLAVE": "FAMILYPL",
+      "IS_VIP": "0",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "5",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "3",
+      "MAX_ROOMS": "4",
+      "ORDER": "30",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-08-05 16:51:30",
+      "ROOM_ORDER": null
+    },
+    "166266": {
+      "ID": "166266",
+      "PROP_ID": "5",
+      "NAME_EN": "Finest Club Junior Suite Ocean Front",
+      "NAME_SP": "Finest Club Junior Suite Ocean Front",
+      "DESCR_EN": "Our Finest Club Junior Suites are 800 sq ft and offer impressive ocean front views and all Finest Club services and amenities plus all amenities from Junior Suite Spa or Pool View. King or two double beds. Perfect for couples and families looking for higher comfort and luxury, along with the best Caribbean Sea views",
+      "INCLU_EN": "The Finest Club represents the ultimate in luxury, privacy, exclusiveness and service for all types of clients. Featuring: private check-in &amp; check-out / Late check-out &amp; early check-in (subject to availability) * Concierge desk (7am to 11pm) * Private lounge (7am to 11pm) with concierge service, smart buffets &amp; bar service * Private Pool Bar * VIP toiletries * Upgraded minibar &amp; room service menu * 1 independent Jacuzzi (hot water) at the pool area * Private beach area * Complimentary newspaper in room every day * Complimentary beach bag for use during your stay * Shoe shine service * Daily fruit &amp; petit fours in room * Fresh flowers and sparkling wine in room upon arrival * Upgraded in-room premium liquor &amp; wine bottle selection * Nespresso machine * Room Service Express (menu featuring a number of savory items that can be delivered almost immediately) * One Aqua Wellness treatment per person per stay. All suites at Finest Club feature an extra-wide sofa bed.",
+      "DESCR_SP": "Nuestra Finest Junior Club Suites son 800 metros cuadrados y ofrecen impresionantes vistas frente al mar y todos los servicios y comodidades del club Finest m&aacute;s todas las comodidades de Suite Junior Spa o Piscina. King o dos camas dobles. Ideal para parejas y familias en busca de una mayor comodidad y lujo, junto con las mejores vistas al mar Caribe",
+      "INCLU_SP": "The Finest club representa lo &uacute;ltimo en lujo, privacidad, exclusividad y servicio para todo tipo de clientes. Con: check-in privado y check-out / Check-out tard&iacute;o y temprano en la salida (sujeto a disponibilidad) * Conserjer&iacute;a (07 a.m.-11 p.m.) * Sal&oacute;n privado (07 a.m.-11 p.m.) con servicio de conserjer&iacute;a, buffets y servicio de bar * Private pool Bar * art&iacute;culos de tocador VIP * Mejorado minibar y servicio de habitaciones con men&uacute; * 1 Jacuzzi independiente (agua caliente) en la zona de la piscina * zona de playa privada * peri&oacute;dico de cortes&iacute;a en la habitaci&oacute;n todos los d&iacute;as * bolsa de playa de cortes&iacute;a para su uso durante su estancia * Limpieza de calzado * de fruta diaria y Petit Fours en la habitaci&oacute;n * Las flores frescas y vino espumoso en la habitaci&oacute;n a la llegada * Mejorado en la habitaci&oacute;n licores premium y selecci&oacute;n botella de vino * cafetera Nespresso * Servicio de habitaciones Express (men&uacute; con una serie de productos salados que se puede entregar casi inmediatamente ) * Un tratamiento Aqua Wellness por persona y estancia. Todas las suites del Finest Club tienen un sof&aacute; cama extra ancha.",
+      "CLAVE": "FCJUNIORST",
+      "IS_VIP": "2",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7,8",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "39",
+      "ORDER": "35",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-08-05 16:52:04",
+      "ROOM_ORDER": "10"
+    },
+    "166267": {
+      "ID": "166267",
+      "PROP_ID": "5",
+      "NAME_EN": "Finest Club Pool Junior Swim Up Suite",
+      "NAME_SP": "Finest Club Pool Junior Swim Up Suite",
+      "DESCR_EN": "Same as the pool swim-up suite (950 sq ft), but located in front of the beach at the Finest Club. King bed. Due to direct access to the pool, not recommended for younger children  ",
+      "INCLU_EN": "Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46&quot; flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery  The Finest Club represents the ultimate in luxury, privacy, exclusiveness and service for all types of clients. Featuring: private check-in &amp; check-out / Late check-out &amp; early check-in (subject to availability) * Concierge desk (7am to 11pm) * Private lounge (7am to 11pm) with concierge service, smart buffets &amp; bar service *  Private Pool Bar *  VIP toiletries * Upgraded minibar &amp; room service menu * 1 independent Jacuzzi (hot water) at the pool area *  Private beach area * Complimentary newspaper in room every day * Complimentary beach bag for use during your stay * Shoe shine service * Daily fruit &amp; petit fours in room * Fresh flowers and sparkling wine in room upon arrival * Upgraded in-room premium liquor &amp; wine bottle selection * Nespresso machine * Room Service Express (menu featuring a number of savory items that can be delivered almost immediately) * One Aqua Wellness treatment per person per stay. All suites at Finest Club feature an extra-wide sofa bed.			 ",
+      "DESCR_SP": "Igual que la piscina de ba&ntilde;o dentro de la piscina (950 pies cuadrados), pero est&aacute; ubicado en frente de la playa en el Club Finest. Cama King. Debido al acceso directo a la piscina, no es recomendable para los ni&ntilde;os m&aacute;s peque&ntilde;os",
+      "INCLU_SP": "Balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de tocador, art&iacute;culos de tocador VIP y tel&eacute;fono inal&aacute;mbrico * Albornoz y zapatillas para utilizar durante su estancia * medios interactivos 46 &quot;TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * Electronic caja de seguridad (tama&ntilde;o laptop) * El caf&eacute; / t&eacute; fabricante * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio de 24 horas para el servicio de habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y el hotel papeler&iacute;a  The Finest club representa lo &uacute;ltimo en lujo, privacidad, exclusividad y servicio para todo tipo de clientes. Con: check-in privado y check-out / Check-out tard&iacute;o y temprano en la salida (sujeto a disponibilidad) * Conserjer&iacute;a (07 a.m.-11 p.m.) * Sal&oacute;n privado (07 a.m.-11 p.m.) con servicio de conserjer&iacute;a, buffets y servicio de bar * Private pool Bar * art&iacute;culos de tocador VIP * Mejorado minibar y servicio de habitaciones con men&uacute; * 1 Jacuzzi independiente (agua caliente) en la zona de la piscina * zona de playa privada * peri&oacute;dico de cortes&iacute;a en la habitaci&oacute;n todos los d&iacute;as * bolsa de playa de cortes&iacute;a para su uso durante su estancia * Limpieza de calzado * de fruta diaria y Petit Fours en la habitaci&oacute;n * Las flores frescas y vino espumoso en la habitaci&oacute;n a la llegada * Mejorado en la habitaci&oacute;n licores premium y selecci&oacute;n botella de vino * cafetera Nespresso * Servicio de habitaciones Express (men&uacute; con una serie de productos salados que se puede entregar casi inmediatamente ) * Un tratamiento Aqua Wellness por persona y estancia. Todas las suites del Finest Club tienen un sof&aacute; cama extra ancha.",
+      "CLAVE": "FCJUNIORSW",
+      "IS_VIP": "2",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "20",
+      "ORDER": "40",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-08-05 16:52:24",
+      "ROOM_ORDER": "10"
+    },
+    "166269": {
+      "ID": "166269",
+      "PROP_ID": "5",
+      "NAME_EN": "Finest Club Family Suite",
+      "NAME_SP": "Finest Club Family Suite",
+      "DESCR_EN": "Same as the family suite 950 sq ft, but located in front of the beach at the Finest Club. King bed and two individual beds at children bedroom. Perfect for families looking for a separate bedroom for the children ",
+      "INCLU_EN": "Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46* flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery * Concierge service from 7am through 11pm  The Finest Club represents the ultimate in luxury, privacy, exclusiveness and service for all types of clients. Featuring: private check-in &amp; check-out / Late check-out &amp; early check-in (subject to availability) * Concierge desk (7am to 11pm) * Private lounge (7am to 11pm) with concierge service, smart buffets &amp; bar service * Private Pool Bar * VIP toiletries * Upgraded minibar &amp; room service menu * 1 independent Jacuzzi (hot water) at the pool area * Private beach area * Complimentary newspaper in room every day * Complimentary beach bag for use during your stay * Shoe shine service * Daily fruit &amp; petit fours in room * Fresh flowers and sparkling wine in room upon arrival * Upgraded in-room premium liquor &amp; wine bottle selection * Nespresso machine * Room Service Express (menu featuring a number of savory items that can be delivered almost immediately) * One Aqua Wellness treatment per person per stay. All suites at Finest Club feature an extra-wide sofa bed.",
+      "DESCR_SP": "Igual que las suite familiar de 950 metros cuadrados, pero est&aacute; ubicado en frente de la playa en el Club Finest. Cama de matrimonio y dos camas individuales en dormitorio de los ni&ntilde;os. Perfecto para familias que buscan una habitaci&oacute;n separada para los ni&ntilde;os",
+      "INCLU_SP": "Balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de tocador, art&iacute;culos de tocador VIP y tel&eacute;fono inal&aacute;mbrico * Albornoz y zapatillas para utilizar durante su estancia * medios interactivos 46 * TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * Electronic caja de seguridad (tama&ntilde;o laptop) * El caf&eacute; / t&eacute; fabricante * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio de 24 horas para el servicio de habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y el hotel papeler&iacute;a * Servicio de consejer&iacute;a de 7am a trav&eacute;s 23:00  The Finest club representa lo &uacute;ltimo en lujo, privacidad, exclusividad y servicio para todo tipo de clientes. Con: check-in privado y check-out / Check-out tard&iacute;o y temprano en la salida (sujeto a disponibilidad) * Conserjer&iacute;a (07 a.m.-11 p.m.) * Sal&oacute;n privado (07 a.m.-11 p.m.) con servicio de conserjer&iacute;a, buffets y servicio de bar * Private pool Bar * art&iacute;culos de tocador VIP * Mejorado minibar y servicio de habitaciones con men&uacute; * 1 Jacuzzi independiente (agua caliente) en la zona de la piscina * zona de playa privada * peri&oacute;dico de cortes&iacute;a en la habitaci&oacute;n todos los d&iacute;as * bolsa de playa de cortes&iacute;a para su uso durante su estancia * Limpieza de calzado * de fruta diaria y Petit Fours en la habitaci&oacute;n * Las flores frescas y vino espumoso en la habitaci&oacute;n a la llegada * Mejorado en la habitaci&oacute;n licores premium y selecci&oacute;n botella de vino * cafetera Nespresso * Servicio de habitaciones Express (men&uacute; con una serie de productos salados que se puede entregar casi inmediatamente ) * Un tratamiento Aqua Wellness por persona y estancia. Todas las suites del Finest Club tienen un sof&aacute; cama extra ancha.",
+      "CLAVE": "FCFAMILYST",
+      "IS_VIP": "2",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "5",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "3",
+      "MAX_ROOMS": "7",
+      "ORDER": "45",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-08-05 16:52:37",
+      "ROOM_ORDER": "10"
+    },
+    "166264": {
+      "ID": "166264",
+      "PROP_ID": "5",
+      "NAME_EN": "Finest Club Two-Story Rooftop Terrace Suite W/Plunge Pool",
+      "NAME_SP": "Finest Club Two-Story Rooftop Terrace Suite W/Plunge Pool",
+      "DESCR_EN": "Our romantic Ocean Front Two-Story Rooftop Terrace Suites at Finest Club offers 1.600 sq ft divided in two floors (800 sq. ft each.) with a private Rooftop terrace with Plunge Pool and confortable lounge furniture. King bed. Due to the stairs to the second floor, not recommended for children.  ",
+      "INCLU_EN": "Expansive private balcony or terrace with comfortable lounge furniture * Oversize Jacuzzi for two * Full bathrooms including a rain shower for two, separate water closet and double vanities equipped with hair dryer, scale, vanity mirror, VIP toiletries and wireless phone * Bathrobe &amp; slippers for use during your stay * Interactive media 46&quot; flat-screen TV * Air conditioning with in-room climate control * Direct-dial telephone * Free wireless Internet * Radio / alarm clock * Electronic in-room safe (laptop size) * Coffee/tea maker * Stocked mini bar with beer, juices, soft drinks, water and snacks * In-room premium liquor &amp; wine bottle selection * 24-hour room service * Service box for room service * Iron and ironing board * Pillow menu * Turn-down service and hotel stationery  The Finest Club represents the ultimate in luxury, privacy, exclusiveness and service for all types of clients. Featuring: private check-in &amp; check-out / Late check-out &amp; early check-in (subject to availability) * Concierge desk (7am to 11pm) * Private lounge (7am to 11pm) with concierge service, smart buffets &amp; bar service *  Private Pool Bar *  VIP toiletries * Upgraded minibar &amp; room service menu * 1 independent Jacuzzi (hot water) at the pool area *  Private beach area * Complimentary newspaper in room every day * Complimentary beach bag for use during your stay * Shoe shine service * Daily fruit &amp; petit fours in room * Fresh flowers and sparkling wine in room upon arrival * Upgraded in-room premium liquor &amp; wine bottle selection * Nespresso machine * Room Service Express (menu featuring a number of savory items that can be delivered almost immediately) * One Aqua Wellness treatment per person per stay. All suites at Finest Club feature an extra-wide sofa bed.			 ",
+      "DESCR_SP": "Nuestro rom&aacute;ntico frente al mar de dos pisos en la azotea Terraza Suites en Finest Club ofrece 1.600 metros cuadrados divididos en dos plantas (800 sq. Ft cada uno.) Con una terraza en la azotea con piscina de inmersi&oacute;n privada y muebles de sal&oacute;n confortable. Cama King. Debido a las escaleras hasta el segundo piso, no se recomienda para ni&ntilde;os.",
+      "INCLU_SP": "Balc&oacute;n privado expansiva o terraza con c&oacute;modos muebles * Oversize Jacuzzi para dos * Ba&ntilde;os completos incluyendo una ducha de lluvia para dos personas, ba&ntilde;o separado y vanidades dobles equipadas con secador de pelo, escala, espejo de tocador, art&iacute;culos de tocador VIP y tel&eacute;fono inal&aacute;mbrico * Albornoz y zapatillas para utilizar durante su estancia * medios interactivos 46 &quot;TV de pantalla plana * Aire acondicionado con control de temperatura en la habitaci&oacute;n * tel&eacute;fono directo * Internet inal&aacute;mbrico gratuito * radio / reloj despertador * Electronic caja de seguridad (tama&ntilde;o laptop) * El caf&eacute; / t&eacute; fabricante * mini bar con cerveza, jugos, refrescos, agua y bocadillos * en la habitaci&oacute;n de licor y vino selecci&oacute;n botella superior * servicio de habitaci&oacute;n * caja de servicio de 24 horas para el servicio de habitaci&oacute;n * Plancha y tabla de planchar * men&uacute; de almohadas * Turn-down servicio y el hotel papeler&iacute;a  The Finest club representa lo &uacute;ltimo en lujo, privacidad, exclusividad y servicio para todo tipo de clientes. Con: check-in privado y check-out / Check-out tard&iacute;o y temprano en la salida (sujeto a disponibilidad) * Conserjer&iacute;a (07 a.m.-11 p.m.) * Sal&oacute;n privado (07 a.m.-11 p.m.) con servicio de conserjer&iacute;a, buffets y servicio de bar * Private pool Bar * art&iacute;culos de tocador VIP * Mejorado minibar y servicio de habitaciones con men&uacute; * 1 Jacuzzi independiente (agua caliente) en la zona de la piscina * zona de playa privada * peri&oacute;dico de cortes&iacute;a en la habitaci&oacute;n todos los d&iacute;as * bolsa de playa de cortes&iacute;a para su uso durante su estancia * Limpieza de calzado * de fruta diaria y Petit Fours en la habitaci&oacute;n * Las flores frescas y vino espumoso en la habitaci&oacute;n a la llegada * Mejorado en la habitaci&oacute;n licores premium y selecci&oacute;n botella de vino * cafetera Nespresso * Servicio de habitaciones Express (men&uacute; con una serie de productos salados que se puede entregar casi inmediatamente ) * Un tratamiento Aqua Wellness por persona y estancia. Todas las suites del Finest Club tienen un sof&aacute; cama extra ancha.",
+      "CLAVE": "",
+      "IS_VIP": "2",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "20",
+      "ORDER": "50",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-01-28 19:35:46",
+      "ROOM_ORDER": "10"
+    },
+    "166270": {
+      "ID": "166270",
+      "PROP_ID": "5",
+      "NAME_EN": "Finest Club Imperial Suite With Pool ",
+      "NAME_SP": "Finest Club Imperial Suite With Pool ",
+      "DESCR_EN": "Our most luxurious beachfront 1-bedroom suite offers 1.700 sq ft of interior space plus a private garden with a large pool. Including a separate bedroom, a full living room, a bar, a separate WC at living room and the bedroom, plus all the amenities and services from the Junior Suites and the Finest Club. ",
+      "INCLU_EN": "Additional amenities include: In room  Check in &amp; Check out, Butler Service for luggage, Laptop, Cellular and I-pad available for the used during stay, One Special  Jacuzzi decoration per stay, one private Wine Cellar dinner per stay, Barman service at the suite.  (these services need to be scheduled with concierge 24 hours in advance), Day pass to other Excellence Group Hotels &amp; Resorts properties with transportation included, Unlimited access to Aqua wellness Spa circuit during stay, in suite Spa amenities and Express ironing (1 outfit per person/stay) 			 The Finest Club represents the ultimate in luxury, privacy, exclusiveness and service for all types of clients. Featuring: private check-in &amp; check-out / Late check-out &amp; early check-in (subject to availability) * Concierge desk (7am to 11pm) * Private lounge (7am to 11pm) with concierge service, smart buffets &amp; bar service * Private Pool Bar * VIP toiletries * Upgraded minibar &amp; room service menu * 1 independent Jacuzzi (hot water) at the pool area * Private beach area * Complimentary newspaper in room every day * Complimentary beach bag for use during your stay * Shoe shine service * Daily fruit &amp; petit fours in room * Fresh flowers and sparkling wine in room upon arrival * Upgraded in-room premium liquor &amp; wine bottle selection * Nespresso machine * Room Service Express (menu featuring a number of savory items that can be delivered almost immediately) * One Aqua Wellness treatment per person per stay. All suites at Finest Club feature an extra-wide sofa bed.",
+      "DESCR_SP": "Nuestra m&aacute;s lujosa suite de 1 dormitorio frente al mar ofrece 1.700 pies cuadrados de espacio interior, m&aacute;s un jard&iacute;n privado con una gran piscina. Incluyendo un dormitorio independiente, una sala de estar completa, un bar, un WC separado en la sala de estar y el dormitorio, adem&aacute;s de todas las comodidades y servicios de las Junior Suites y el Club Finest.",
+      "INCLU_SP": "Entre los servicios adicionales incluyen: En la habitaci&oacute;n Check in y check out, servicio de mayordomo para el equipaje, Ordenador port&aacute;til, celular y I-pad disponibles para el utilizado durante la estancia, Una decoraci&oacute;n especial Jacuzzi por estancia, una cena bodega privada por estancia, servicio de barman en el suite. (estos servicios deben ser programadas con conserje 24 horas de antelaci&oacute;n), el D&iacute;a de transmitir a otras Excellence Group Hoteles &amp; Resorts de propiedades con el transporte incluido, acceso ilimitado al circuito Aqua Wellness Spa durante la estancia, en privado Los servicios de spa y expreso de planchado (1 traje por persona / estancia)  The Finest club representa lo &uacute;ltimo en lujo, privacidad, exclusividad y servicio para todo tipo de clientes. Con: check-in privado y check-out / Check-out tard&iacute;o y temprano en la salida (sujeto a disponibilidad) * Conserjer&iacute;a (07 a.m.-11 p.m.) * Sal&oacute;n privado (07 a.m.-11 p.m.) con servicio de conserjer&iacute;a, buffets y servicio de bar * Private pool Bar * art&iacute;culos de tocador VIP * Mejorado minibar y servicio de habitaciones con men&uacute; * 1 Jacuzzi independiente (agua caliente) en la zona de la piscina * zona de playa privada * peri&oacute;dico de cortes&iacute;a en la habitaci&oacute;n todos los d&iacute;as * bolsa de playa de cortes&iacute;a para su uso durante su estancia * Limpieza de calzado * de fruta diaria y Petit Fours en la habitaci&oacute;n * Las flores frescas y vino espumoso en la habitaci&oacute;n a la llegada * Mejorado en la habitaci&oacute;n licores premium y selecci&oacute;n botella de vino * cafetera Nespresso * Servicio de habitaciones Express (men&uacute; con una serie de productos salados que se puede entregar casi inmediatamente ) * Un tratamiento Aqua Wellness por persona y estancia. Todas las suites del Finest Club tienen un sof&aacute; cama extra ancha.",
+      "CLAVE": "",
+      "IS_VIP": "2",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "1",
+      "ORDER": "55",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-01-28 19:36:13",
+      "ROOM_ORDER": "10"
+    },
+    "166271": {
+      "ID": "166271",
+      "PROP_ID": "5",
+      "NAME_EN": "Finest Club Imperial Suite Two-Story Rooftop Terrace W/Plunge Pool",
+      "NAME_SP": "Finest Club Imperial Suite Two-Story Rooftop Terrace W/Plunge Pool",
+      "DESCR_EN": "Our most luxurious beachfront 1-bedroom suite offers 3.400 sq ft divided in two floors. At the ground floor you will find a full living room, a bar, a separate WC at living room and the bedroom, plus all the amenities and services from the Junior Suites and the Finest Club. At the Rooftop terrace you will find a plunge pool, lounge bed and a sofa area. ",
+      "INCLU_EN": "Additional amenities include: In room  Check in &amp; Check out, Butler Service for luggage, Laptop, Cellular and I-pad available for the used during stay, One Special  Jacuzzi decoration per stay, one  private Wine Cellar dinner per stay, Barman service at the suite (these services need to be scheduled with concierge 24 hours in advance), Day pass to other Excellence Group Hotels &amp; Resorts properties with transportation included, Unlimited access to Aqua wellness Spa circuit during stay, in suite Spa amenities and Express ironing (1 outfit per person/stay) 			 The Finest Club represents the ultimate in luxury, privacy, exclusiveness and service for all types of clients. Featuring: private check-in &amp; check-out / Late check-out &amp; early check-in (subject to availability) * Concierge desk (7am to 11pm) * Private lounge (7am to 11pm) with concierge service, smart buffets &amp; bar service * Private Pool Bar * VIP toiletries * Upgraded minibar &amp; room service menu * 1 independent Jacuzzi (hot water) at the pool area * Private beach area * Complimentary newspaper in room every day * Complimentary beach bag for use during your stay * Shoe shine service * Daily fruit &amp; petit fours in room * Fresh flowers and sparkling wine in room upon arrival * Upgraded in-room premium liquor &amp; wine bottle selection * Nespresso machine * Room Service Express (menu featuring a number of savory items that can be delivered almost immediately) * One Aqua Wellness treatment per person per stay. All suites at Finest Club feature an extra-wide sofa bed.",
+      "DESCR_SP": "Nuestra m&aacute;s lujosa suite de 1 dormitorio frente al mar ofrece 3.400 metros cuadrados divididos en dos plantas. En la planta baja se encuentra una habitaci&oacute;n llena de estar, un bar, un WC separado en la sala de estar y el dormitorio, adem&aacute;s de todas las comodidades y servicios de las Junior Suites y el Club Finest. En la terraza de la azotea se encuentra una piscina, cama sal&oacute;n y una zona de sof&aacute;s.",
+      "INCLU_SP": "Entre los servicios adicionales incluyen: En la habitaci&oacute;n Check in y check out, servicio de mayordomo para el equipaje, Ordenador port&aacute;til, celular y I-pad disponibles para el utilizado durante la estancia, Una decoraci&oacute;n especial Jacuzzi por estancia, una cena bodega privada por estancia, servicio de barman en el suite (estos servicios deben ser programadas con conserje 24 horas de antelaci&oacute;n), el D&iacute;a de transmitir a otras Excellence Group Hoteles &amp; Resorts propiedades con transporte incluido, acceso ilimitado al circuito Aqua Wellness Spa durante la estancia, en privado Los servicios de spa y expreso de planchado (1 equipo por persona / estancia)  The Finest club representa lo &uacute;ltimo en lujo, privacidad, exclusividad y servicio para todo tipo de clientes. Con: check-in privado y check-out / Check-out tard&iacute;o y temprano en la salida (sujeto a disponibilidad) * Conserjer&iacute;a (07 a.m.-11 p.m.) * Sal&oacute;n privado (07 a.m.-11 p.m.) con servicio de conserjer&iacute;a, buffets y servicio de bar * Private pool Bar * art&iacute;culos de tocador VIP * Mejorado minibar y servicio de habitaciones con men&uacute; * 1 Jacuzzi independiente (agua caliente) en la zona de la piscina * zona de playa privada * peri&oacute;dico de cortes&iacute;a en la habitaci&oacute;n todos los d&iacute;as * bolsa de playa de cortes&iacute;a para su uso durante su estancia * Limpieza de calzado * de fruta diaria y Petit Fours en la habitaci&oacute;n * Las flores frescas y vino espumoso en la habitaci&oacute;n a la llegada * Mejorado en la habitaci&oacute;n licores premium y selecci&oacute;n botella de vino * cafetera Nespresso * Servicio de habitaciones Express (men&uacute; con una serie de productos salados que se puede entregar casi inmediatamente ) * Un tratamiento Aqua Wellness por persona y estancia. Todas las suites del Finest Club tienen un sof&aacute; cama extra ancha.",
+      "CLAVE": "",
+      "IS_VIP": "2",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "BEDS": "7",
+      "MAX_OCUP": "4",
+      "MAX_ADUL": "3",
+      "MAX_CHIL": "2",
+      "MAX_ROOMS": "1",
+      "ORDER": "60",
+      "UPDATED_BY": "107515",
+      "UPDATED_ON": "2015-01-28 19:36:42",
+      "ROOM_ORDER": "10"
+    },
+    "170191": {
+      "ID": "170191",
+      "PROP_ID": "5",
+      "NAME_EN": "All 2016",
+      "NAME_SP": "All 2016",
+      "REFERENCE": "",
+      "YEAR": "2016",
+      "MARKUP": "0",
+      "IS_ACTIVE": "1",
+      "IS_ARCHIVE": "0",
+      "ROOM_ID": "166258",
+      "RATE_PER_RP": "150",
+      "DESCR_EN": "",
+      "DESCR_SP": "",
+      "UPDATED_ON": "2015-12-23 14:29:28",
+      "UPDATED_BY": "1",
+      "SEASON_ID": "170190",
+      "SEASON_FROM": "2016-01-01 00:00:00",
+      "SEASON_TO": "2016-12-31 23:59:59",
+      "SUPL_SINGLE": "0",
+      "SUPL_TRIPLE": "0",
+      "SUPL_TYPE": "$",
+      "USERTYPE_ID": "1",
+      "COUNTRY_CODE": "US",
+      "MARKUP_YEAR": "26.59",
+      "BLACKOUT": null
+    },
+    "PROPERTY": {
+      "ID": "5",
+      "COMP_ID": "1",
+      "NAME": "Finest Playa Mujeres",
+      "BLOCK_IP": "201.144.205.86,201.144.205.87,201.144.212.114,187.157.138.146,187.141.65.250,190.167.195.186,196.3.81.37,196.3.85.37,187.157.139.167,187.210.89.82,190.167.195.188,187.210.89.81,187.217.120.227",
+      "CODE": "FPM",
+      "DESCR_EN": "Escape to The Finest Playa Mujeres, Mexico, just a few minutes north of Cancun.  The Finest Playa Mujeres is a 5-star luxury resort and one of the most popular Playa Mujeres hotels. Here you will have a comfortable home base of contemporary luxury. Stylish hotel architecture and decor, generous suites, spotless service, deluxe facilities, and of course, our secluded beachfront setting, all enable you to let your days here happen naturally.",
+      "DESCR_SP": "Esc&aacute;pese a The Finest Playa Mujeres, en Playa Mujeres, M&eacute;xico, a s&oacute;lo unos minutos del norte de Canc&uacute;n.  The Finest Playa Mujeres es un lujoso establecimiento de 5 estrellas. En sus acogedoras instalaciones podr&aacute; disfrutar de un lujo contempor&aacute;neo. En Playa Mujeres, todo se conjuga para que sus d&iacute;as discurran pl&aacute;cidamente: su bella arquitectura y decoraci&oacute;n, las amplias suites, el servicio impecable, las lujosas instalaciones y, por supuesto, su tranquila ubicaci&oacute;n frente al mar.",
+      "ORDER": "4",
+      "INVENTORY_EMAIL": "juan.sarria@everlivesolutions.com",
+      "INVENTORY_MIN": "2",
+      "INFO_EN": "Finest Playa Mujeres, Mexico<br>Prolongacion Bonampak, S/N, Punta Sam<br>Lote Terrenos 001 MZ. 001 Sm. 003<br>Zona Continental de Isla Mujeres<br>77400 Quintana Roo, Mexico<br><br>USA: 866.540.2585<br>Canada: 866.451.1592<br>Mexico: 800.966.3670<br>UK: +0 800 051 6244",
+      "INFO_SP": "Finest Playa Mujeres, Mexico<br>Prolongacion Bonampak, S/N, Punta Sam<br>Lote Terrenos 001 MZ. 001 Sm. 003<br>Zona Continental de Isla Mujeres<br>77400 Quintana Roo, Mexico<br><br>USA: 866.540.2585<br>Canada: 866.451.1592<br>Mexico: 800.966.3670<br>UK: +0 800 051 6244",
+      "HOME_URL": "http://www.finestresorts.com",
+      "HOME_URL_SP": "http://www.finestresorts.com/es/",
+      "LOGIN_GUEST_URL": "http://www.finestresorts.com/guest/",
+      "LOGIN_TA_URL": "finestresorts.com/ta/",
+      "RES_URL": "http://www.finestresorts.com/guest/",
+      "RES_URL_SP": "http://www.finestresorts.com/es/guest/",
+      "SPA_URL_EN": "http://www.finestresorts.com/experience-finest/one-spa/",
+      "SPA_URL_SP": "http://www.finestresorts.com/es/experience-finest/one-spa/",
+      "SPA_RES_EN": "http://www.finestresorts.com/finest-resort-playa-mujeres/one-spa/one-spa-reservations/",
+      "SPA_RES_SP": "http://www.finestresorts.com/finest-resort-playa-mujeres/one-spa/one-spa-reservations/",
+      "MLIST_URL_EN": "",
+      "MLIST_URL_SP": "",
+      "EMAIL_HDR_EN": "Please review your reservation information carefully and contact us if we can be of further assistance.  We look forward to welcoming you and wish you a most enjoyable stay.",
+      "EMAIL_HDR_SP": "Por favor, revise los datos de su reserva con cuidado y cont&aacute;ctenos si podemos serle de m&aacute;s ayuda.  Esperamos su pronta visita  y le deseamos una estancia placentera.",
+      "EMAIL_CAN_EN": "Your reservation [RESERVATION] at [STYLED PROPERTY] has been canceled  If this has occurred in error, please reply to this email or contact us.  We hope you will keep us in mind in your future travel plans.  &lt;b&gt;Cancellation date&lt;/b&gt;: [CANCELLATION DATE]  &lt;b&gt;Cancellation fee&lt;/b&gt;: USD $[FEE]",
+      "EMAIL_CAN_SP": "Su reserva n&uacute;mero [RESERVATION] en el [STYLED PROPERTY] ha sido cancelada.  Si esto ha ocurrido por error, por favor responda a este correo electr&oacute;nico o p&oacute;ngase en contacto con nosotros.  Esperamos nos considere en sus futuros planes de viaje.  &lt;b&gt;Fecha de cancelaci&oacute;n&lt;/b&gt;: [CANCELLATION DATE]  &lt;b&gt;Tasa de cancelaci&oacute;n&lt;/b&gt;: USD $[FEE]",
+      "EMAIL_PRESTAY_EN": "We look forward to serving you during your upcoming stay at [STYLED PROPERTY].  If we can be of further assistance, please do not hesitate to reply to this email or contact us.",
+      "EMAIL_PRESTAY_SP": "Esperamos poder servirle de la manera m&aacute;s atenta durante su pr&oacute;xima estancia en [STYLED PROPERTY].  Si podemos serle de ayuda, por favor no dude en responder a este correo electr&oacute;nico o p&oacute;ngase en contacto con nosotros.",
+      "EMAIL_POSTSTAY_EN": "Thank you for staying with us at [STYLED PROPERTY] .  We sincerely hope you enjoyed your visit with us and that we were able to exceed your expectations.   We look forward to serving you again.  Sincerely, [PROPERTY] ",
+      "EMAIL_POSTSTAY_SP": "Gracias por hospedarse con nosotros en [STYLED PROPERTY] .  Esperamos sinceramente haber superado sus expectativas y que haya disfrutado su estancia con nosotros.  Deseamos poder servirle de nuevo en sus pr&oacute;ximas vacaciones.  Atentamente, [PROPERTY]  ",
+      "EMAIL_CCDETAILS_EN": "Credit card details are collected in order to guarantee your booking. Please note the maximum number of reservations guaranteed under the same credit card is five (5). The full amount corresponding to your reservation will be charged in full thirty (30) days prior to your arrival day to the credit card provided during the booking process. Please see Terms and Conditions for more information.",
+      "EMAIL_CCDETAILS_SP": "Los datos de su tarjeta de cr&eacute;dito se obtienen con el fin de garantizar su reserva. Por favor, tenga en cuenta que el n&uacute;mero m&aacute;ximo de reservas avaladas por la misma tarjeta de cr&eacute;dito es de  m&aacute;ximo cinco (5). El importe total correspondiente a su reserva, se cargar&aacute; en su totalidad a la tarjeta proporcionada treinta (30) d&iacute;as antes de la fecha de su llegada. Consulte los T&eacute;rminos y Condiciones para m&aacute;s informaci&oacute;n.",
+      "EMAIL_RES_EN": "&lt;b&gt;CANCELLATION AND MODIFICATION POLICY&lt;/b&gt; [POLICY]  Toll Free USA: +1 866 540 25 85 Toll Free Canada: +1 866 451 15 92 Mexico 01 800 966 36 70 Toll Free UK +800 051 6244  &lt;hr&gt; &lt;b&gt;New Mexican Law on Accepting U.S. Dollars&lt;/b&gt;  The Mexican Government passed a new law which goes into effect in Mexico beginning September 14, 2010. With this new law, the use of American Dollars (CASH) to make purchases in Mexico will be restricted as follows:   * Hotels and Exchange Booths, and Local Banks will only be able to change a maximum of $1,500 USD CASH per person per month into Mexican Pesos. Previously there was no limit.  * Businesses (including restaurants, shops, and Destination Management Companies) will only be able to accept a maximum of $100 USD CASH per transaction - but the number of transactions per customer is not restricted. Certain businesses may not be able to, or may choose not to accept American Dollars for any purchase at all (this may include shops, etc), however still accepting Mexican Pesos. Other payment methods such as credit cards of all types and all issuing banks, Travelers Checks, Mexican pesos and non-American foreign currencies (such as Euros or Canadian Dollars) are not affected in any way by this new law. &lt;hr&gt; &lt;b&gt; AIRPORT TRANSFER TO THE HOTEL &amp; TOURS&lt;/b&gt; Make the most of your vacation and enjoy The Finest Experience since the very beginning with a DELUXE PRIVATE transfer, saving you time and getting you comfortably to and from your hotel. Book your own and private transfer or tours at info@finestresorts.com  &lt;hr&gt; &lt;b&gt;TO REVIEW YOUR RESERVATION OR CHANGE YOUR BOOKING, PLEASE GO TO THIS ADDRESS:&lt;/b&gt;  View my Reservations [RESERVATIONS URL]  OR CLICK ON &quot;VIEW MY RESERVATIONS&quot; LINK OF OUR HOMEPAGE [HOME] &lt;hr&gt; Indulge at the Spa at [PROPERTY], and embrace the experience of pure relaxation. Visit the Spa at [PROPERTY] [SPA URL]&lt;/a&gt; to discover the full range of deluxe spa services and facilities available.  Take advantage of our pre-booking 20% discount from regular prices &lt;hr&gt;",
+      "EMAIL_RES_SP": null,
+      "EMAIL_REB_EN": "Reservation [RESERVATION] has been re-booked. Original reservation [ORIGINAL] has been canceled with a penalty fee of USD $[FEE]. Please see your re-booked reservation details below.",
+      "EMAIL_REB_SP": "La reserva con n&uacute;mero [RESERVATION] ha sido modificada. La reserva original en [ORIGINAL] ha sido cancelada con un cargo de USD $[FEE]. A continuaci&oacute;n, por favor consulte los nuevos detalles de su reserva.",
+      "EMAIL_ARR_EN": "Expected hotel arrival time: [ARRIVAL]  Your room preferences have been submitted with your reservation and are subject to hotel availability. ",
+      "EMAIL_ARR_SP": "Hora prevista de llegada al Hotel: [ARRIVAL]  Sus preferencias de habitaci&oacute;n se han enviado junto con su reserva y estar&aacute;n sujetas a la disponibilidad del hotel.",
+      "EMAIL_AIR_EN": "Our concierge department will contact you regarding the transfer arrangements **Additional fee will apply: &lt;b&gt;Airline: [AIRLINE]&lt;/b&gt;",
+      "EMAIL_AIR_SP": "Nuestro departamento de concierge  le contactar&aacute; con respecto a la informaci&oacute;n de transportaci&oacute;n solicitada.  ** El servicio de transportaci&oacute;n tiene un cargo adicional: &lt;b&gt;Aerol&iacute;nea: [AIRLINE]&lt;/b&gt;",
+      "LEGAL_URL_EN": "http://www.finestresorts.com/en/playa-mujeres-cancun-legal/index.cfm",
+      "LEGAL_URL_SP": "http://www.finestresorts.com/en/playa-mujeres-cancun-legal/index.cfm",
+      "RES_EMAIL": "juan.sarria@everlivesolutions.com",
+      "ADMIN_EMAIL": "juan.sarria@everlivesolutions.com",
+      "SERVICE_EMAIL": "info@excellencegroup.com",
+      "AIR_EMAIL": "juan.sarria@everlivesolutions.com",
+      "UPDATED_BY": "1",
+      "UPDATED_ON": "2015-02-02 21:40:18",
+      "COMPANY_NAME": "Excellence Resorts",
+      "BED_TYPES": {
+        "7": "1 King",
+        "8": "2 Doubles"
+      }
+    },
+    "PROPERTIES": {
+      "5": {
+        "NAME": "Finest Playa Mujeres",
+        "CODE": "FPM",
+        "ADMIN_EMAIL": "juan.sarria@everlivesolutions.com",
+        "IS_TRANSFER_ACTIVE": 1
+      }
+    },
+    "TRANSFER": {
+      "169977": {
+        "ID": "169977",
+        "PROP_ID": "5",
+        "NAME_EN": "car 3",
+        "NAME_SP": "car 3",
+        "DESCR_EN": "testing car 3",
+        "DESCR_SP": "testing car 3",
+        "PRICE_1_YEAR": "2015",
+        "PRICE_1_ONEWAY": "100",
+        "PRICE_1_ROUNDT": "200",
+        "PRICE_2_YEAR": "0",
+        "PRICE_2_ONEWAY": "0",
+        "PRICE_2_ROUNDT": "0",
+        "PRICE_3_YEAR": "0",
+        "PRICE_3_ONEWAY": "0",
+        "PRICE_3_ROUNDT": "0",
+        "TYPE": "SUV",
+        "IS_ACTIVE": "1",
+        "IS_ARCHIVE": "0",
+        "MAX_PAX": "3",
+        "UPDATED_BY": "1",
+        "UPDATED_ON": "2015-10-15 19:10:15"
+      },
+      "170016": {
+        "ID": "170016",
+        "PROP_ID": "5",
+        "NAME_EN": "Car test 4",
+        "NAME_SP": "Car test 4",
+        "DESCR_EN": "some description",
+        "DESCR_SP": "some description",
+        "PRICE_1_YEAR": "2015",
+        "PRICE_1_ONEWAY": "200",
+        "PRICE_1_ROUNDT": "350",
+        "PRICE_2_YEAR": "0",
+        "PRICE_2_ONEWAY": "0",
+        "PRICE_2_ROUNDT": "0",
+        "PRICE_3_YEAR": "0",
+        "PRICE_3_ONEWAY": "0",
+        "PRICE_3_ROUNDT": "0",
+        "TYPE": "SUV",
+        "IS_ACTIVE": "1",
+        "IS_ARCHIVE": "0",
+        "MAX_PAX": "6",
+        "UPDATED_BY": "170013",
+        "UPDATED_ON": "2015-11-09 15:29:40"
+      },
+      "113266": {
+        "ID": "113266",
+        "PROP_ID": "5",
+        "NAME_EN": "CLUB WAGON PRIVATE TRANSFER",
+        "NAME_SP": "TRANSPORTACI&Oacute;N PRIVADA EN VAN",
+        "DESCR_EN": "Leave the crowd behind and start off your holidays in the best way by reserving your Airport Private Transfer with Seasons Tours. This service is provided by comfortable, spacious and fully air conditioned vans (Volkswagen transporter or similar). Our English speaking team of representatives and drivers are awaiting you upon arrival.",
+        "DESCR_SP": "Con este servicio, usted y los suyos dispondr&aacute;n de su propio ch&oacute;fer y veh&iacute;culo que les llevar&aacute; directamente a su Resort, sin tener que compartir el veh&iacute;culo con otras personas. Este servicio es proporcionado por confortables, espaciosas y c&oacute;modas VANS (tipo Volkswagen Transporter o similar) con capacidad de 5 a 8 pasajeros. Todos nuestros conductores y representantes son altamente cualificados y experimentados.",
+        "PRICE_1_YEAR": "2015",
+        "PRICE_1_ONEWAY": "138",
+        "PRICE_1_ROUNDT": "195",
+        "PRICE_2_YEAR": "2014",
+        "PRICE_2_ONEWAY": "137",
+        "PRICE_2_ROUNDT": "195",
+        "PRICE_3_YEAR": "2016",
+        "PRICE_3_ONEWAY": "137",
+        "PRICE_3_ROUNDT": "195",
+        "TYPE": "VAN",
+        "IS_ACTIVE": "1",
+        "IS_ARCHIVE": "0",
+        "MAX_PAX": "8",
+        "UPDATED_BY": "1",
+        "UPDATED_ON": "2015-11-02 21:52:59"
+      },
+      "337820": {
+        "ID": "337820",
+        "PROP_ID": "5",
+        "NAME_EN": "DELUXE SUV PRIVATE TRANSFER",
+        "NAME_SP": "TRANSPORTACION PRIVADA DELUXE",
+        "DESCR_EN": "Ensure your private airport transportation to the Resort and travel in style with our modern deluxe SUV fleet (Chevrolet Suburban, Ford Explorer or similar). Our English speaking team of representatives and drivers are awaiting you upon arrival.",
+        "DESCR_SP": "La forma m&aacute;s exclusiva de iniciar sus vacaciones desde su llegada al aeropuerto. Seasons Tours pone a su disposici&oacute;n una flota de veh&iacute;culos de lujo tipo SUV (Chevrolet Suburban, Ford Explorer o similares). perfectamente equipados, as&iacute; como un equipo de ch&oacute;feres y representantes altamente cualificados y experimentados.",
+        "PRICE_1_YEAR": "2014",
+        "PRICE_1_ONEWAY": "90",
+        "PRICE_1_ROUNDT": "153",
+        "PRICE_2_YEAR": "2015",
+        "PRICE_2_ONEWAY": "100",
+        "PRICE_2_ROUNDT": "168",
+        "PRICE_3_YEAR": "2016",
+        "PRICE_3_ONEWAY": "100",
+        "PRICE_3_ROUNDT": "168",
+        "TYPE": "SUV",
+        "IS_ACTIVE": "1",
+        "IS_ARCHIVE": "0",
+        "MAX_PAX": "4",
+        "UPDATED_BY": "1",
+        "UPDATED_ON": "2015-11-02 02:00:45"
+      }
+    },
+    "CHILDREN": {
+      "96": {
+        "NAME": "Infant",
+        "FROM": "0",
+        "TO": "3",
+        "COUNTS": "0",
+        "PERCENTAGE": "0"
+      },
+      "97": {
+        "NAME": "Child 4-6",
+        "FROM": "4",
+        "TO": "6",
+        "COUNTS": "1",
+        "PERCENTAGE": "50"
+      },
+      "98": {
+        "NAME": "Child 7-12",
+        "FROM": "7",
+        "TO": "12",
+        "COUNTS": "1",
+        "PERCENTAGE": "50"
+      },
+      "99": {
+        "NAME": "Test - Average kid",
+        "FROM": "13",
+        "TO": "17",
+        "COUNTS": "1",
+        "PERCENTAGE": "100"
+      }
+    }
+  },
+  "RES_ROOMS_ADULTS_QTY": 2,
+  "RES_ROOMS_CHILDREN_QTY": 2,
+  "SEARCH": {
+    "ACTION": "SUBMIT",
+    "RES_SRC": "CC",
+    "RES_LANGUAGE": "EN",
+    "RES_IN_THE_FUTURE": 0,
+    "RES_DATE": "2016-04-20",
+    "RES_PROP_ID": 5,
+    "RES_USERTYPE": [
+      "2",
+      "1",
+      "3"
+    ],
+    "RES_COUNTRY_CODE": "US",
+    "RES_STATE_CODE": "",
+    "RES_SPECIAL_CODE": "",
+    "RES_CHECK_IN": "2016-06-21",
+    "RES_CHECK_OUT": "2016-06-23",
+    "RES_NIGHTS": 2,
+    "RES_ROOMS_QTY": 1,
+    "RES_ROOM_1_ADULTS_QTY": "2",
+    "RES_ROOM_1_CHILDREN_QTY": "2",
+    "RES_ROOM_1_CHILD_AGE_1": "1",
+    "RES_ROOM_1_CHILD_AGE_2": "10",
+    "RES_ROOM_1_CHILD_AGE_3": "0",
+    "RES_ROOM_1_CHILD_AGE_4": "0",
+    "RES_ROOM_1_CHILD_AGE_5": "0",
+    "RES_REBOOKING": {
+      "RES_ID": "",
+      "RES_NUM": "",
+      "RES_CODE": "",
+      "RES_YEAR": "",
+      "PROP_ID": "",
+      "CHECK_IN": "",
+      "ROOMS": "",
+      "TOTAL_CHARGE": "",
+      "NIGHTS": "",
+      "TO_WHOM": "",
+      "GUEST_ID": "",
+      "TA_ID": "",
+      "CC_COMMENTS": "",
+      "TRANSFER_FEE": "",
+      "TRANSFER_CAR": ""
+    },
+    "RES_ROOMS_SELECTED": [
+      "166258"
+    ]
+  },
+  "RESERVATION": {
+    "RES_ROOMS_SELECTED": [
+      "166258"
+    ],
+    "RES_ROOM_CHARGE": [
+      950
+    ],
+    "RES_TOTAL_CHARGE": 950,
+    "RES_ROOMS_SELECTED_NAMES": {
+      "166258": "Junior Suite Spa or Pool View"
+    },
+    "FORWHOM": {
+      "RES_TO_WHOM": "GUEST",
+      "RES_GUEST_ID": 170018,
+      "RES_NEW_GUEST": 0,
+      "RES_TA_ID": 0,
+      "RES_NEW_TA": 0,
+      "TA": [
+        
+      ]
+    },
+    "GUEST": {
+      "TITLE": "Mr.",
+      "FIRSTNAME": "Juan Fernando",
+      "LASTNAME": "Sarria Cobo",
+      "LANGUAGE": "EN",
+      "ADDRESS": "255 park Ridge Dr",
+      "CITY": "Easton",
+      "STATE": "PA",
+      "COUNTRY": "US",
+      "ZIPCODE": "18040",
+      "PHONE": "6104385668",
+      "EMAIL": "jaunsarria@gmail.com",
+      "MAILING_LIST": "1"
+    },
+    "RES_GUESTMETHOD": "CC",
+    "PAYMENT": {
+      "CC_TYPE": "Visa",
+      "CC_NUMBER": "************1111",
+      "CC_NAME": "test",
+      "CC_CODE": "123",
+      "CC_EXP": "01/17",
+      "CC_BILL_ADDRESS": "255 park Ridge Dr",
+      "CC_BILL_CITY": "Easton",
+      "CC_BILL_STATE": "PA",
+      "CC_BILL_COUNTRY": "US",
+      "CC_BILL_ZIPCODE": "18040",
+      "CC_BILL_EMAIL": ""
+    },
+    "ROOMS": [
+      {
+        "GUEST_TITLE": "Mr.",
+        "GUEST_FIRSTNAME": "Juan Fernando",
+        "GUEST_LASTNAME": "Sarria Cobo",
+        "GUEST_BEDTYPE": "",
+        "GUEST_SMOKING": "",
+        "GUEST_OCCASION": ""
+      }
+    ],
+    "ARRIVAL_TIME": "",
+    "ARRIVAL_AMPM": "AM",
+    "AIRLINE": "",
+    "FLIGHT": "",
+    "ARRIVAL": "",
+    "ARRIVAL_AP": "AM",
+    "DEPARTURE_AIRLINE": "",
+    "DEPARTURE_FLIGHT": "",
+    "DEPARTURE": "",
+    "DEPARTURE_AP": "AM",
+    "COMMENTS": "",
+    "HEAR_ABOUT_US": "",
+    "CC_COMMENTS": "",
+    "RES_NUMBER": "5107924320982",
+    "RES_ID": "170817",
+    "DONE": {
+      "REBOKKING": 1,
+      "GUEST": 1
+    },
+    "RES_TABLE": "RESERVATIONS_FPM_2016"
+  },
+  "NAVISION_RESULT": ""
+}
+
+
+======================
+
+<ROOT>
+    <PROCESS_TYPE>RESERVAR</PROCESS_TYPE>
+    <ID>5107924320982</ID>
+    <HOTEL>MXFPM</HOTEL>
+    <LOCALIZADOR>5107924320982</LOCALIZADOR>
+    <ORIGEN>WEB_XCL</ORIGEN>
+    <RESERVA>
+        <ID_RVA>5107924320982</ID_RVA>
+        <FVENTA>20/04/2016</FVENTA>
+        <HOTEL>MXFPM</HOTEL>
+        <FI>21/06/2016</FI>
+        <FF>23/06/2016</FF>
+        <TTOO>WEBEXC-USD</TTOO>
+        <AGENCIA>LUXCARIBE</AGENCIA>
+        <CLIENTE>WEBEXC-USD</CLIENTE>
+        <CANAL>CALL CENTER USA</CANAL>
+        <CATALOGO/>
+        <BONO>5107924320982</BONO>
+        <PAGADO/>
+        <DNI_PAGO/>
+        <NOMBRE_PAGO>Juan Fernando</NOMBRE_PAGO>
+        <AP1_PAGO>Sarria Cobo</AP1_PAGO>
+        <AP2_PAGO/>
+        <TELEFONO_PAGO>6104385668</TELEFONO_PAGO>
+        <EMAIL_PAGO>jaunsarria@gmail.com</EMAIL_PAGO>
+        <DIRECCION_PAGO>255 park Ridge Dr</DIRECCION_PAGO>
+        <CIUDAD_PAGO>Easton</CIUDAD_PAGO>
+        <ESTADO_PAGO>PA</ESTADO_PAGO>
+        <CP_PAGO>18040</CP_PAGO>
+        <PAIS_PAGO>US</PAIS_PAGO>
+        <HAB_LIST>
+            <HAB>
+                <RESERVANH></RESERVANH>
+                <TIPO_HAB>JUNIORST</TIPO_HAB>
+                <REG>AI</REG>
+                <FECHA_ENTRADA>21/06/2016</FECHA_ENTRADA>
+                <FECHA_SALIDA>23/06/2016</FECHA_SALIDA>
+                <HOR_LLEG></HOR_LLEG>
+                <HOR_SAL></HOR_SAL>
+                <AD>2</AD>
+                <JR>0</JR>
+                <NI>1</NI>
+                <BB>1</BB>
+                <PROMOCION_LIST/>
+                <COD_TARIFA></COD_TARIFA>
+                <DIVISA_PREC>USD</DIVISA_PREC>
+                <TIPO_PREC>M</TIPO_PREC>
+                <PRECIOS_LIST>
+                    <PRECIOS>
+                        <P_FEC>21/06/2016</P_FEC>
+                        <P_PRE>475</P_PRE>
+                    </PRECIOS>
+                    <PRECIOS>
+                        <P_FEC>22/06/2016</P_FEC>
+                        <P_PRE>475</P_PRE>
+                    </PRECIOS>
+                </PRECIOS_LIST>
+                <OCUPANTES_LIST>
+                    <OCUPANTES>
+                        <TIPO>AD</TIPO>
+                        <NOMBRE>Juan Fernando</NOMBRE>
+                        <APELLIDO1>Sarria Cobo</APELLIDO1>
+                        <APELLIDO2></APELLIDO2>
+                        <DNI></DNI>
+                        <EDAD>0</EDAD>
+                    </OCUPANTES>
+                    <OCUPANTES>
+                        <TIPO>AD</TIPO>
+                        <NOMBRE></NOMBRE>
+                        <APELLIDO1>Sarria Cobo</APELLIDO1>
+                        <APELLIDO2></APELLIDO2>
+                        <DNI></DNI>
+                        <EDAD>0</EDAD>
+                    </OCUPANTES>
+                    <OCUPANTES>
+                        <TIPO>NI</TIPO>
+                        <NOMBRE></NOMBRE>
+                        <APELLIDO1>Sarria Cobo</APELLIDO1>
+                        <APELLIDO2></APELLIDO2>
+                        <DNI></DNI>
+                        <EDAD>0</EDAD>
+                    </OCUPANTES>
+                    <OCUPANTES>
+                        <TIPO>CU</TIPO>
+                        <NOMBRE></NOMBRE>
+                        <APELLIDO1>Sarria Cobo</APELLIDO1>
+                        <APELLIDO2></APELLIDO2>
+                        <DNI></DNI>
+                        <EDAD>0</EDAD>
+                    </OCUPANTES>
+                </OCUPANTES_LIST>
+                <EXTRAS_LIST>
+                    <EXTRAS/>
+                </EXTRAS_LIST>
+                <OBSERVACIONES>
+                    <TEXTO> -  -  -  - </TEXTO>
+                </OBSERVACIONES>
+            </HAB>
+        </HAB_LIST>
+    </RESERVA>
+</ROOT>

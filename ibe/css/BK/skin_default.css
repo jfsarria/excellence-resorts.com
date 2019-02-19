@@ -1,0 +1,282 @@
+body {
+        background-color:#F2F2F2;
+    }
+    a {
+        color:#0A8DE9;
+    }
+    h1 {
+        color: #FFFFFF;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+        color: #464646;
+        text-shadow: 0 1px 0 #FFFFFF;
+    }
+    h6 {
+        color: #808080;
+        text-align:center;
+        padding:10px 0;
+        font-size:11px;
+    }
+
+/* HELPERS */
+
+/* FRAME */ 
+#wrapper {
+        border-right-color:#BCC2C7;
+    }
+    #hdr {
+            background-color:#5c8398;
+        }
+        #hdr #cmsuser {
+            color: #FFFFFF;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+        }
+        #hdr a {
+            color:#ffcc00;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+        }
+    #subhdr {
+            background-color:#FFFFFF;
+            border-bottom-color:#BCC2C7;
+        }
+    #leftcol {
+        background-color:#DFE1E3;
+        border-right-color:#BCC2C7;
+    }
+    #midcol {
+        background-color:#FFFFFF;
+        border-right-color:#A4A4A4;
+    }
+    #maincol {
+            background-color:#F2F2F2;
+    }
+
+/* LOGIN */
+#loginForm {
+        border-color:#315489;
+    }
+    #loginForm input {
+        color:#383838;
+    }
+
+/* MESSAGES */
+.s_missing {
+    border-color:#990000;
+    background-color:#FFD5D5;
+}
+.s_success {
+    background-color:#f0fff0;
+    border-color:#00ff00;
+}
+.s_notice {
+    background-color:#ffffdd;
+    border-color:#ffd700;
+}
+.s_required {
+    background-color:#ffdddd;
+    border-color:#ffa6a6;
+}
+.s_error {
+    background-color:#990000;
+    border-color:#cc0000;
+    color:#FFFFFF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* BUTTONS */
+span.button {
+        background-color:#dff4ff;
+        border-color: #EEEEEE #c2e1ef #c2e1ef #EEEEEE;
+        color:#336699;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    }
+    span.button.selected {
+        background-color:#529214 !important;
+        color: #FFFFFF !important;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3) !important;
+    }
+    /* STANDARD */
+    span.button:hover {
+        background-color:#a6e0ff;
+        border-color: #EEEEEE #84c4df #84c4df #EEEEEE;
+        color:#336699;
+    }
+    /* PLAIN */
+    span.button.plain {
+            border-color: #EEEEEE #DEDEDE #DEDEDE #EEEEEE;
+            background-color:#f5f5f5;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+            color:#565656;
+        }
+        span.button.plain:hover{
+            background-color:#a6e0ff;
+            border-color: #EEEEEE #84c4df #84c4df #EEEEEE;
+            color:#336699;
+        }
+    /* POSITIVE */
+    span.button.positive {
+            color:#529214;
+        }
+        span.button.positive:hover{
+            background-color:#E6EFC2;
+            border-color: #C6D880 #B1C467 #B1C467 #C6D880;
+            color:#529214;
+        }
+    /* NEGATIVE */
+    span.button.negative {
+            color:#d12f19;
+        }
+        span.button.negative:hover {
+            background-color:#fbe3e4;
+            border-color: #FBC2C4 #F87378 #F87378 #FBC2C4;
+            color:#d12f19;
+        }
+
+    /* LEFT NAV BTN */
+    span.navbtn {
+            border-color: #E9EAEB transparent #C7CCD1 transparent;
+        }
+        span.navbtn:hover {
+            background-color:#E6EFC2;
+            color:#529214;
+        }
+    /* TOP NAV BTN */
+    span.topbtn {
+            border-color: #7FA0B1;
+            background-color:#E3EFF6;
+            color: #426373;
+        }
+        span.topbtn:hover{
+            background-color:#E6EFC2;
+            color:#529214;
+        }
+        .topnav select {
+            border-color: #7FA0B1;
+        }
+
+/* LIST */
+.listTbl {
+        background-color:#FFFFFF;
+        border-color:#B2BEB1;
+        color:#000000;
+    }
+    .listRow-1 {
+        background-color:#e1e1e1;
+    }
+    .listRowHdr {
+        background-color:#5C8398;
+        color:#FFFFFF;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3) !important
+    }
+
+/* EDIT FORMS */
+legend {
+    background-color:#7FA0B1;
+    border-color:#7FA0B1;
+    color:#FFFFFF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+fieldset {
+        background-color:#FFFFFF;
+        border-color:#B2BEB1;
+        color:#000000;
+    }
+    fieldset hr {
+        background-color:#B2BEB1;
+    }
+.selectedItem {
+    background-color:#529214;
+    color:#FFFFFF;
+}
+
+/* IMAGES THUMBNAIL */
+.ddsitem {
+    border-color:#D5D5D5;    
+}
+.ddsitem:hover {
+    border-color:#000000;
+}
+
+/* CALENDAR */
+.ng_cal_selected_date_custom {
+    background-color:#ffd895;
+    font-weight: bold;
+}
+
+/* CALL CENTER AVAILABILITY */
+tr.AVAILABLE_ROOM {
+    background-color:#e1e8ec;
+}
+tr.AVAILABLE_ROOM.selected td a {
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+tr.NO_AVAILABLE_ROOM {
+    background-color:#e4e4e4;
+    color:#808080;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+tr.NO_AVAILABLE_ROOM td a {
+    color:#808080;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+tr.IS_VIP {
+    color:#FFFFFF;
+    background-color:#7FA0B1;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.avaResultsTbl {
+        border-color:#7FA0B1;
+    }
+    .avaResultsTbl td {
+        border-color:#E4E4E4;
+    }
+    .avaResultsTbl tr.hdr {
+        color:#FFFFFF;
+        background-color:#5C8398;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    }
+    .avaResultsTbl tr.selected {
+        background-color: #529214;
+        color: #FFFFFF;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    }
+.dailyDetailsTbl {
+    background-color:#ffffff;
+    color:#000000;
+}
+
+/* TOOLTIP */
+#tooltip .tooltip_room_descr {
+    background-color:#FFFFFF;
+    color:#000000;
+    border-color:#7FA0B1;
+}
+#tooltip .tooltip_daily_details {
+    background-color:#FFFFFF;
+    color:#000000;
+    border-color:#7FA0B1;
+}
+
+/* CALL CENTER RESERVATION */
+#reservation_wrapper {
+    }
+    #reservation_wrapper .reserv_right_col fieldset {
+        background-color: #DFE1E3;
+    }
+
+.res_row_header td {
+    background-color: #DFE1E3;
+    color:#000;
+}
+#searchGuestResultTbl .td {
+    border-color:#DFE1E3;
+    color:#000000;
+}
+#searchTAResultTbl .td {
+    border-color:#DFE1E3;
+    color:#000000;
+}
+
+

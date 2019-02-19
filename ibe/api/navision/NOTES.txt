@@ -1,0 +1,59 @@
+4111111111111111
+
+SELECT ID, NUMBER, ARRAY, NAVISION_STATUS, NAVISION_SENT, NAVISION_RESULT, NAVISION_CANCEL, NAVISION_ERROR, MODIFIED FROM RESERVATIONS_FPM_2016 WHERE NAVISION_STATUS <> ''
+
+https://staging.finestresorts.com/booking/confirmation.php?{%22RES_ID%22:%22170245%22,%22RES_NUMBER%22:%225107812880000%22,%22RES_YEAR%22:%22FPM_2016%22}
+
+UPDATE `RESERVATIONS_FPM_2016` SET NAVISION_RESULT = "" WHERE NAVISION_STATUS <> "";
+
+SELECT * FROM `RESERVATIONS_FPM_2016`  WHERE NAVISION_STATUS <> "" ORDER BY `ID` DESC 
+
+----------------------------------------------------------------------------------
+
+SELECT * FROM `RESERVATIONS_FPM_2016` WHERE `NAVISION_SENT` != '' 
+
+SELECT * FROM `RESERVATIONS_FPM_2016` WHERE `NAVISION_STATUS` <> ""
+
+
+
+UPDATE RESERVATIONS_FPM_2016
+SET NAVISION_STATUS=''
+WHERE 
+(NAVISION_RESULT = "" AND NAVISION_CANCEL = "" AND NAVISION_ERROR = "")
+AND 
+(NAVISION_STATUS = "ELIMINAR" OR NAVISION_STATUS = "UPDATE")
+
+----------------------------------------------------------------------------------
+
+SELECT *  FROM `RESERVATIONS_FPM_2016` WHERE `NUMBER` LIKE "5114205272409"
+
+UPDATE RESERVATIONS_FPM_2016 SET NAVISION_STATUS="RESERVAR" WHERE NUMBER = "5114372695187" ORDER BY ID DESC LIMIT 1
+
+----------------------------------------------------------------------------------
+
+(NAVISION_STATUS = 'RESERVAR' OR NAVISION_STATUS = 'UPDATE' OR NAVISION_STATUS = 'ELIMINAR')
+
+*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
+Navision reservations to delete
+
+51078*
+
+4112019387313
+
+4112020007663
+
+4112021359058
+
+Parse error: syntax error, unexpected '[' in /var/www/vhosts/secure-laamadahotel.com/httpdocs/ibe/api/navision/XMLParser-master/XMLParser.class.php on line 64 
+
+http://secure-belovedhotels.com/ibe/index.php?PAGE_CODE=ws.navisionCall
+
+TBH = PHP Version 5.3.5
+FPM = PHP Version 5.4.13
+
+===========
+
+
+
+

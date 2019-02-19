@@ -1,0 +1,263 @@
+SoapFault Object
+(
+    [message:protected] => Error Fetching http headers
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => /var/www/vhosts/iskullny.com/finestresorts/ibe/api/navision/classes.php
+    [line:protected] => 71
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [function] => __doRequest
+                    [class] => SoapClient
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => 
+<ROOT><PROCESS_TYPE>RESERVAR</PROCESS_TYPE><ID>5115349017053</ID><HOTEL>MXFPM</HOTEL><LOCALIZADOR>5115349017053</LOCALIZADOR><ORIGEN>WEB_XCL</ORIGEN><RESERVA><ID_RVA>5115349017053</ID_RVA><FVENTA>03/03/2016</FVENTA><HOTEL>MXFPM</HOTEL><FI>26/03/2016</FI><FF>27/03/2016</FF><TTOO>WEBEXC-USD</TTOO><AGENCIA>LUXCARIBE</AGENCIA><CLIENTE>WEBEXC-USD</CLIENTE><CANAL>WEB HOTEL</CANAL><CATALOGO/><BONO>5115349017053</BONO><PAGADO/><DNI_PAGO/><NOMBRE_PAGO>Juan Fdo.</NOMBRE_PAGO><AP1_PAGO>Sarria</AP1_PAGO><AP2_PAGO/><TELEFONO_PAGO>2012365566</TELEFONO_PAGO><EMAIL_PAGO>jaunsarria@g
+ mail.com</EMAIL_PAGO><DIRECCION_PAGO>255 Park Ridge Dr</DIRECCION_PAGO><CIUDAD_PAGO>Easton</CIUDAD_PAGO><ESTADO_PAGO>PA</ESTADO_PAGO><CP_PAGO>18045</CP_PAGO><PAIS_PAGO>US</PAIS_PAGO><HAB_LIST><HAB><RESERVANH></RESERVANH><TIPO_HAB>JUNIORST</TIPO_HAB><REG>AI</REG><FECHA_ENTRADA>26/03/2016</FECHA_ENTRADA><FECHA_SALIDA>27/03/2016</FECHA_SALIDA><HOR_LLEG></HOR_LLEG><HOR_SAL></HOR_SAL><AD>2</AD><JR>0</JR><NI>0</NI><BB>0</BB><PROMOCION_LIST/><COD_TARIFA></COD_TARIFA><DIVISA_PREC>USD</DIVISA_PREC><TIPO_PREC>M</TIPO_PREC><PRECIOS_LIST><PRECIOS><P_FEC>26/03/2016</P_FEC><P_PRE>542</P_PRE></PRECIOS></PRECIOS_LIST><OCUPANTES_LIST><OCUPANTES><TIPO>AD</TIPO><NOMBRE>
+ Juan Fdo.</NOMBRE><APELLIDO1>Sarria</APELLIDO1><APELLIDO2></APELLIDO2><DNI></DNI><EDAD>0</EDAD></OCUPANTES></OCUPANTES_LIST><EXTRAS_LIST><EXTRAS/></EXTRAS_LIST><OBSERVACIONES><TEXTO> -  -  -  - </TEXTO></OBSERVACIONES></HAB></HAB_LIST></RESERVA></ROOT>
+
+                            [1] => http://216.152.171.246/vivaCRS.svc
+                            [2] => http://tempuri.org/IvivaCRS/GetProcess
+                            [3] => 1
+                            [4] => 0
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => /var/www/vhosts/iskullny.com/finestresorts/ibe/api/navision/classes.php
+                    [line] => 71
+                    [function] => __call
+                    [class] => SoapClient
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => GetProcess
+                            [1] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [pPeticionXml] => RESERVAR5115349017053MXFPM5115349017053WEB_XCL511534901705303/03/2016MXFPM26/03/201627/03/2016WEBEXC-USDLUXCARIBEWEBEXC-USDWEB HOTEL5115349017053Juan Fdo.Sarria2012365566jaunsarria@gmail.com255 Park Ridge DrEastonPA18045USJUNIORSTAI26/03/201627/03/20162000USDM26/03/2016542ADJuan Fdo.Sarria0 -  -  -  - 
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => /var/www/vhosts/iskullny.com/finestresorts/ibe/api/navision/classes.php
+                    [line] => 71
+                    [function] => GetProcess
+                    [class] => SoapClient
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [pPeticionXml] => RESERVAR5115349017053MXFPM5115349017053WEB_XCL511534901705303/03/2016MXFPM26/03/201627/03/2016WEBEXC-USDLUXCARIBEWEBEXC-USDWEB HOTEL5115349017053Juan Fdo.Sarria2012365566jaunsarria@gmail.com255 Park Ridge DrEastonPA18045USJUNIORSTAI26/03/201627/03/2016
+ 2000USDM26/03/2016542ADJuan Fdo.Sarria0 -  -  -  - 
+                                )
+
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => /var/www/vhosts/iskullny.com/finestresorts/ibe/api/navision/make.php
+                    [line] => 244
+                    [function] => execute
+                    [class] => navision_cls
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [PROCESS_TYPE] => RESERVAR
+                                    [ID] => 5115349017053
+                                    [HOTEL] => MXFPM
+                                    [LOCALIZADOR] => 5115349017053
+                                    [ORIGEN] => WEB_XCL
+                                    [RESERVA] => Array
+                                        (
+                                            [ID_RVA] => 5115349017053
+                                            [FVENTA] => 03/03/2016
+                                            [HOTEL] => MXFPM
+                                            [FI] => 26/03/2016
+                                            [FF] => 27/03/2016
+                                            [TTOO] => WEBEXC-USD
+                                            [AGENCIA] => LUXCARIBE
+                                            [CLIENTE] => WEBEXC-USD
+                                            [CANAL] => WEB HOTEL
+                                            [CATALOGO] => Array
+                                                (
+                                                )
+
+                                            [BONO] => 5115349017053
+                                            [PAGADO] => Array
+                                                (
+                                                )
+
+                                            [DNI_PAGO] => Array
+                                                (
+                                                )
+
+                                            [NOMBRE_PAGO] => Juan Fdo.
+                                            [AP1_PAGO] => Sarria
+                                            [AP2_PAGO] => Array
+                                                (
+                                                )
+
+                                            [TELEFONO_PAGO] => 2012365566
+                                            [EMAIL_PAGO] => jaunsarria@gmail.com
+                                            [DIRECCION_PAGO] => 255 Park Ridge Dr
+                                            [CIUDAD_PAGO] => Easton
+                                            [ESTADO_PAGO] => PA
+                                            [CP_PAGO] => 18045
+                                            [PAIS_PAGO] => US
+                                            [HAB_LIST] => Array
+                                                (
+                                                    [HAB-1] => Array
+                                                        (
+                                                            [RESERVANH] => 
+                                                            [TIPO_HAB] => JUNIORST
+                                                            [REG] => AI
+                                                            [FECHA_ENTRADA] => 26/03/2016
+                                                            [FECHA_SALIDA] => 27/03/2016
+                                                            [HOR_LLEG] => 
+                                                            [HOR_SAL] => 
+                                                            [AD] => 2
+                                                            [JR] => 0
+                                                            [NI] => 0
+                                                            [BB] => 0
+                                                            [PROMOCION_LIST] => Array
+                                                                (
+                                                                )
+
+                                                            [COD_TARIFA] => 
+                                                            [DIVISA_PREC] => USD
+                                                            [TIPO_PREC] => M
+                                                            [PRECIOS_LIST] => Array
+                                                                (
+                                                                    [PRECIOS-1] => Array
+                                                                        (
+                                                                            [P_FEC] => 26/03/2016
+                                                                            [P_PRE] => 542
+                                                                        )
+
+                                                                )
+
+                                                            [OCUPANTES_LIST] => Array
+                                                                (
+                                                                    [OCUPANTES] => Array
+                                                                        (
+                                                                            [TIPO] => AD
+                                                                            [NOMBRE] => Juan Fdo.
+                                                                            [APELLIDO1] => Sarria
+                                                                            [APELLIDO2] => 
+                                                                            [DNI] => 
+                                                                            [EDAD] => 0
+                                                                        )
+
+                                                                )
+
+                                                            [EXTRAS_LIST] => Array
+                                                                (
+                                                                    [EXTRAS] => Array
+                                                                        (
+                                                                        )
+
+                                                                )
+
+                                                            [OBSERVACIONES] => Array
+                                                                (
+                                                                    [TEXTO] =>  -  -  -  - 
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => RESERVAR5115349017053MXFPM5115349017053WEB_XCL511534901705303/03/2016MXFPM26/03/201627/03/2016WEBEXC-USDLUXCARIBEWEBEXC-USDWEB HOTEL5115349017053Juan Fdo.Sarria2012365566jaunsarria@gmail.com255 Park Ridge DrEastonPA18045USJUNIORSTAI26/03/201627/03/2016
+ 2000USDM26/03/2016542ADJuan Fdo.Sarria0 -  -  -  - 
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => /var/www/vhosts/iskullny.com/finestresorts/ibe/inc/mods/m.navision.php
+                    [line] => 25
+                    [args] => Array
+                        (
+                            [0] => /var/www/vhosts/iskullny.com/finestresorts/ibe/api/navision/make.php
+                        )
+
+                    [function] => include_once
+                )
+
+            [5] => Array
+                (
+                    [file] => /var/www/vhosts/iskullny.com/finestresorts/ibe/inc/mods/m.reserv.confirmation.php
+                    [line] => 453
+                    [args] => Array
+                        (
+                            [0] => /var/www/vhosts/iskullny.com/finestresorts/ibe/inc/mods/m.navision.php
+                        )
+
+                    [function] => include
+                )
+
+            [6] => Array
+                (
+                    [file] => /var/www/vhosts/iskullny.com/finestresorts/ibe/inc/mods/m.reserv.make.confirm.php
+                    [line] => 37
+                    [args] => Array
+                        (
+                            [0] => /var/www/vhosts/iskullny.com/finestresorts/ibe/inc/mods/m.reserv.confirmation.php
+                        )
+
+                    [function] => include
+                )
+
+            [7] => Array
+                (
+                    [file] => /var/www/vhosts/iskullny.com/finestresorts/ibe/inc/ws.makeReservation.php
+                    [line] => 36
+                    [args] => Array
+                        (
+                            [0] => /var/www/vhosts/iskullny.com/finestresorts/ibe/inc/mods/m.reserv.make.confirm.php
+                        )
+
+                    [function] => include_once
+                )
+
+            [8] => Array
+                (
+                    [file] => /var/www/vhosts/iskullny.com/finestresorts/ibe/index.php
+                    [line] => 17
+                    [args] => Array
+                        (
+                            [0] => /var/www/vhosts/iskullny.com/finestresorts/ibe/inc/ws.makeReservation.php
+                        )
+
+                    [function] => include_once
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [faultstring] => Error Fetching http headers
+    [faultcode] => HTTP
+)

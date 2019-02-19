@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ROOT>
+  <PROCESS_TYPE>RESERVAR</PROCESS_TYPE>
+  <ID>502834446</ID>
+  <HOTEL>MXFPM</HOTEL>
+  <LOCALIZADOR>502834446</LOCALIZADOR>
+  <ORIGEN>WEB_EXC</ORIGEN> 	
+  <RESERVA>
+    <ID_RVA>502834446</ID_RVA>
+    <FVENTA>01/03/2015</FVENTA>
+    <HOTEL>MXFPM</HOTEL>
+    <FI>10/05/2015</FI>
+    <FF>17/05/2015</FF>
+    <TTOO>WEBEXC-USD</TTOO>
+    <AGENCIA>LUXCARIBE</AGENCIA>
+    <CLIENTE>WEBEXC-USD</CLIENTE>
+    <CATALOGO />
+    <BONO>502834446</BONO>
+    <PAGADO />
+    <DNI_PAGO />
+    <NOMBRE_PAGO>Hassan</NOMBRE_PAGO>
+    <AP1_PAGO>Charara</AP1_PAGO>
+    <AP2_PAGO />
+    <TELEFONO_PAGO>13132071686</TELEFONO_PAGO>
+    <EMAIL_PAGO>charara123@hotmail.com</EMAIL_PAGO>
+    <HAB_LIST>
+      <HAB>
+        <RESERVANH />
+        <TIPO_HAB>JUNIORTR</TIPO_HAB>
+        <REG>AI</REG>
+        <FECHA_ENTRADA>10/05/2015</FECHA_ENTRADA>
+        <FECHA_SALIDA>17/05/2015</FECHA_SALIDA>
+        <HOR_LLEG>04:00:00</HOR_LLEG>
+        <HOR_SAL />
+        <AD>2</AD>
+        <JR>0</JR>
+        <NI>0</NI>
+        <BB>0</BB>
+        <PROMOCION_LIST>
+          <COD_PROMOCION>FPMU3</COD_PROMOCION>
+        </PROMOCION_LIST>
+        <COD_TARIFA>USARO</COD_TARIFA>
+        <DIVISA_PREC>USD</DIVISA_PREC>
+        <TIPO_PREC>M</TIPO_PREC>
+        <PRECIOS_LIST>
+          <PRECIOS>
+            <P_FEC>10/05/2015</P_FEC>
+            <P_PRE>427</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>11/05/2015</P_FEC>
+            <P_PRE>427</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>12/05/2015</P_FEC>
+            <P_PRE>427</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>13/05/2015</P_FEC>
+            <P_PRE>427</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>14/05/2015</P_FEC>
+            <P_PRE>427</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>15/05/2015</P_FEC>
+            <P_PRE>427</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>16/05/2015</P_FEC>
+            <P_PRE>427</P_PRE>
+          </PRECIOS>
+        </PRECIOS_LIST>
+        <OCUPANTES_LIST>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE>Hassan</NOMBRE>
+            <APELLIDO1>Charara</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <MAIL>charara123@hotmail.com</MAIL>
+            <EDAD>0</EDAD>
+          </OCUPANTES>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE />
+            <APELLIDO1>Charara</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>0</EDAD>
+          </OCUPANTES>
+        </OCUPANTES_LIST>
+        <EXTRAS_LIST />
+        <OBSERVACIONES>
+          <TEXTO>CUSTROOMCODE 200739356 4: This is for a Honeymoon, guest wanted a more private rooftop room. Thanks 2.1: Non-Smoking 1.14: 1 king bed</TEXTO>
+        </OBSERVACIONES>
+      </HAB>
+    </HAB_LIST>
+  </RESERVA>
+</ROOT>

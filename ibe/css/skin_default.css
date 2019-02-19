@@ -1,0 +1,375 @@
+body {
+        background-color:#dfe1e3;
+    }
+    a {
+        color:#0A8DE9;
+    }
+    h1 {
+        color: #464646;
+        text-shadow: 0 1px 0 #FFFFFF;
+    }
+    h2 {
+        color: #464646;
+        text-shadow: 0 1px 0 #FFFFFF;
+    }
+    h6 {
+        color: #808080;
+        text-align:center;
+        padding:10px 0;
+        font-size:11px;
+    }
+
+/* HELPERS */
+.row1 {
+    background-color:#F2F4F6;
+}
+
+/* FRAME */ 
+#wrapper {
+        border-right-color:#dfe1e3;
+    }
+    #hdr {
+            background-color:#dfe1e3;
+        }
+        #hdr #cmsuser {
+            color: #666666;
+   
+        }
+        #hdr a {
+            color:#d1861c;
+
+        }
+    #subhdr {
+            background-color:#dfe1e3;
+            border-bottom-color:#dfe1e3;
+        }
+    #leftcol {
+        background-color:#dfe1e3;
+        border-right-color:#dfe1e3;
+    }
+    #midcol {
+        background-color:#dfe1e3;
+        border-right-color:#bcc2c7;
+    }
+    #maincol {
+		-webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+            background-color:#f2f4f6;			
+    }
+
+/* LOGIN */
+#loginForm {
+        border-color:#315489;
+    }
+    #loginForm input {
+        color:#383838;
+    }
+
+/* MESSAGES */
+.s_missing {
+    border-color:#990000;
+    background-color:#FFD5D5;
+}
+.s_success {
+    background-color:#f0fff0;
+    border-color:#00ff00;
+}
+.s_notice {
+    background-color:#ffffdd;
+    border-color:#ffd700;
+}
+.s_required {
+    background-color:#ffdddd;
+    border-color:#ffa6a6;
+}
+.s_error {
+    background-color:#990000;
+    border-color:#cc0000;
+    color:#FFFFFF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* BUTTONS */
+span.button {
+		-webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+		font-size:14px;
+		text-align:left;
+        background-color:#2598e7;
+        border-color: #87c6ee #2182d5 #2182d5 #87c6ee;
+        color:#FFFFFF;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7);
+    }
+    span.button.selected {
+        background-color:#74878d !important;
+        color: #FFFFFF !important;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3) !important;
+    }
+    /* STANDARD */
+    span.button:hover {
+        background-color:#a6e0ff;
+        border-color: #EEEEEE #84c4df #84c4df #EEEEEE;
+        color:#0d3154;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+    /* PLAIN */
+    span.button.plain {
+            border-color: #EEEEEE #C9C9C9 #C9C9C9 #EEEEEE;
+            background-color:#DFDFDF;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+            color:#565656;
+        }
+        span.button.plain:hover{
+            background-color:#a6e0ff;
+            border-color: #EEEEEE #84c4df #84c4df #EEEEEE;
+            color:#336699;
+        }
+    /* POSITIVE */
+    span.button.positive {
+            color:#529214;
+        }
+        span.button.positive:hover{
+            background-color:#9eadb2;
+            border-color: #C6D880 #B1C467 #B1C467 #C6D880;
+            color:#529214;
+        }
+    /* NEGATIVE */
+    span.button.negative {
+            color:#FFFFFF;
+        }
+        span.button.negative:hover {
+            background-color:#fbe3e4;
+            border-color: #FBC2C4 #F87378 #F87378 #FBC2C4;
+            color:#d12f19;
+        }
+
+    /* LEFT NAV BTN */
+    span.navbtn {
+		color:#333333;	
+            border-color: #transparent transparent #ffffff transparent;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+        }
+        span.navbtn:hover {
+            background-color:#9eadb2;
+            color:#000000;
+        }
+    /* TOP NAV BTN */
+    span.topbtn {
+            border-color: #bcc2c7;
+            background-color:#bcc2c7;
+            color: #333333;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+        }
+        span.topbtn:hover{
+            background-color:#333333;
+            color:#FFFFFF;
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+        }
+        .topnav select {
+            border-color: #dfe1e3;
+        }
+
+/* LIST */
+.listTbl {
+        background-color:#FFFFFF;
+        border-color:#cccccc;
+        color:#000000;
+    }
+    .listRow-1 {
+		-webkit-border-radius: 4px;
+  		-moz-border-radius: 4px;
+        background-color:#eaeaea;
+	
+    }
+    .listRowHdr {
+        background-color:#74878d;
+        color:#FFFFFF;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3) !important
+    }
+
+/* EDIT FORMS */
+legend {
+    background-color:#FFFFFF;
+    border-color:#7FA0B1;
+    color:#84909a;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+}
+fieldset {
+	
+        background-color:#FFFFFF;
+        border-color:#dfe1e3;
+        color:#000000;
+		text-align:left;
+    }
+    fieldset hr {
+        background-color:#f2f4f6;
+    }
+.selectedItem {
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color:#bcc2c7;
+    color:#000000;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* IMAGES THUMBNAIL */
+.ddsitem {
+    border-color:#D5D5D5;    
+}
+.ddsitem:hover {
+    border-color:#000000;
+}
+
+/* CALENDAR */
+.ng_cal_selected_date_custom {
+    background-color:#ffd895;
+    font-weight: bold;
+}
+
+/* CALL CENTER AVAILABILITY */
+tr.AVAILABLE_ROOM {
+    background-color:#f2f4f6;
+	font-size:13px;
+	text-align:left;
+}
+tr.AVAILABLE_ROOM.selected td a {
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+tr.NO_AVAILABLE_ROOM {
+    background-color:#d0d5d9;
+    color:#808080;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+tr.NO_AVAILABLE_ROOM td a {
+    color:#808080;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+tr.IS_VIP {
+    color:#FFFFFF;
+    background-color:#c1a236;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+.avaResultsTbl {
+        border-color:#FFFFFF;
+    }
+    .avaResultsTbl td {
+        border-color:#E4E4E4;
+    }
+    .avaResultsTbl tr.hdr {
+        color:#FFFFFF;
+        background-color:#74878d;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+		font-style:normal;
+    }
+    .avaResultsTbl tr.selected {
+        background-color: #2598e7;
+        color: #FFFFFF;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+    }
+.dailyDetailsTbl {
+    background-color:#ffffff;
+    color:#000000;
+}
+
+/* TOOLTIP */
+#tooltip .tooltip_room_descr {
+    background-color:#FFFFFF;
+    color:#000000;
+    border-color:#666666;
+}
+#tooltip .tooltip_daily_details {
+    background-color:#FFFFFF;
+    color:#000000;
+    border-color:#666666;
+}
+
+/* CALL CENTER RESERVATION */
+#reservation_wrapper {
+    }
+    #reservation_wrapper .reserv_right_col fieldset {
+        background-color: #f2f4f6;
+    }
+
+.res_row_header td {
+    background-color: #DFE1E3;
+    color:#000;
+}
+#searchGuestResultTbl .td {
+    border-color:#DFE1E3;
+    color:#000000;
+}
+#searchTAResultTbl .td {
+    border-color:#DFE1E3;
+    color:#000000;
+}
+.resStatus_cancelled {
+    font-weight:bold;
+    color:#990000;
+}
+
+/* INVENTORY */
+#inventoryTbl, #inventoryTbl th {
+	border-style:solid;
+    border-color:#dfe1e3;
+	background:#dfe1e3;
+	
+}
+
+#inventoryTbl td {
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-color:#f2f4f6;
+		text-align:center;
+		background:#FFFFFF;
+		border-style:solid;
+}
+
+#inventoryTbl td.is_closed {
+    background-color:#808080;
+    color:#FFFFFF;
+	text-align:center;
+}
+
+#inventoryTbl td.is_sold {
+    background-color:#ff6600;
+	color:#FFFFFF;
+	        text-shadow: 0 -1px 0 rgba(123, 52, 4, 0.8);
+			text-align:center;
+
+}
+#inventoryTbl td.is_sold.cell_hover {
+    background-color:#0066CC;
+	color:#FFFFFF;
+	text-decoration:underline;
+	font-weight:bold;
+	text-align:center;
+}
+
+#inventoryTbl .cell_hover {
+    background-color:#0066CC;
+	color:#FFFFFF;
+	text-decoration:underline;
+	font-weight:bold;
+	text-align:center;
+}
+
+
+#inventoryTbl td.is_closed.cell_hover {
+    background-color:#0066CC;
+	color:#FFFFFF;
+	text-decoration:underline;
+	font-weight:bold;
+	text-align:center;
+}
+
+
+
+#inventoryEditBox fieldset {
+    border-color:#74878D;
+}
+#inventoryEditBox legend {
+    border-color:#000000;
+    color:#000000;
+	text-align:center;
+}

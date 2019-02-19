@@ -1,0 +1,10 @@
+.clearfix { zoom:1; }
+
+* html #content {margin-left: 35px;} 
+
+/*.form-textarea-item {padding-bottom: 30px;}
+#content .mt {padding: 5px 0 0 0;}*/
+
+.mt {padding:4px !important;}
+
+input.checkbox, input.radio  {position: static;}

@@ -1,0 +1,77 @@
+<ROOT>
+  <PROCESS_TYPE>ELIMINAR</PROCESS_TYPE>
+  <ID>474455483</ID>
+  <HOTEL>MXXPM</HOTEL>
+  <LOCALIZADOR>474455483</LOCALIZADOR>
+  <ORIGEN>WEB_EXC</ORIGEN> 
+  <RESERVA>
+    <ID_RVA>474455483</ID_RVA>
+    <FVENTA>18/11/2014</FVENTA>
+    <HOTEL>MXXPM</HOTEL>
+    <FI>17/04/2015</FI>
+    <FF>20/04/2015</FF>
+    <TTOO>WEBEXC-USD</TTOO>
+    <AGENCIA>LUXCARIBE</AGENCIA>
+    <CLIENTE>WEBEXC-USD</CLIENTE>
+    <CATALOGO />
+    <BONO>474455483</BONO>
+    <PAGADO />
+    <DNI_PAGO />
+    <NOMBRE_PAGO>Sharon</NOMBRE_PAGO>
+    <AP1_PAGO>Marks</AP1_PAGO>
+    <AP2_PAGO />
+    <TELEFONO_PAGO>117139566015</TELEFONO_PAGO>
+    <EMAIL_PAGO />
+    <HAB_LIST>
+      <HAB>
+        <RESERVANH>2015#273#1</RESERVANH>
+        <TIPO_HAB>JUNIORST</TIPO_HAB>
+        <REG>AI</REG>
+        <FECHA_ENTRADA>17/04/2015</FECHA_ENTRADA>
+        <FECHA_SALIDA>20/04/2015</FECHA_SALIDA>
+        <HOR_LLEG>04:00:00</HOR_LLEG>
+        <HOR_SAL />
+        <AD>1</AD>
+        <JR>0</JR>
+        <NI>0</NI>
+        <BB>0</BB>
+        <PROMOCION_LIST>
+          <COD_PROMOCION>PMU15</COD_PROMOCION>
+        </PROMOCION_LIST>
+        <COD_TARIFA>USARO</COD_TARIFA>
+        <DIVISA_PREC>USD</DIVISA_PREC>
+        <TIPO_PREC>M</TIPO_PREC>
+        <PRECIOS_LIST>
+          <PRECIOS>
+            <P_FEC>17/04/2015</P_FEC>
+            <P_PRE />
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>18/04/2015</P_FEC>
+            <P_PRE>,00</P_PRE>
+          </PRECIOS>
+          <PRECIOS>
+            <P_FEC>19/04/2015</P_FEC>
+            <P_PRE>,00</P_PRE>
+          </PRECIOS>
+        </PRECIOS_LIST>
+        <OCUPANTES_LIST>
+          <OCUPANTES>
+            <TIPO>AD</TIPO>
+            <NOMBRE>Sharon</NOMBRE>
+            <APELLIDO1>Marks</APELLIDO1>
+            <APELLIDO2 />
+            <DNI />
+            <EDAD>0</EDAD>
+          </OCUPANTES>
+        </OCUPANTES_LIST>
+        <EXTRAS_LIST />
+        <OBSERVACIONES>
+          <TEXTO>CUSTROOMCODE 172710 2.1: Non-Smoking
+1.21: 2 double beds
+</TEXTO>
+        </OBSERVACIONES>
+      </HAB>
+    </HAB_LIST>
+  </RESERVA>
+</ROOT>

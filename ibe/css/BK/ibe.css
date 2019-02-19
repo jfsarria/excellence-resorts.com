@@ -1,0 +1,511 @@
+body {
+        margin:0;
+        font-family:Helvetica,Arial,sans-serif;
+        font-size:12px;
+    }
+    P {
+        margin:0px;
+    }
+    a {
+        text-decoration:none;
+    }
+    h1 {
+        font: italic 24px Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+        font-weight: bold;
+        padding:0px;
+        margin:0px;
+    }
+    h2 {
+        font: italic 22px Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+        font-weight: bold;
+        padding:0px;
+        margin:0 0 15px;
+        display: block;
+    }
+
+/* FRAME */ 
+#wrapper {
+        width:100%;
+        border-right-style:solid;
+        border-right-width:1px;
+    }
+    #main {
+        width:100%;
+    }
+    #hdr {
+            height:43px;
+        }
+        #hdr #cmslogo {
+            float:left;
+        }
+        #hdr #cmsname {
+            float:left;
+            padding:5px 0 0 10px;
+        }
+        #hdr #cmsuser {
+            float:right;
+            padding:10px 10px 0 0;
+        }
+        #hdr a {
+        }
+        #hdr a:hover {
+            text-decoration:underline;
+        }
+    #subhdr {
+            height:42px;
+            border-bottom-style:solid;
+            border-bottom-width:1px;
+        }
+        #subhdr .topnav {
+            padding: 5px 0 0 10px;
+        }
+        #subhdr .topnav a, #subhdr .topnav select {
+            float:left;
+            margin-right:10px;
+        }
+        #subhdr .topnav select {
+            padding: 4px;
+        }
+    #leftcol {
+        float:left;
+        border-right-style:solid;
+        border-right-width:5px;
+        overflow:hidden;
+    }
+    #midcol {
+        float:left;
+        width:250px;
+        background-color:white;
+        border-right-style:solid;
+        border-right-width:1px;
+        overflow:auto;
+    }
+    #maincol {
+            float:left;
+            width:800px;
+        }
+        #maincol .editarea {
+            padding:15px;
+        }
+
+/* LOGIN */
+#loginForm {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        width:490px;
+        border-style:solid;
+        border-width:1px;
+        padding:15px;
+        margin-top:30px;
+    }
+    #loginForm input {
+        float:left;
+        width:215px;
+        height:29px;
+        font-size:17px;
+        padding-left:6px;
+        margin-right:20px;
+    }
+    #loginForm .box {
+        margin:12px 0;
+    }
+
+/* MESSAGES */
+.top_msg {
+    padding: 10px 0 10px 40px;
+    margin-bottom:20px;
+}
+.s_missing {
+    border-style:dotted;
+    border-width:1px;
+}
+.s_success {
+    background-image:url(img/s_success.png);
+    background-position:10px 9px;
+    background-repeat:no-repeat;
+    border-style:solid;
+    border-width:2px;
+}
+.s_notice {
+    background-image:url(img/s_notice.png);
+    background-position:10px 9px;
+    background-repeat:no-repeat;
+    border-style:solid;
+    border-width:2px;
+}
+.s_required {
+    border-style:dotted;
+    border-width:1px;
+}
+.s_error {
+    background-image:url(img/cross.png);
+    background-position:10px 9px;
+    background-repeat:no-repeat;
+    border-style:solid;
+    border-width:2px;
+}
+.crossed {
+    text-decoration: line-through;
+}
+/* BUTTONS */
+span.button {
+        border-style: solid;
+        border-width: 1px 2px 2px 1px;
+        font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+        font-size:12px;
+        font-weight:bold;
+        text-decoration:none !important;
+        text-align:left;
+        padding:5px 10px 6px 7px;
+        margin:0 7px 0 0;
+        cursor:pointer;
+        padding-left:25px;
+        background-position:7px 5px;
+        background-repeat:no-repeat;
+    }
+    .IE span.button {
+        padding-left:28px;
+        background-position:7px 3px;
+    }
+    /* POSITIVE */
+    span.button.positive {
+            background-image:url("img/tick.png");
+        }
+        span.button.positive:hover{
+        }
+    /* NEGATIVE */
+    span.button.negative {
+            background-image:url("img/cross.png");
+        }
+        span.button.negative:hover{
+        }
+    /* KEY */
+    span.button.key {
+            background-image:url("img/key.png");
+        }
+    /* LEFT NAV BTN */
+    .leftnav span.navbtn {
+        background-color: transparent;
+        border-width: 1px 0;
+        display: block;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        width: 180px;
+    }
+    .IE .leftnav span.navbtn {
+        width: 200px;
+    }
+    /* TOP NAV BTN */
+    span.topbtn, .IE span.topbtn, .topnav select {
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-width: 1px;
+            padding-left:10px;
+            display: block;
+            width: auto;
+        }
+        .topnav select {
+            width:auto;
+            font-weight: bold;
+        }
+
+/* LIST */
+.listTbl {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-width: 1px;
+        border-style: solid;
+        padding:10px;
+    }
+    .listTbl td {
+        padding:5px;
+    }
+    .listRowHdr {
+        font-weight: bold;
+    }
+
+/* EDIT FORMS */
+legend {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 6px;
+}
+fieldset {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-style: solid;
+        border-width: 1px;
+        margin:0 0 20px;;
+        padding: 6px 6px 15px;
+    }
+    fieldset hr {
+        border: medium none;
+        height: 1px;
+        margin-bottom:20px
+    }
+    .fieldset {
+            margin:0 0 5px 5px;
+        }
+        .fieldset .label {
+            margin-top:5px;
+        }
+        .fieldset a:hover {
+            text-decoration:underline;
+        }
+        .fieldset .imgUploaded, .fieldset .videoUploaded {
+            padding:0 0 10px 0;
+        }
+        .fieldset .cbdelete {
+            cursor:pointer;
+        }
+        .fieldset .cbdelete:hover {
+            cursor:pointer;
+            opacity: .7;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+            filter: alpha(opacity=70);
+        }
+        .fieldset #GrossRackRate {
+            font-size:20px;
+        }
+
+.frmBtns {
+    float:right;
+    padding-bottom:30px;
+}
+.ListBtns {
+        float:left;
+        padding-bottom:15px;
+    }
+    .ListBtns h2 {
+        margin:0;
+    }
+
+.ng_cal_input_field {
+    /*display:none;*/
+}
+
+/* HELPERS */
+.aclear {
+    clear:both;
+    float:none !important;
+}
+.aleft {
+    float:left;
+}
+.aright {
+    float:right;
+}
+.opaque {
+    opacity: .5;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+}
+input.full {
+    width:750px;
+}
+input.med {
+    width:150px;
+}
+input.large {
+    width:300px;
+}
+input.small {
+    width:30px;
+}
+.IE input {
+    font-size:14px;
+}
+textarea.full {
+    width:750px;
+    height:100px;
+}
+
+/* IMAGES THUMBNAIL */
+.ddsitem {
+    float:left;
+    border-style: solid;
+    border-width: 1px;
+    margin:5px;
+    padding:2px;
+    text-align:center;
+    cursor:move !important;
+}
+.ddsitem:hover {
+    border-style: solid;
+    border-width: 1px;
+}
+.ddsitem .ddsimg {
+    width:150px;
+    height:113px;
+    padding:2px;
+    overflow:hidden;
+}
+.ddsitem .ddsfile {
+    font-size:10px;
+    text-align:left;
+    width:150px;
+    height:20px;
+    overflow:hidden;
+    white-space:nowrap;
+    padding-top: 5px;
+}
+
+
+/* CALENDAR */
+#CloseArrivalTbl .ng_cal_input_field {
+    display:none;
+}
+.ng_cal_selected_date_custom {
+    background-color:#c0c0c0;
+    font-weight: bold;
+}
+
+/* CALL ENTER MAKE RESERVATION */
+.descr_prop {
+    display:none;
+}
+.room_box_tpl {
+    padding:0 0 25px 25px;
+    display:none;
+}
+
+/* CALL CENTER AVAILABILITY */
+tr.AVAILABLE_ROOM.selected td a {
+    text-decoration:underline;
+}
+tr.IS_VIP {
+    font-weight: bold;
+}
+.avaResultsTbl {
+        border-style: solid;
+        border-width: 1px;
+        padding:3px;
+    }
+    #avaResults .hdr {
+        font-weight: bold;
+        text-align: center;
+        font-size: 16px;
+    }
+    #avaResults .TOTAL_RESERVATION {
+        text-align: center;
+        font-size: 24px;
+    }
+    #avaResults #TOTAL_RESERVATION_CELL {
+        display:none;
+    }
+    .avaResultsTbl td {
+        border-style: solid;
+        border-width: 1px;
+        padding:6px 3px;
+    }
+    .avaResultsTbl tr.hdr {
+        font-weight: bold;
+    }
+    .avaResultsTbl tr.hdr td {
+        text-align:center;
+    }
+    .avaResultsTbl .AVG_FINAL {
+        text-align:right;
+    }
+    .avaResultsTbl .AVG_FINAL_DIFF {
+        text-align:right;
+    }
+    .avaResultsTbl .FINAL {
+        text-align:right;
+    }
+.dailyDetailsTbl td {
+    height:35px;
+}
+
+/* TOOLTIP */
+#tooltip {
+        position:absolute;
+        z-index:9999;
+        width:550px;
+        cursor:pointer;
+    }
+    #tooltip .tooltip_room_descr {
+        border-style: solid;
+        border-width: 2px;
+        padding:5px;
+        width:550px;
+    }
+    #tooltip .tooltip_daily_details {
+        border-style: solid;
+        border-width: 2px;
+        padding:5px;
+        width:550px;
+    }
+
+
+/* CALL CENTER RESERVATION */
+#reservation_wrapper {
+    }
+    .reserv_left_col {
+        float:left;
+        width:520px;
+    }
+    .reserv_right_col {
+        float:right;
+        width:260px;
+    }
+    #reserv_summary {
+    }
+    #reservation_wrapper h4 {
+        font-size: 14px;
+        margin: 0;        
+    }
+    #reservation_wrapper h5 {
+        font-size: 16px;
+        margin: 0;        
+    }
+
+#callcenter_reserv_ta_form {
+        padding: 0 20px;
+    }
+    #callcenter_reserv_ta_form table input {
+        margin-left:10px;
+    }
+
+#callcenter_RES_TO_WHOM_TA, #callcenter_RES_TO_WHOM_GUEST, #callcenter_NEW_RES_TO_WHOM_TA {
+    display:none;
+}
+#m_reserv_forwhom_next,#m_reserv_forwhom_ta_next,#m_reserv_forwhom_guest_next,#m_reserv_forwhom_newta_next {
+    margin-top:20px;
+    text-align:right
+}
+#m_reserv_rooms_next {
+    margin-top:20px;
+    text-align:right
+}
+.res_row_header td {
+    font-weight: bold;
+    padding: 6px 4px;
+}
+#cc_processing .lbl {
+    text-align:center;
+    font-size:20px;
+}
+#cc_processing .result {
+    display:none;
+}
+#searchGuestResultTbl .td {
+    border-style:solid;
+    border-width:1px;
+    padding: 5px;
+}
+#searchTAResultTbl .td {
+    border-style:solid;
+    border-width:1px;
+    padding: 5px;
+}
+
+

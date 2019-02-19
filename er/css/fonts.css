@@ -1,0 +1,53 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2824904, 2014-06-06T15:47:22-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Campton Book by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/campton/book/
+ * 
+ * Webfont: Campton ExtraLight by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/campton/extra-light/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2824904
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2014 by Ren&#x00E9; Bieder. All rights reserved.
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+/*@import url("//hello.myfonts.net/count/2b1ac8");*/
+
+  
+@font-face {
+	font-family: 'Campton-Book';
+	src: url('../fonts/2B1AC8_0_0.eot');
+	src: url('../fonts/2B1AC8_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2B1AC8_0_0.woff') format('woff'),url('../fonts/2B1AC8_0_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'Campton-ExtraLight';
+	src: url('../fonts/2B1AC8_1_0.eot');
+	src: url('../fonts/2B1AC8_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2B1AC8_1_0.woff') format('woff'),url('../fonts/2B1AC8_1_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'socicon';
+    src: url('../fonts/socicon-webfont.eot');
+    src: url('../fonts/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/socicon-webfont.woff') format('woff'),
+         url('../fonts/socicon-webfont.ttf') format('truetype'),
+         url('../fonts/socicon-webfont.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ 

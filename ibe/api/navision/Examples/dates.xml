@@ -1,0 +1,87 @@
+<ROOT>
+    <PROCESS_TYPE>ELIMINAR</PROCESS_TYPE>
+    <ID>5114852406035</ID>
+    <HOTEL>MXFPM</HOTEL>
+    <LOCALIZADOR>5114852406035</LOCALIZADOR>
+    <ORIGEN>WEB_XCL</ORIGEN>
+    <RESERVA>
+        <ID_RVA>5114852406035</ID_RVA>
+        <FVENTA>07/02/2016</FVENTA>
+        <HOTEL>MXFPM</HOTEL>
+        <FI>15/02/2016</FI>
+        <FF>19/02/2016</FF>
+        <TTOO>WEBEXC-USD</TTOO>
+        <AGENCIA>LUXCARIBE</AGENCIA>
+        <CLIENTE>WEBEXC-USD</CLIENTE>
+        <CANAL>WEB HOTEL</CANAL>
+        <CATALOGO/>
+        <BONO>5114852406035</BONO>
+        <PAGADO/>
+        <DNI_PAGO/>
+        <NOMBRE_PAGO>Melanie </NOMBRE_PAGO>
+        <AP1_PAGO>Chasse</AP1_PAGO>
+        <AP2_PAGO/>
+        <TELEFONO_PAGO>12073578639</TELEFONO_PAGO>
+        <EMAIL_PAGO>melchasse@gmail.com</EMAIL_PAGO>
+        <DIRECCION_PAGO>20 Emmons Road</DIRECCION_PAGO>
+        <CIUDAD_PAGO>Livermore</CIUDAD_PAGO>
+        <ESTADO_PAGO>ME</ESTADO_PAGO>
+        <CP_PAGO>04253</CP_PAGO>
+        <PAIS_PAGO>US</PAIS_PAGO>
+        <HAB_LIST>
+            <HAB>
+                <RESERVANH>2016#4495#1</RESERVANH>
+                <TIPO_HAB>JUNIORTR</TIPO_HAB>
+                <REG>AI</REG>
+                <FECHA_ENTRADA>15/02/2016</FECHA_ENTRADA>
+                <FECHA_SALIDA>19/02/2016</FECHA_SALIDA>
+                <HOR_LLEG></HOR_LLEG>
+                <HOR_SAL></HOR_SAL>
+                <AD>1</AD>
+                <JR>0</JR>
+                <NI>0</NI>
+                <BB>0</BB>
+                <PROMOCION_LIST>
+                    <COD_PROMOCION>fun2016</COD_PROMOCION>
+                </PROMOCION_LIST>
+                <COD_TARIFA></COD_TARIFA>
+                <DIVISA_PREC>USD</DIVISA_PREC>
+                <TIPO_PREC>M</TIPO_PREC>
+                <PRECIOS_LIST>
+                    <PRECIOS>
+                        <P_FEC>15/02/2016</P_FEC>
+                        <P_PRE>421</P_PRE>
+                    </PRECIOS>
+                    <PRECIOS>
+                        <P_FEC>16/02/2016</P_FEC>
+                        <P_PRE>421</P_PRE>
+                    </PRECIOS>
+                    <PRECIOS>
+                        <P_FEC>17/02/2016</P_FEC>
+                        <P_PRE>421</P_PRE>
+                    </PRECIOS>
+                    <PRECIOS>
+                        <P_FEC>18/02/2016</P_FEC>
+                        <P_PRE>421</P_PRE>
+                    </PRECIOS>
+                </PRECIOS_LIST>
+                <OCUPANTES_LIST>
+                    <OCUPANTES>
+                        <TIPO>AD</TIPO>
+                        <NOMBRE>Melanie </NOMBRE>
+                        <APELLIDO1>Chasse</APELLIDO1>
+                        <APELLIDO2></APELLIDO2>
+                        <DNI></DNI>
+                        <EDAD>0</EDAD>
+                    </OCUPANTES>
+                </OCUPANTES_LIST>
+                <EXTRAS_LIST>
+                    <EXTRAS/>
+                </EXTRAS_LIST>
+                <OBSERVACIONES>
+                    <TEXTO> - Tripadvisor - Non-smoking -  - 1 King</TEXTO>
+                </OBSERVACIONES>
+            </HAB>
+        </HAB_LIST>
+    </RESERVA>
+</ROOT>
