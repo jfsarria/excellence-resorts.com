@@ -91,7 +91,9 @@
                 'Hear_about_us' : '<?=$DATA["RESERVATION"]["HEAR_ABOUT_US"]?>'
             }];
         </script>
+
         <? include "../GTM.php"; ?>
+        
 		<div id="wrapper">
 			<? include "top.php"; ?>
             <div id="content" style="font-size:12px">
