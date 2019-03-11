@@ -1,5 +1,5 @@
 
-<!-- <br><br><br><br><center><img src="http://www.excellence-resorts.com/er/top-logo-desktop.png"><h1>Under Maintenance<h1></center> -->
+<!-- <br><br><br><br><center><img src="http://www.excellence-resorts.com/er/top-logo-desktop.png"><h1>Our booking system is closed for maintenance<br>We apologize for the inconvenience.<h1></center> -->
 
 <?
 

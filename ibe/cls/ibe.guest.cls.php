@@ -322,18 +322,20 @@ class guest {
             if (strstr($VIEWNAME,"V_SEARCH_")) array_push($TABLES,$VIEWNAME);
         }
         foreach ($TABLES as $i=>$VIEWNAME) {
-            $clsReserv->searchReservationQuery($db, array(
-                "GROUPED"=>$GROUPED,
-                "VIEWNAME"=>$VIEWNAME,
-                "TABLENAME"=>str_replace("V_SEARCH_","RESERVATIONS_",$VIEWNAME),
-                "WHERE"=>"GUEST_ID={$GUEST_ID}"
-            ), $qry);
+            if (dbTableExists($db, $VIEWNAME)) {
+                $clsReserv->searchReservationQuery($db, array(
+                    "GROUPED"=>$GROUPED,
+                    "VIEWNAME"=>$VIEWNAME,
+                    "TABLENAME"=>str_replace("V_SEARCH_","RESERVATIONS_",$VIEWNAME),
+                    "WHERE"=>"GUEST_ID={$GUEST_ID}"
+                ), $qry);
+            }
         }
 
         $query = implode(" UNION ",$qry)." ORDER BY ID DESC, NUMBER";
         $arg = array('query' => $query);
         //if ($this->showQry) print "<p class='s_notice top_msg'>$query</p>";
-        //mail("jaunsarria@gmail.com","query",$query);
+        //file_put_contents($_SERVER['DOCUMENT_ROOT']."/ibe/cls/DEBUG.TXT",$query,FILE_APPEND);
         $result = dbQuery($db, $arg);
         return $result;
     }
