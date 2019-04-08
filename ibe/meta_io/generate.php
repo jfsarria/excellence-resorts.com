@@ -46,44 +46,46 @@ $RJSON = file_get_contents($API);
 
 $RESULT = json_decode($RJSON, true);
 
-foreach ($RESULT['RES_ROOM_1_ROOMS'] as $ROOM_ID => $ROOM) {
-  $DEBUG .= "\nupdating ROOM_ID: $ROOM_ID :: AVAILABLE_NIGHTS: {$ROOM['AVAILABLE_NIGHTS']} - exists: ".(isset($ROOM["NIGTHS"])?"YES":"NO")." - total: ".(isset($ROOM["TOTAL"])?"YES":"NO");
-  if (isset($ROOM['NIGTHS'])) {
-      foreach ($ROOM['NIGTHS'] as $NIGHT_DATE => $NIGHT_DATA) {
-          $DEBUG .= "$NIGHT_DATE: ";
-          $KEY = str_replace("-","",$NIGHT_DATE);
-          $CURRENT_FILE = "data/".$PROP_CODE."-".substr($NIGHT_DATE, 0, 7).".json";
-          $DEBUG .= "$CURRENT_FILE ";
+if (isset($RESULT['RES_ROOM_1_ROOMS']) && is_array($RESULT['RES_ROOM_1_ROOMS'])) {
+  foreach ($RESULT['RES_ROOM_1_ROOMS'] as $ROOM_ID => $ROOM) {
+    $DEBUG .= "\nupdating ROOM_ID: $ROOM_ID :: AVAILABLE_NIGHTS: {$ROOM['AVAILABLE_NIGHTS']} - exists: ".(isset($ROOM["NIGTHS"])?"YES":"NO")." - total: ".(isset($ROOM["TOTAL"])?"YES":"NO");
+    if (isset($ROOM['NIGTHS'])) {
+        foreach ($ROOM['NIGTHS'] as $NIGHT_DATE => $NIGHT_DATA) {
+            $DEBUG .= "$NIGHT_DATE: ";
+            $KEY = str_replace("-","",$NIGHT_DATE);
+            $CURRENT_FILE = "data/".$PROP_CODE."-".substr($NIGHT_DATE, 0, 7).".json";
+            $DEBUG .= "$CURRENT_FILE ";
 
-          if ($PREV_FILE != $CURRENT_FILE) {
-              $PREV_FILE = $CURRENT_FILE;
-              if (!file_exists($CURRENT_FILE)) {
-                  //print "<br>Creating $CURRENT_FILE file...<br>";
-                  $empty = array("calendar" => array());
-                  $JSON = json_encode($empty);
-                  file_put_contents($CURRENT_FILE, $JSON);
-              }
-          }
-          if (!isset($FILES[$CURRENT_FILE])) {
-              $JSON = file_get_contents($CURRENT_FILE);
-              $FILES[$CURRENT_FILE] = json_decode($JSON, true);
-          }
+            if ($PREV_FILE != $CURRENT_FILE) {
+                $PREV_FILE = $CURRENT_FILE;
+                if (!file_exists($CURRENT_FILE)) {
+                    //print "<br>Creating $CURRENT_FILE file...<br>";
+                    $empty = array("calendar" => array());
+                    $JSON = json_encode($empty);
+                    file_put_contents($CURRENT_FILE, $JSON);
+                }
+            }
+            if (!isset($FILES[$CURRENT_FILE])) {
+                $JSON = file_get_contents($CURRENT_FILE);
+                $FILES[$CURRENT_FILE] = json_decode($JSON, true);
+            }
 
-          $DATA = $FILES[$CURRENT_FILE];
+            $DATA = $FILES[$CURRENT_FILE];
 
-          $ROOM_DATA = isset($DATA['calendar'][$KEY]["Adults ".$ADULTS_QTY][$ROOM_ID]) ? $DATA['calendar'][$KEY]["Adults ".$ADULTS_QTY][$ROOM_ID] : array("name"=>"","price"=>array());
-          $ROOM_DATA["name"] = $ROOM['NAME'];
-          if (!is_array($ROOM_DATA["price"])) { $ROOM_DATA["price"] = array(); } 
+            $ROOM_DATA = isset($DATA['calendar'][$KEY]["Adults ".$ADULTS_QTY][$ROOM_ID]) ? $DATA['calendar'][$KEY]["Adults ".$ADULTS_QTY][$ROOM_ID] : array("name"=>"","price"=>array());
+            $ROOM_DATA["name"] = $ROOM['NAME'];
+            if (!is_array($ROOM_DATA["price"])) { $ROOM_DATA["price"] = array(); } 
 
-          // EX has a different JSON than TBH and FPM. EX has QTY under class therefore we have to mutiplay final rate. The others already have final rate times adults. 
-          $MULTIPLY_BY = is_array($NIGHT_DATA) && isset($NIGHT_DATA['CLASS']) && isset($NIGHT_DATA['CLASS']['RATE']) && isset($NIGHT_DATA['CLASS']['RATE']['QTY']) ? (int)$NIGHT_DATA['CLASS']['RATE']['QTY'] : 1;
+            // EX has a different JSON than TBH and FPM. EX has QTY under class therefore we have to mutiplay final rate. The others already have final rate times adults. 
+            $MULTIPLY_BY = is_array($NIGHT_DATA) && isset($NIGHT_DATA['CLASS']) && isset($NIGHT_DATA['CLASS']['RATE']) && isset($NIGHT_DATA['CLASS']['RATE']['QTY']) ? (int)$NIGHT_DATA['CLASS']['RATE']['QTY'] : 1;
 
-          $ROOM_DATA["price"][$COUNTRY_CODE] = is_array($NIGHT_DATA) ? (int)$NIGHT_DATA['RATE']['FINAL'] * $MULTIPLY_BY : 0;
-          $DATA['calendar'][$KEY]["Adults ".$ADULTS_QTY][$ROOM_ID] = $ROOM_DATA;
-          ksort($DATA['calendar'][$KEY]["Adults ".$ADULTS_QTY]);
+            $ROOM_DATA["price"][$COUNTRY_CODE] = is_array($NIGHT_DATA) ? (int)$NIGHT_DATA['RATE']['FINAL'] * $MULTIPLY_BY : 0;
+            $DATA['calendar'][$KEY]["Adults ".$ADULTS_QTY][$ROOM_ID] = $ROOM_DATA;
+            ksort($DATA['calendar'][$KEY]["Adults ".$ADULTS_QTY]);
 
-          $FILES[$CURRENT_FILE] = $DATA;
-      }
+            $FILES[$CURRENT_FILE] = $DATA;
+        }
+    }
   }
 }
 

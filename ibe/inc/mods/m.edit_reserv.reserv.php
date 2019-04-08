@@ -25,7 +25,13 @@ if ($MODIFY!="") {
             <div>CheckOut: <? print shortDate($RES_CHECK_OUT) ?></div>
             <? foreach ($RESERVATION['RES_ROOMS_SELECTED'] as $ind => $ROOM_ID) { 
                 $ROOM = $JSON["RES_ROOM_".($ind+1)."_ROOMS"][$ROOM_ID];
-                $GUESTS = (int)$JSON["RES_ROOM_".($ind+1)."_ADULTS_QTY"];
+                if (isset($JSON["RES_ROOM_".($ind+1)."_ADULTS_QTY"])) {
+                  $GUESTS = (int)$JSON["RES_ROOM_".($ind+1)."_ADULTS_QTY"];
+                } else if (isset($RESERVATION["RES_ROOM_".($ind+1)."_ADULTS_QTY"])) {
+                  $GUESTS = (int)$RESERVATION["RES_ROOM_".($ind+1)."_ADULTS_QTY"];
+                } else {
+                  $GUESTS = 2;
+                }
                 ?>
                 <br>
                 <div>Room Type: <? print $ROOM["NAME"] ?></div>
