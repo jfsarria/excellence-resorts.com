@@ -73,6 +73,8 @@
                 </td>
                 <td class="w205">
                     <input type="text" id="GUEST_FIRSTNAME" name="GUEST_FIRSTNAME" value="<? print $_COOKIE['GUEST_LOGGED']?$RES_GUEST['FIRSTNAME']:"" ?>">
+                     <input type="hidden" name="T_ACCESO" value="<? print isset($results['T_ACCESO'])?$results['T_ACCESO']:''?>">
+                         <input type="hidden" name="ENTORNO" value="<? print isset($results['ENTORNO'])?$results['ENTORNO']:''?>">
                     <span><?=ln("First Name","Nombre")?>*</span>
                 </td>
                 <td class="w205">

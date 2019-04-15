@@ -8,7 +8,7 @@
     $isMakeBooking = true;
 
     include "get_search.php";
-
+    $_POST['QRYSTR']=$_POST['QRYSTROLD'];
     $BOOK = $_REQUEST['BOOK'];
 
 

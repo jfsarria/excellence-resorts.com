@@ -77,7 +77,100 @@ function daily_rate_BoxDates($FROM, $TO, $DOW) {
     $return = "<TD nowrap valign='top' style='padding:0 15px 0 5px'>";
     $return .= date("M j", strtotime($FROM));
     if ( $FROM != $TO ) $return .= "&nbsp;-&nbsp;".date("M j", strtotime($TO));
-    $return .= "</TD>";
+    //$return .= "</TD><TD>Discounts</TD>";
+
+    return $return;
+}
+
+function daily_discounts_row($_AVAILABILITY, $arg) {
+    extract($arg);
+    $return = "";
+
+    $ROOM = $_AVAILABILITY["RES_ROOM_{$ROOM_NUM}_ROOMS"][$ROOM_ID];
+    if (!isset($ROOM["NIGTHS"])) $ROOM["NIGTHS"] = array();
+
+    $AV_STAY = (int)$_AVAILABILITY['RES_NIGHTS'];
+    $AV_DAY = $_AVAILABILITY['RES_CHECK_IN'];
+    $AV_TO = $_AVAILABILITY['RES_CHECK_OUT'];
+    
+    $incr = 0;
+    $diff=array();
+
+    do {
+        $hasRate = true;
+        if (isset($ROOM["NIGTHS"][$AV_DAY])) {
+            $NIGHT = $ROOM["NIGTHS"][$AV_DAY];
+            if (is_array($NIGHT)) {
+                
+                for($i=0;$i<count($NIGHT['DISCOUNT']);$i++){
+                    if(isset($NIGHT['DISCOUNT'][$i][0])){
+                       $s="";
+                       $s=$NIGHT['DISCOUNT'][$i][0]['SISTEMA'];
+                       $cadena=explode('_', $s);
+                       if($cadena[0]=="F" && !in_array($NIGHT['DISCOUNT'][$i][0]['ID_LIN'], $diff) && $NIGHT['DISCOUNT'][$i][0]['APLICA']==1){
+                           $return .= "<TR >";
+                          // $return .= "<TD>";
+                          // $return .=  $AV_DAY;   
+                          // $return .= "</TD>";
+                          // $return .= "</TR>";
+
+                           //$return .= "<TR>";
+                           //$return .= "<TD>";
+                           //$return .=  $NIGHT['DISCOUNT'][$i][0]['ID_LIN'];   
+                           //$return .= "</TD>";
+                           array_push($diff,$NIGHT['DISCOUNT'][$i][0]['ID_LIN']);
+                           $return .= "<TD>";
+                           $return .=  $NIGHT['DISCOUNT'][$i][0]['VALOR']; 
+                           //$return .= "</TD>";                   
+                            
+                           //$return .= "<TD>";
+                           $return .=  $NIGHT['DISCOUNT'][$i][0]['SIMBOLO']; 
+                           $return .= "</TD>";   
+                           //$return .= "</TR>";
+                           $return .= "<TD>";
+                           $return .=  "<img height='42' width='50' src='/ibe/img/sale.png'> ";
+                           $return .= "</TD>";
+                           $return .= "<TD>";
+                          
+                            $from_fecha=date("M j", strtotime($NIGHT['DISCOUNT'][$i][0]['WINFROM']));              
+                            $to_fecha=date("M j", strtotime($NIGHT['DISCOUNT'][$i][0]['WINTO']));
+
+                           //$hoy= date("M j");
+                            //if($hoy==$to_fecha){
+
+                            //}
+                           $return .=  " Valid {$from_fecha} - {$to_fecha}";
+
+                           $return .= "</TD>";
+                           //if($s!="F_INV"){
+                           //     $return .= "<TD>";
+                           //     $return .=  "&nbsp;&nbsp; left:  <b>{$NIGHT['DISCOUNT'][$i][0]['LEFT']}</b>";
+                           //     $return .= "</TD>";
+                           //}
+                           
+                              
+                           $return .= "</TR>";
+
+                       }
+
+                    }
+                   
+                   
+                }                
+                
+            } else $hasRate = false;
+        } else $hasRate = false;
+        if (!$hasRate) $return .= "<TD></TD>";
+
+        // NEXT DAY
+        $DOW = date("w", strtotime($AV_DAY))+1;
+        $AV_DAY = addDaysToDate($AV_DAY, 1);
+        ++$incr;
+
+        //if ( $DOW == 7 && $incr < $AV_STAY ) {
+        //    $return .= "<TR>".daily_rate_BoxDates($AV_DAY, $AV_TO, 1)."</TD>";
+        //}
+    } while ($incr < $AV_STAY);
 
     return $return;
 }
