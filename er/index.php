@@ -7,6 +7,9 @@
 
 
     //print "<pre>";print_r($_SERVER);print "</pre>";exit;
+global $T_ACCESO;
+global $ENTORNO;
+$ENTORNO="Front";
     include "mobile-redirect.php";
     include "secure-redirect.php";
 

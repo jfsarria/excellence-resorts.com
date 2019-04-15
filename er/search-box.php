@@ -140,9 +140,18 @@
                     <label>Promo</label>
                     <span class="input-wrapper">
                         <input type="text" name="RES_SPECIAL_CODE" value="<? print $results['RES_SPECIAL_CODE']?>">
+                        <input type="hidden" name="T_ACCESO" value="<? print isset($results['T_ACCESO'])?$results['T_ACCESO']:''?>">
+                         <input type="hidden" name="ENTORNO" value="<? print isset($results['ENTORNO'])?$results['ENTORNO']:''?>">
                     </span><!--.input-wrapper-->
                 </div>
-
+                <!-- 
+                <div class="form-item-text third-form-el promo-code">
+                    <label>Coupon</label>
+                    <span class="input-wrapper">
+                       <input type="text" name="RES_COUPON_CODE" id="RES_COUPON_CODE" value="<? print $results['RES_COUPON_CODE']?>">   
+                   
+                </div>
+                -->
             </div>
             <!--.form-select-group-->
             <input type="hidden" name="RES_LANGUAGE" value="<? print $RES_LANGUAGE ?>">

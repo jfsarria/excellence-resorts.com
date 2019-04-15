@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     //TRANSFERS
     var transferdata = $.getJSON('/ibe/index.php', {
-        PAGE_CODE: 'ws.getTransferSettings',
+        PAGE_CODE:        'ws.getTransferSettings',
         FIELDS: "IS_ACTIVE,OVERVIEW_EN,OVERVIEW_SP"
         }, function(retVal) {
             setUpTransfer(false, retVal);
@@ -62,6 +62,7 @@ $(document).ready(function() {
 
 
 function see_more(ITEM_ID) {
+    //alert(ITEM_ID);
     $("#"+ITEM_ID).addClass("see-more");
 	startSlide(ITEM_ID);
 }
@@ -89,7 +90,7 @@ function set_lbl_vip(list_rooms) {
 
 function select_room(ITEM_ID, track) {
 	if (typeof(ITEM_ID)=='undefined') return;
-
+//alert('hola');
     var track = track || false;
         room = ITEM_ID.split("_"),
         room_num = room[0],
@@ -144,7 +145,6 @@ function select_room(ITEM_ID, track) {
 
     track_selection(room_num, room_id, total_price_was, total_price_is, vip);
     update_totals(room_num);
-
 }
 
 function track_selection(room_num, room_id, total_price_was, total_price_is, vip) {
@@ -155,22 +155,26 @@ function track_selection(room_num, room_id, total_price_was, total_price_is, vip
         'total_price_is':total_price_is
     };
     room_options(room_num, vip);
-
-	//console.log('ibe_price_'+room_num + " : " + total_price_is)
-	if (room_num==1) {
-		dataLayer.push({"ibe_price_1" : total_price_is});
-	} else if (room_num==2) {
-		dataLayer.push({"ibe_price_2" : total_price_is});
-	} else if (room_num==3) {
-		dataLayer.push({"ibe_price_3" : total_price_is});
-	}
-	
 }
 
 function room_options(room_num, vip) {
     var room = $("#pref_room_"+room_num);
     room.find(".field_vip").hide();
     room.find(".field_vip_"+vip).show();
+}
+
+function update_totals() {
+    var total_was = 0,
+        total_is = 0;
+    for (room_num in _book.room) {
+        //alert(room_num);
+        total_was += _book.room[room_num].total_price_was;
+        total_is += _book.room[room_num].total_price_is;
+    }
+    $("#total_was").html(total_was!=0?"$"+number_format(total_was):"");
+    $("#total_is").html("$"+number_format(total_is));
+    $("#total_cc_charge_is").html(total_is!=0?"$"+number_format(total_is):"");
+    TOTAL_COST = total_is;
 }
 
 function formatCurrency(total, decimals, sign) {
@@ -204,6 +208,15 @@ function click_room_tab(ROOM_NUM, is_modify) {
     }
 
     return true;
+}
+
+function click_room_tab_del(args) {   
+      var AVAILABLE = args.AVAILABLE,
+        ROOM_NUM = args.ROOM_NUM,
+        ROOMS_QTY = args.ROOMS_QTY;
+
+    //alert(AVAILABLE + "," + ROOM_NUM + "," + ROOMS_QTY + " = " + args.toSource()) 
+    $("#summary_room_"+ROOM_NUM).hide();       
 }
 
 function select_continue(args) {
@@ -240,9 +253,7 @@ function select_continue(args) {
 			$("#btn-book-now").removeClass("hidden");
 			$("#select-rooms").addClass("hidden");
 			$("#guest-info").removeClass("hidden");
-
-			dataLayer.push({"ibe_step": "step-2"});
-
+            //alert("llenar info");
 			select_nav_step(2);
 		}
 		if (ROOM_NUM==ROOMS_QTY-1) {
@@ -250,20 +261,9 @@ function select_continue(args) {
 		}
 
 		ga('send', {
-			hitType : 'pageview',
-			page : '/booking-client-info',
-			title : 'Booking - Client Info'
+		  hitType: 'pageview',
+		  title: 'Booking - Client Info'
 		});
-
-		// JUST WAITING TO SEE IF THEY WANTED HERE TOO
-		/*
-		taq('track', 'START_BOOKING', {
-			'travel_start_date' : data.RES_CHECK_IN,
-			'travel_end_date' : data.RES_CHECK_OUT
-		}); 
-		*/
-
-		//console.log(data.RES_CHECK_IN, data.RES_CHECK_OUT)
 
 	} else {
 		if (args.LN=="EN") {
@@ -297,7 +297,7 @@ function currency_symbol(val) {
 	return (typeof(CURRENCY_SYMBOL[val])!="undefined" ? CURRENCY_SYMBOL[val] : "$");
 }
 
-function update_totals() {
+function update_totals() { //este actualiza
     var currval = $("#QUOTE").val(),
 		symbol = currency_symbol(currval) + "&nbsp;",
 		total_conv_hidden = $("#total_conversion").hasClass("hidden"),
@@ -316,8 +316,6 @@ function update_totals() {
     TOTAL_COST = total_is;
 
 	update_conversion(currval, symbol);
-
-	return TOTAL_COST;
 }
 
 function update_conversion(currval, symbol) {
@@ -739,6 +737,7 @@ function validate_form() {
 }
 
 function book_now() {
+    //alert("hola");
     BOOK = {};
 
     validate_form();
@@ -848,22 +847,20 @@ function book_now() {
 
         var make =  $.post('make-booking.php', {
 			QRYSTR: search_qry+"&makebooking=1",
-            QRYSTROLD: search_qry,
 			BOOK: BOOK
 		}, function(result) {
-
-			if (typeof result.RES_NUMBER != "undefined") {
-                //document.location.href = "confirmation.php?"+JSON.stringify(result);
-                document.location.href = "confirmation.php";
+			if (result.indexOf("RES_NUMBER")>0) {
+                //alert(result);
+				document.location.href = "confirmation.php?"+result;
 			} else {
-				alert(typeof result.error == "undefined" ? "Room is not longer available." : result.error.join(", "));
+                
+				alert(result);
+
 				$("#btn-book-now").removeClass("hidden");
 				$("#loading-making-booking").hide();
 			}
-
 		}).fail(function(result) {
-			alert("The transaction could not be completed. Please call +1 866 540 2585")
-			//document.location.href = "confirmation.php";
+			document.location.href = "confirmation.php";
 		})
 
         //make.error(function() { alert("Error submitting the reservation"); })

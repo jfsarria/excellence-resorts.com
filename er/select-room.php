@@ -118,7 +118,12 @@
                                 <div class="slider-direction-nav" id="slider-direction-nav-<?=$ITEM_ID?>"></div>
                                 <div class="slider-control-nav" id="slider-control-nav-<?=$ITEM_ID?>"></div>
                             </div>
-
+                             <div class="sale-was">
+                            <table style="align-items: center;"> <!--JM-->                       
+                                <? $discounts_DETAILS = daily_discounts_row($results, array("ROOM_ID"=>$ROOM_ID,"ROOM_NUM"=>$ROOM_NUM)); ?>                            
+                            <?print $discounts_DETAILS?>                                              
+                            </table>
+                            </div>
                             <div class="room-description"><?=excerpt($ROOM_DETAILS['DESCR_'.$RES_LANGUAGE])?></div>
                             <div class="room-features"><div><?=ln("ROOM FEATURES","EQUIPAMIENTO DE LA HABITACIÓN")?></div><?=$ROOM_DETAILS['INCLU_'.$RES_LANGUAGE]?></div>
                             <div class="room-more"><a href="javascript:void(0)" onclick="see_more('<?=$ITEM_ID?>')">+ <?=ln("SEE MORE","VER MÁS")?></a></div>

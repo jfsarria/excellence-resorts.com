@@ -27,8 +27,27 @@
 
     $search_qry = "RES_CHECK_IN={$_TOMORROW}&RES_CHECK_OUT={$_AFTER_TOMORROW}&RES_NIGHTS=2&RES_ROOMS_QTY=1&RES_ROOM_1_ADULTS_QTY=2&RES_ROOM_1_CHILD_AGE_5=0&RES_ROOM_1_CHILDREN_QTY=0&RES_ROOM_1_CHILD_AGE_3=4&RES_ROOM_1_CHILD_AGE_2=4&RES_ROOM_1_CHILD_AGE_1=4&RES_ROOM_2_ADULTS_QTY=1&RES_ROOM_2_CHILD_AGE_5=0&RES_ROOM_2_CHILDREN_QTY=0&RES_ROOM_2_CHILD_AGE_3=4&RES_ROOM_2_CHILD_AGE_2=4&RES_ROOM_2_CHILD_AGE_1=4&RES_ROOM_3_ADULTS_QTY=1&RES_ROOM_3_CHILD_AGE_5=0&RES_ROOM_3_CHILDREN_QTY=0&RES_ROOM_3_CHILD_AGE_3=4&RES_ROOM_3_CHILD_AGE_2=4&RES_ROOM_3_CHILD_AGE_1=4&RES_SPECIAL_CODE=&RES_SPECIAL_CODE=&RES_LANGUAGE=EN&RES_STATE_CODE=&RES_COUNTRY_CODE={$_GEO['RES_COUNTRY_CODE']}&";
 
-    $search_qry = isset($_POST['QRYSTR'])&&!empty($_POST['QRYSTR']) ? $_POST['QRYSTR'] : $search_qry;
-
+    $search_qry .= isset($T_ACCESO) ? "T_ACCESO={$T_ACCESO}&" : "";
+    $search_qry .= isset($ENTORNO) ? "ENTORNO={$ENTORNO}&" : "";
+    //$search_qry.=isset($MCF)?"MCF={$MCF}&":"";
+    //print "<pre>";print_r($_POST);print "</pre>";
+    $search_qry = isset($_POST['QRYSTR']) && !empty($_POST['QRYSTR']) ? $_POST['QRYSTR'] : $search_qry;
+    $BOOK = isset($_POST['BOOK']) && !empty($_POST['BOOK']) ? $_POST['BOOK'] : "";
+    if (is_array($BOOK)) {
+        $var = "";
+        for($i = 0; $i < count($BOOK['RES_ROOMS_SELECTED']); $i++) {
+            $sep = "";
+            if ($i > 0) {
+                $sep="-";
+            }
+            $var .= $sep.$BOOK['RES_ROOMS_SELECTED'][$i];
+        } 
+        $search_qry .= "&ROOM_SELEC={$var}";
+    }
+    
+    //echo "<h1>".$search_qry."</h1>";
+     //escribe("search_qry",print_r($search_qry,true));
+    
     if (isset($_GET) && isset($_GET['RES_CHECK_IN'])) {
         $_GET = array_merge(array(
           'RES_LANGUAGE'=>"EN",
