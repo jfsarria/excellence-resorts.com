@@ -2,7 +2,6 @@
 /*
  * Revised: Jan 06, 2013
  *          Jul 07, 2014
- *          Dec 13, 2017
  */
 
 // DO NOT REMOVE
@@ -16,28 +15,28 @@ $BLACKOUT = array();
 $STOPSALE = array();
 
 $_ARG =  array (
-    "ROOM_IDs"=>$ROOM_IDs,
-    "FROM"=>$FROM,
-    "TO"=>$TO,
-    "CODE"=>$CODE,
-    "YEAR"=>(isset($YEAR))?$YEAR:date("Y"),
-    "YEARS"=>(isset($YEARS))?$YEARS:array(date("Y"))
+    "ROOM_IDs" => $ROOM_IDs,
+    "FROM" => $FROM,
+    "TO" => $TO,
+    "CODE" => $CODE,
+    "YEAR" => (isset($YEAR)) ? $YEAR : date("Y"),
+    "YEARS" => (isset($YEARS)) ? $YEARS : array(date("Y"))
 );
 //$YEARS = array(2011, date("Y")); // override and include all years since 2011
 $YEARS = array();
 
-$YEAR_START = (int)substr($FROM,0,4);
-if ($YEAR_START<2011) $YEAR_START = 2011;
+$YEAR_START = (int)substr($FROM, 0, 4);
+if ($YEAR_START < 2011) $YEAR_START = 2011;
 
 $YEAR_END = (int)substr($TO,0,4);
-if ($YEAR_END>date("Y")+2) $YEAR_END = date("Y")+2;
+if ($YEAR_END > date("Y") + 2) $YEAR_END = date("Y") + 2;
 
-for ($YEAR=$YEAR_START;$YEAR<=$YEAR_END;++$YEAR) array_push($YEARS, $YEAR);
+for ($YEAR = $YEAR_START; $YEAR <= $YEAR_END;$YEAR++) array_push($YEARS, $YEAR);
 
 if (isset($YEARS)) $_ARG["YEARS"] = $YEARS;
 //print "DATA: <pre>";print_r($_ARG);print "</pre>";
 
-if (count($ROOM_IDs)>0) {
+if (count($ROOM_IDs) > 0) {
     $I_RSET = $clsInventory->getInventory($db, $_ARG);
     $_ARG = array("ROOM_IDs"=>$ROOM_IDs);
     $R_RSET = $clsInventory->getRooms($db, $_ARG);
@@ -49,12 +48,23 @@ if (count($ROOM_IDs)>0) {
     //mail("jaunsarria@gmail.com","C_RSET",$output);
 
     if (!is_string($I_RSET))  while ($row = $db->fetch_array($I_RSET['rSet'])) $INVENTORY[$row['ROOM_ID']][substr($row['RES_DATE'],0,10)] = $row['SOLD'];
+
     while ($row = $db->fetch_array($O_RSET['rSet'])) $OVERRIDE[$row['ROOM_ID']][substr($row['RES_DATE'],0,10)] = $row['QTY'];
+
     while ($row = $db->fetch_array($C_RSET['rSet'])) $BLACKOUT[$row['ROOM_ID']][substr($row['DATE_CLOSED'],0,10)] = 1;
 
     if ($getStopSale) {
-        $_DATA['RES_COUNTRY_GROUP'] = $clsGlobal->getCountryGroupByCode($db, array("CODE"=>$_DATA['RES_COUNTRY_CODE']));
-        $STOPSALE = $clsInventory->makeStopSale($db, $_ARG, $_DATA);
+        $_DATA['RES_COUNTRY_GROUP'] = $clsGlobal->getCountryGroupByCode($db, array("CODE" => $_DATA['RES_COUNTRY_CODE']));
+        $S_RSET = $clsInventory->getStopSale($db, $_ARG, $_DATA);
+        while ($row = $db->fetch_array($S_RSET['rSet'])) {
+            $FROM = substr($row['FROM'],0,10);$int_FROM = (int)str_replace("-","",$FROM);
+            $TO = substr($row['TO'],0,10);$int_TO = (int)str_replace("-","",$TO);
+            $DAYS = ($int_TO - $int_FROM) + 1;
+            for ($t=0; $t < $DAYS; ++$t) {
+                $THIS_DAY = addDaysToDate($FROM, $t);
+                $STOPSALE[$row['ROOM_ID']][$THIS_DAY] = $DAYS;
+            }
+        }
         //ob_start();print_r($STOPSALE);print_r($BLACKOUT);$output = ob_get_clean();
         //mail("jaunsarria@gmail.com","STOPSALE",$output);
     }

@@ -12,7 +12,11 @@
                 <table width="100%" id='RES_PROPS'>
                 <tr>
                     <td style='width:250px;padding-right:50px' valign='top'><? print $clsUsers->propertiesRadioBtns($db, $_DATA['RES_PROP_ID']) ?></td>
-                    <td valign='top'><? print $clsUsers->propertiesDescription($db, array("LANGUAGE"=>$_DATA['RES_LANGUAGE'])) ?></td>
+                    <td valign='top'><? print $clsUsers->propertiesDescription($db, array("LANGUAGE"=>$_DATA['RES_LANGUAGE'])) ?>
+                        <input type="hidden" name="T_ACCESO" value="Desktop">
+                         <input type="hidden" name="ENTORNO" value="Back">
+
+                    </td>
                 </tr>
                 </table>
             </div>

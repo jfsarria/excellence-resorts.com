@@ -1,0 +1,123 @@
+
+
+<?$check_all_rooms="";
+//print_r($_DATA);
+
+
+//print_r($radio);
+
+?>
+
+<fieldset id="mode" style='display:none;'>
+    <legend>Mode</legend>
+    <div class="fieldset">
+        <div class="label"></div>
+        <div class="field">
+             <input type='checkbox' name='multicode' id="multicode" value='multicode' >&nbsp;Group Code
+        </div>          
+    </div>
+</fieldset>
+
+
+<div id="geo1" >
+<fieldset >
+    <legend>Geo Targeting</legend>
+    <div class="fieldset">
+        
+        <table>
+            <tr>
+                <td>
+                 <input type='checkbox' name='Generalgeo' id="Generalgeo" value='generalgeo' checked style='display:none;'>
+                 
+            </td>
+            <td>
+                <input type='text' name='Graltxtgeo' id="Graltxtgeo" value='' maxlength='3' size='3' style='display:none;'> <div id='porgeo' name='porgeo' style='display:none;'>%</div>
+               
+            </td>
+        </tr>
+        </table>
+       
+        <div class="label">
+            <?php
+            $TARGETS = array(
+                "US" => "United States",
+                "CA" => "Canada",
+                "DO" => "Dominican Republic",
+                "JM" => "Jamaica",
+                "MX" => "Mexico",
+                "GB" => "United Kingdom",
+                "LA" => "Latin America",
+                "EU" => "Europe",
+                "--" => "Rest of the world"
+
+            );
+            ?>
+
+            <table id="GeosPickList" class="pickList">
+            <tr>
+                <!--<input type='checkbox' value='' id='cb_' name='GEOS[]' >&nbsp;All &nbsp;-->
+            <?php
+            //print_r($_DATA);
+            
+            $GEOS=array();
+            $GEOSpor=array();
+            $GEOSid=array();
+            if(isset($_DATA['LINMOD'])){
+                 for($i=0;$i<count($_DATA['LINMOD']);$i++){
+                //$GEOS[]=$_DATA['LINMOD'][$i]['GEOCOUNTRY'];
+                $_geo=explode(',',$_DATA['LINMOD'][$i]['GEOCOUNTRY']);
+                for($j=0;$j<count($_geo);$j++){
+                   $GEOS[] =$_geo[$j];
+                   $GEOSpor[]=$_DATA['LINMOD'][$i]['VALUE'];
+                $GEOSid[]=$_DATA['LINMOD'][$i]['ID_LIN'];
+                }    
+                
+
+            }
+            }
+           
+            //$GEOS = isset($_DATA['LINMOD'][0] ) ? $_DATA['LINMOD'][0][]: array();
+            //print_r($GEOS);
+            //print_r($GEOSpor);
+            $cnt=0;
+            foreach ($TARGETS as $CODE => $NAME) {
+                //print_r($CODE); 
+                if (in_array($CODE,$GEOS)===false && $check_all_rooms=="on") array_push($GEOS,$CODE);
+                $pos=-1;
+                $valortext="";
+                $idgeo="";
+                if(in_array($CODE,$GEOS)===true){
+                    $pos= array_search($CODE, $GEOS);
+                    if($pos>=0){
+                        $valortext=$GEOSpor[$pos];
+                        $idgeo=$GEOSid[$pos];
+                    }  
+                }
+                //print_r($idgeo);
+
+                
+                //print $pos;
+                print "<td width='20%' nowrap class='pickListItem i{$cnt}'>
+                <input type='hidden' id='geoid[]' name='geoid[]' value='{$idgeo}'>
+                <input type='hidden' id='geocheck[]' name='geocheck[]' value='{$CODE}'>
+                <input type='radio' class='geo'  value='{$CODE}' id='cb_{$CODE}' name='GEOS[]' ".((in_array($CODE,$GEOS)===true)?"checked":"").">&nbsp;{$NAME} &nbsp; 
+                <input type='text' id='GEOStext[]' name='GEOStext[]' style='display:none;' maxlength='3' size='3' value=''> <div id='porgeo{$cnt}' name='porgeo{$cnt}' ".((in_array($CODE,$GEOS)===true)?"style='display:inline;'":"style='display:none;'")."></div></td>";
+                if (fmod(++$cnt,3)==0) print "</tr><tr>";
+            }
+            
+            ?>
+            </tr>
+            </table>
+        </div>
+         <div class="calculo" id="calculo">
+            <div id="loading-making-booking" style='display:none;'>
+         <img src="img/loading-small.gif">
+     </div>
+        </div>
+        
+    </div>
+</fieldset>
+</div>
+
+
+

@@ -25,6 +25,8 @@ $_TRANSFER_DAYS = 31;//4;
 
 global $PROP_ID;
 global $ROOM_ID;
+global $ID_CAB;
+global $ID_DOC;
 global $SEASON_ID;
 global $CLASS_ID;
 global $BANNER_ID;
@@ -33,6 +35,8 @@ global $MARKUP_ID;
 $ACTION = isset($_REQUEST['ACTION']) ? $_REQUEST['ACTION'] : "LIST";
 $PROP_ID = isset($_REQUEST['PROP_ID']) ? (int)$_REQUEST['PROP_ID'] : 0;
 $ROOM_ID = isset($_REQUEST['ROOM_ID']) ? (int)$_REQUEST['ROOM_ID'] : 0;
+$ID_CAB = isset($_REQUEST['ID_CAB']) ? (int)$_REQUEST['ID_CAB'] : 0;
+$ID_DOC = isset($_REQUEST['ID_DOC']) ? (int)$_REQUEST['ID_DOC'] : 0;
 $SEASON_ID = isset($_REQUEST['SEASON_ID']) ? (int)$_REQUEST['SEASON_ID'] : 0;
 $CLASS_ID = isset($_REQUEST['CLASS_ID']) ? (int)$_REQUEST['CLASS_ID'] : 0;
 $SPECIAL_ID = isset($_REQUEST['SPECIAL_ID']) ? (int)$_REQUEST['SPECIAL_ID'] : 0;
@@ -51,6 +55,8 @@ print "
         var _PAGE_CODE = '$_PAGE_CODE',
             _PROP_ID = '$PROP_ID',
             _ROOM_ID = '$ROOM_ID',
+            _ID_CAB='$ID_CAB',
+            _ID_DOC='$ID_DOC',
             _BANNER_ID = '$BANNER_ID',
             _SEASON_ID = '$SEASON_ID',
             _CLASS_ID = '$CLASS_ID',

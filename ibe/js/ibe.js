@@ -14,6 +14,7 @@ if (typeof(ibe.reserv)=="undefined") ibe.reserv = {};
 if (typeof(ibe.reserv.forWhom)=="undefined") ibe.reserv.forWhom = {};
 if (typeof(ibe.reserv.rooms)=="undefined") ibe.reserv.rooms = {};
 if (typeof(ibe.inventory)=="undefined") ibe.inventory = {};
+if (typeof(ibe.flashsale)=="undefined") ibe.flashsale = {};
 
 var ng_config = {
     assests_dir: 'cal/assets/'	// the path to the assets directory for the calendar
@@ -365,6 +366,25 @@ ibe.select.getClassesByYear = function(YEAR, GEOS, SEASON, ROOM) {
         }
     });
 }
+ibe.select.getClassesByYearDiscounts = function(YEAR, GEOS, SEASON, ROOM,linea) {
+
+    GEOS = GEOS || "";
+    SEASON = SEASON || "";
+    ROOM = ROOM || "";
+    $.ajax({
+        url: "index.php?PAGE_CODE=ajax.getClassesByYear.discounts&ID_CAB="+linea+"&PROP_ID="+_PROP_ID+"&SPECIAL_ID="+_SPECIAL_ID+"&YEAR="+YEAR+"&GEOS="+GEOS+"&SEASON="+SEASON+"&ROOM="+ROOM,
+        success: function(result) {
+            var o = $("<div>"+result+"</div>"),
+                YEAR = o.find("#wrapper").attr('year');
+                
+            $("#classes_"+YEAR).html(o);
+            ibe.page.frms("#classes_"+YEAR);
+            $("#classes_"+YEAR+" input[type='checkbox']").click(function() {
+                ibe.select.checkClassesByYear($(this), YEAR)
+            });
+        }
+    });
+}
 
 ibe.select.showClasses = function($this) {
     var isChecked = $this[0].checked,
@@ -398,7 +418,52 @@ ibe.select.showClasses = function($this) {
         list.hide();
     }
 }
+ibe.select.showClassesDiscounts = function($this,$id_cab) {
+  
+    var isChecked = $this[0].checked,
+        geosPickList = function() { 
+            var array = new Array();
+            $("#GeosPickList input[type='checkbox']").each(function() { if ($(this)[0].checked) array.push($(this).val()); });
+          
+            return array.join(",");
+        }
+      
+        YEAR = $this.val(),
+        GEOS = geosPickList(),
+        SEASON = $("#SeasonPickList").val(),
+        ROOM = $("#RoomPickList").val(),
+        list = $("#classList_"+YEAR),
+        cls = $("#classes_"+YEAR);
 
+    if (isChecked) {
+
+        ibe.select.getClassesByYearDiscounts(YEAR, GEOS, SEASON, ROOM,$id_cab);
+        list.show();
+    } else {
+        $("#classes_"+YEAR+" input[type='checkbox']").each(function() {
+            if ($this[0].checked) {
+                $this[0].checked = false;
+                $this.parent().removeClass("selectedItem");
+            }
+        });
+        list.hide();
+    }
+}
+ibe.select.controlSpecialFiltersDiscounts = function(idcab) {
+    $("#YearsPickList input[type='checkbox']").click(function() {
+        ibe.select.showClassesDiscounts($(this),idcab);
+    });
+    $("#GeosPickList input[type='checkbox']").click(function() {
+        $("#YearsPickList input[type='checkbox']").each(function() {
+            ibe.select.showClassesDiscounts($(this),idcab);
+        });
+    });
+    $("#SeasonPickList,#RoomPickList").change(function() {
+        $("#YearsPickList input[type='checkbox']").each(function() {
+            ibe.select.showClassesDiscounts($(this),idcab);
+        });
+    });
+}
 ibe.select.controlSpecialFilters = function() {
     $("#YearsPickList input[type='checkbox']").click(function() {
         ibe.select.showClasses($(this));
@@ -796,6 +861,12 @@ ibe.reserv.forWhom.open = function(ID) {
     $("#callcenter_"+ID).show();
     $(document).scrollTop(0);
 }
+ibe.flashsale.open = function(ID) {
+    ibe.reserv.forWhom.resetAll();
+    $("#callcenter_"+ID).show();
+
+}
+
 ibe.reserv.forWhom.resetAll = function() {
     $(".RES_TO_WHOM").hide();
     $("#searchGuestResult","#searchTAResult").html("");
@@ -871,7 +942,7 @@ ibe.reserv.searchGuest = function(ele, field, who) {
                 for (t=0; t < guests.length; ++t) {
                     var guest = guests[t];
                     if (typeof(guest)!="undefined") {
-                        table += "<td valign='top' width='50%' class='td'><table><tr><td valign='top'><input id='select_guest_"+t+"' type='radio' name='select_guest' onclick=\"ibe.reserv.selectGuest('"+guest.ID+"')\"></td><td>"+ibe.toString(guest.LASTNAME,", ")+ibe.toString(guest.FIRSTNAME,"<br>")+ibe.toString(guest.ADDRESS,"<br>")+ibe.toString(guest.CITY,", ")+ibe.toString(guest.STATE," ")+ibe.toString(guest.ZIPCODE,"<br>")+ibe.toString(guest.PHONE,"<br>")+ibe.toString(guest.EMAIL,"<br>")+"</td></tr></table></td>";
+                        table += "<td valign='top' width='50%' class='td'><table><tr><td valign='top'><input id='select_guest_"+t+"' type='radio' name='select_guest' onclick=\"ibe.reserv.selectGuest('"+guest.ID+"')\"></td><td>"+ibe.toString(guest.LASTNAME,", ")+ibe.toString(guest.FIRSTNAME,"<br>")+ibe.toString(guest.ADDRESS,"<br>")+ibe.toString(guest.CITY,", ")+ibe.toString(guest.STATE," ")+ibe.toString(guest.ZIPCODE,"<br>")+ibe.toString(guest.PHONE,"<br>")+ibe.toString(guest.EMAIL,"<br>")+" <input type='hidden' id='couponrel' name='couponrel' value="+guest.ID+"></td></tr></table></td>";
                         ++cnt; if ((cnt % 2)==0) table += "</tr><tr>";
                     }
                 }
@@ -952,6 +1023,51 @@ ibe.inventory.init = function() {
         });
     });
 }
+ibe.flashsale.close = function() {
+    $("#inventoryEditBox").html("").hide();
+}
+ibe.flashsale.init = function() {
+        
+    $(".email").click(function (event) {
+
+        var valor = $(event.target).val();
+        var valor2 = event.target.id; //CAB
+        var valor3 = event.target.name; //PROP-LINEA-CAB
+        
+        
+        if(valor==""){
+            $.ajax({
+                url: "index.php?PAGE_CODE=ajax.emailcoupon&PARAM="+valor3+"&",
+                success: function(result) {
+                    var y = $(result).find("#top").text();
+                    $("#inventoryEditBox").html(result).css({'top':y+'px'}).show();
+                }
+            });
+        }
+        
+    });
+    $(".geo").click(function (event) {
+       var valor = $(event.target).val();
+       var valor2 = $("#Infinito").attr('checked');       
+
+        if(!valor2){
+            $("#loading-making-booking").show();
+
+            
+            $.ajax({
+                url: "index.php?PAGE_CODE=ajax.guestcoupon&GEO="+valor+"&",
+                success: function(result) {
+                    var y = $(result).find("#top").text();
+                    $("#calculo").html(result).css({'top':y+'px'}).show();
+                }
+            });
+            $("#loading-making-booking").hiden();
+        }
+            
+
+    });
+}
+
 ibe.inventory.hover = function(cell, status) {
     var rel = cell.attr("rel"),
         date = cell.attr("class").replace(/[^\d]+/g,""),

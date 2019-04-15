@@ -64,7 +64,7 @@ if (!isset($_SESSION['AVAILABILITY']['RESERVATION']['DONE']['PAYMENT']) && $_SES
 
         print $_PAYMENT_RESULT_STR."</div></div>";
 
-        $_PAYMENT_RESULT_XML = str2xml($_PAYMENT_RESULT_STR);
+        /*$_PAYMENT_RESULT_XML = str2xml($_PAYMENT_RESULT_STR);z
         $_P_ERR = $_PAYMENT_RESULT_XML->err;
         if ( $_P_ERR && count($_P_ERR->children()) != 0 ) {
             $isOk = false;
@@ -77,8 +77,8 @@ if (!isset($_SESSION['AVAILABILITY']['RESERVATION']['DONE']['PAYMENT']) && $_SES
             include "m.reserv.room.payment.php";
         } else {
             if ($RES_PAYMENT_VERIFY==0) $_SESSION['AVAILABILITY']['RESERVATION']['DONE']['PAYMENT'] = 1;
-        }
-
+        }*/
+        if ($RES_PAYMENT_VERIFY==0) $_SESSION['AVAILABILITY']['RESERVATION']['DONE']['PAYMENT'] = 1;
         print "<script>$('div#cc_processing.cc_info').hide();</script>";
     } else {
         $isOk = false;

@@ -15,7 +15,7 @@
             <br>
             <div id='classList'>
                 <?
-                for ($YEAR=2011; $YEAR <= date("Y")+5; ++$YEAR) {
+                for ($YEAR=2011; $YEAR <= date("Y")+2; ++$YEAR) {
                     $DISPLAY = (in_array($YEAR,$_DATA['YEARS'])) ? "" : "none";
                     print "<div id='classList_{$YEAR}' style='display:{$DISPLAY};margin-bottom:20px;'>
                                 <div class='classYear' style='padding-bottom:5px'><b>{$YEAR} Classes</b>&nbsp;&nbsp;&nbsp;<a href='javascript:void(0)' onclick=\"ibe.select.setAllClassesByYear('{$YEAR}', true)\">Check all</a>&nbsp;-&nbsp;<a href='javascript:void(0)' onclick=\"ibe.select.setAllClassesByYear('{$YEAR}', false)\">Uncheck all</a></div>

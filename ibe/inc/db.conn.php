@@ -51,10 +51,12 @@ class db {
         $result = mysql_list_tables(constant("APP_DB_NAME"));
         while ($row = mysql_fetch_array($result)) {
             //print "<br>$row[0]";
-            if ($row[0] ==  $TableName) {
+            // +001 RTS 01.03.2019
+            if ($row[0] ==  strtolower($TableName) || $row[0] == strtoupper($TableName)) {
                 $bRetVal = true;
                 break;
             }
+            // -001
         }
         mysql_free_result($result);
         return ($bRetVal);

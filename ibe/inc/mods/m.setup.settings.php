@@ -13,7 +13,7 @@
             <tr>
             <?
             $MRSET = $clsSetup->getMarkups($db, array("PROP_ID"=>$PROP_ID,"asArray"=>true));
-            for ($YY = date("Y")-1; $YY <= date("Y")+5; ++$YY) {
+            for ($YY = date("Y")-1; $YY <= date("Y")+2; ++$YY) {
                 if (!isset($MRSET[$YY])) $MRSET[$YY] = array("MARKUP"=>0);
             }
             //if (!isset($MRSET[date("Y")])) $MRSET[date("Y")] = array("MARKUP"=>0);
@@ -28,6 +28,54 @@
             </tr>
             </table>
         </div>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>CAP</legend>
+    <div class="fieldset">
+        
+        <div class="field"><input type="text" id="LIMIT_MPRICE" name="LIMIT_MPRICE" value="<? print isset($_DATA['LIMIT_MPRICE']) ? $_DATA['LIMIT_MPRICE'] : "" ?>" class="small">% &nbsp; (0 without discounts)</div>
+    </div>
+</fieldset>
+<fieldset>
+    <legend>Global configuration of price modifiers</legend>
+    <div class="fieldset">
+        <?$RSET=$clsDiscounts->get_all_priority($db);
+        //print_r($RSET);
+        
+        if ( $RSET['iCount'] != 0 ) { ?>
+            <div class="listTbl">
+            <table>
+            <tr class="listRowHdr">
+                <td>System</td>                
+                <td>Priority</td>                
+                
+                <!-- <td>&nbsp;</td> -->
+            </tr>
+            <?
+            $cnt=1;
+            while ($row = $db->fetch_array($RSET['rSet'])) {
+               
+                ?>
+                <tr class='listRow<? print $cnt ?>'>                    
+                    <td align='right'>
+                        <label><? print $row['SYSTEM'] ?></label>
+                        <input type="hidden" id="C_SYSTEM[]" name="C_SYSTEM[]" value="<? print $row['SYSTEM'] ?>">
+                        </td>
+                    <td align='right'>
+                        <select name="C_PRIORITY[]" id="C_PRIORITY[]"><? for ($t=1; $t<= 20; ++$t) print "<option value='{$t}' ".((isset($row['PRIORITY']) && (int)$row['PRIORITY']==$t) ? "selected" : "").">{$t}</option>"; ?></select>
+                        <? //print $row['PRIORITY'] ?>
+                        
+                    </td>                     
+                </tr>
+                <?
+                $cnt*=-1;
+            }
+            ?>
+            </table>
+            </div>
+        <? }?>
     </div>
 </fieldset>
 

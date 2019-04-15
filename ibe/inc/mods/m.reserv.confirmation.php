@@ -416,12 +416,11 @@ if (!isset($_SESSION['AVAILABILITY']['RESERVATION'])) {
             // SEND EMAIL IN CASE OF LOW INVENTORY
             $PROPERTY = $RES_ITEMS['PROPERTY'];
             $ROOM = $_SESSION['AVAILABILITY']["RES_ROOM_".($IND+1)."_ROOMS"][$ROOM_ID];
-            $ADMIN_EMAIL = explode(",", $SETUP['ADMIN_EMAIL']);
             foreach ($ROOM["NIGTHS"] as $DATE => $DATA) {
                 $LEFT = (int)$DATA["INVENTORY"]["LEFT"]-1;
                 if ($LEFT <= (int)$PROPERTY['INVENTORY_MIN'] ) {
                     $clsGlobal->sendEmail(array(
-                        'FORM' => trim($ADMIN_EMAIL[0]),
+                        'FORM' => $SETUP['ADMIN_EMAIL'],
                         'TO' => $SETUP['INVENTORY_EMAIL'],
                         'SUBJECT' => "{$PROPERTY['NAME']} Low Inventory {$DATE}",
                         'MESSAGE' => "The allotment for the room '{$ROOM['NAME']}' at {$PROPERTY['NAME']} on {$DATE} is now {$LEFT} and has reached its minimum of {$PROPERTY['INVENTORY_MIN']}.",

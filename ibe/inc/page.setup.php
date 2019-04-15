@@ -29,12 +29,23 @@ if ($ACTION=="SAVE") {
         $_DATA['UPS_FOLDER'] = "/ibe/ups/props/";
 
         //print "<pre>";print_r($_DATA);print "</pre>";
-        $result = $clsSetup->save($db, $_DATA); 
+
+        /*
+            16/10/18
+            CAP del 0 al 100
+        */
+        if ($_DATA['LIMIT_MPRICE'] >= 0 && $_DATA['LIMIT_MPRICE'] <= 100) {
+            $result = $clsSetup->save($db, $_DATA);
+        } else {
+            $result = "Invalid CAP percentage";
+        }
+        
 
         if ((int)$result == 1) {
             /* Upload Images & Videos */
             foreach ($_FILES as $_KEY => $_FILE) $clsImage->upload($_KEY, $_DATA['UPS_FOLDER'], $PROP_ID);
             $isMetaIO = true;
+            $clsSetup->save_global_setup_mod($db, $_DATA);
             include_once "inc/ibe.frm.ok.php";
         } else {
             print "<div id='s_notice' class='top_msg'>$result</div><br><br>";

@@ -10,7 +10,7 @@
             Season Belongs to the Year&nbsp;
             <select id="YEAR" name="YEAR">
             <?
-            for ($t=2011; $t<=date("Y")+5; ++$t) {
+            for ($t=2011; $t<=date("Y")+2; ++$t) {
                 $selected = (isset($_DATA['YEAR'])&&(int)$_DATA['YEAR']==$t) ? "selected":"";
                 print "<option value='{$t}' $selected>{$t}</option>";
             }

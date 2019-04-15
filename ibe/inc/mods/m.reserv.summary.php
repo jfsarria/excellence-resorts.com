@@ -2,7 +2,6 @@
 /*
  * Revised: Jul 21, 2011
  *          Aug 15, 2016
- *          Sep 13, 2018
  */
 
 //print_r($_POST);
@@ -49,7 +48,9 @@ $ROOM_NAMES = implode(", ",$RESERVATION['RES_ROOMS_SELECTED_NAMES']);
                 foreach ($_SESSION['AVAILABILITY']['SEARCH'] AS $KEY => $VALUE) {
                     if (is_array($VALUE)) {
                         foreach ($VALUE AS $SKEY => $SVALUE) {
-                            if (!is_array($SVALUE)) print "<input type='hidden' name='{$KEY}[]' VALUE='{$SVALUE}'>\n";
+                            // + 14.02.19 RTS
+                            if(!is_array($SVALUE)) print "<input type='hidden' name='{$KEY}[]' VALUE='{$SVALUE}'>\n";                  
+                            // - 14.02.19
                         }
                     } else {
                         print "<input type='hidden' name='{$KEY}' VALUE='{$VALUE}'>\n";

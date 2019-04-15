@@ -8,8 +8,27 @@
             <table>
             <tr>
                 <td width="80%" nowrap>&nbsp;</td>
-                <td width="10%" nowrap>Active&nbsp;<input type="checkbox" id="IS_ACTIVE" name="IS_ACTIVE" value="1" <? print (isset($_DATA['IS_ACTIVE'])&&(int)$_DATA['IS_ACTIVE']==1) ? "checked" : "" ?>>&nbsp;&nbsp;&nbsp;</td>
-                <td nowrap>Archive&nbsp;<span><input type="checkbox" id="IS_ARCHIVE" name="IS_ARCHIVE" value="1" <? print (isset($_DATA['IS_ARCHIVE'])&&(int)$_DATA['IS_ARCHIVE']==1) ? "checked" : "" ?>></span></td>
+                <td width="10%" nowrap>
+                    Active&nbsp;
+                    <input
+                        type="checkbox"
+                        id="IS_ACTIVE"
+                        name="IS_ACTIVE"
+                        value="1"
+                        <? print (isset($_DATA['IS_ACTIVE']) && (int)$_DATA['IS_ACTIVE'] == 1) ? "checked" : "" ?>>
+                    &nbsp;&nbsp;&nbsp;
+                </td>
+                <td nowrap>
+                    Archive&nbsp;
+                    <span>
+                        <input
+                            type="checkbox"
+                            id="IS_ARCHIVE"
+                            name="IS_ARCHIVE"
+                            value="1"
+                            <? print (isset($_DATA['IS_ARCHIVE']) && (int)$_DATA['IS_ARCHIVE'] == 1) ? "checked" : "" ?>>
+                    </span>
+                </td>
             </tr>
             </table>                    
         </div>
@@ -23,8 +42,8 @@
             Stop Sale Belongs to the Year&nbsp;
             <select id="YEAR" name="YEAR">
             <?
-            for ($t=2016; $t<=date("Y")+5; ++$t) {
-                $selected = (isset($_DATA['YEAR'])&&(int)$_DATA['YEAR']==$t) ? "selected":"";
+            for ($t = 2016; $t <= date("Y") + 2; $t++) {
+                $selected = (isset($_DATA['YEAR']) && (int)$_DATA['YEAR'] == $t) ? "selected":"";
                 print "<option value='{$t}' $selected>{$t}</option>";
             }
             ?>
@@ -34,10 +53,14 @@
             <table align="center">
             <tr>
                 <td><b>From</b>&nbsp;</td>
-                <td align="right"><input type="hidden" id="FROM" name="FROM" value="<? print isset($_DATA['FROM']) ? $_DATA['FROM'] : "" ?>" /></td>
+                <td align="right">
+                    <input type="hidden" id="FROM" name="FROM" value="<? print isset($_DATA['FROM']) ? $_DATA['FROM'] : "" ?>" />
+                </td>
                 <td style="padding-left:100px"></td>
                 <td><b>To</b>&nbsp;</td>
-                <td align="right"><input type="hidden" id="TO" name="TO" value="<? print isset($_DATA['TO']) ? $_DATA['TO'] : "" ?>" /></td>
+                <td align="right">
+                    <input type="hidden" id="TO" name="TO" value="<? print isset($_DATA['TO']) ? $_DATA['TO'] : "" ?>" />
+                </td>
             </tr>
             <tr>
                 <td colspan="2"><div id="objFROM"></div></td>
@@ -62,9 +85,15 @@
             visible: true,
             object: "objFROM",
             events: { 
-                onLoad: function() { ibe.calendarClick($("#objFROM .ng_cal_date_<? print ng_date(isset($_DATA['FROM'])&&$_DATA['FROM']!="0000-00-00 00:00:00" ? $_DATA['FROM'] : "") ?>")); ibe.page.height(); } 
+                onLoad: function() {
+                    ibe.calendarClick(
+                        $("#objFROM .ng_cal_date_<? print ng_date(isset($_DATA['FROM'])&&$_DATA['FROM']!="0000-00-00 00:00:00" ? $_DATA['FROM'] : "") ?>")
+                        );
+                    ibe.page.height();
+                }
             }
         });
+        
         sTo = new ng.Calendar({
             input: 'TO',
             start_date: 'year - 5',
@@ -72,7 +101,12 @@
             visible: true,
             object: "objTO",
             events: { 
-                onLoad: function() { ibe.calendarClick($("#objTO .ng_cal_date_<? print ng_date(isset($_DATA['TO'])&&$_DATA['TO']!="0000-00-00 00:00:00" ? $_DATA['TO'] : "") ?>")); ibe.page.height(); } 
+                onLoad: function() {
+                    ibe.calendarClick(
+                        $("#objTO .ng_cal_date_<? print ng_date(isset($_DATA['TO'])&&$_DATA['TO']!="0000-00-00 00:00:00" ? $_DATA['TO'] : "") ?>")
+                    );
+                    ibe.page.height();
+                } 
             }
         });
     });

@@ -9,15 +9,13 @@ if (!is_array($_DATA)) $_DATA = array();
 
 if (!$isWEBSERVICE) print $clsGlobal->buildWebserviceParameters("ws.availability", $_DATA);
 
-//$_CODIGO = isset($_DATA['T_ACCESO']) ? $_DATA['T_ACCESO'] : "";
-$_DATA['MACCESS'] = isset($_DATA['T_ACCESO']) ? $_DATA['T_ACCESO'] : "";
-//+110419 MC
-//if ($_CODIGO != '') {
-//    $_Discount[] = array("SYSTEM" => 'T_ACCESO', "CODE" => "{$_CODIGO}");
-//    //$_Discount[]=array("SISTEMA"=>'T_ACCESO',"CODIGO"=>"{$_CODIGO}");
-//    $_DATA['MOD'] = $_Discount;
-//}
-//-110419
+$_CODIGO = isset($_DATA['T_ACCESO']) ? $_DATA['T_ACCESO'] : "";
+$_DATA['_CODE'] = isset($_DATA['T_ACCESO']) ? $_DATA['T_ACCESO'] : "";
+if ($_CODIGO != '') {
+    $_Discount[] = array("SYSTEM" => 'T_ACCESO', "CODE" => "{$_CODIGO}");
+    //$_Discount[]=array("SISTEMA"=>'T_ACCESO',"CODIGO"=>"{$_CODIGO}");
+    $_DATA['MOD'] = $_Discount;
+}
 //$_DATA['MC']=isset($_DATA['MCF'])?$_DATA['MCF']:"0";
 $_DATA['ENTORNO'] = isset($_DATA['ENTORNO']) ? $_DATA['ENTORNO'] : "";
 $_DATA['RES_SRC'] = isset($_DATA['RES_SRC']) ? $_DATA['RES_SRC'] : "";

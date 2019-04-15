@@ -193,7 +193,26 @@ class guest {
         $result = dbQuery($db, $arg);
         return $result;
     }
+    function searchGuestsbyGeo($db, $arg) {
+        extract($arg);
 
+        $SELECT_FIELDS = (isset($COUNT) && (int)$COUNT==1) ? " distinct(EMAIL),g.ID" : " g.* ";
+
+        $arr = array();
+        
+        if (isset($MAILING_LIST)&&$MAILING_LIST!="") array_push($arr," MAILING_LIST='{$MAILING_LIST}'");       
+        if (isset($CODE)&&$CODE!="") array_push($arr," CODE='{$CODE}'"); //    -----..
+        if (isset($GROUP)&&$GROUP!="") array_push($arr," c.GROUP='{$GROUP}'");//son excluyentes
+        $WHERE = count($arr)>0 ? "WHERE ".join(" AND ",$arr) : "";
+
+        $query = "SELECT {$SELECT_FIELDS} FROM COUNTRIES c inner join V_GUEST_SEARCH g on c.CODE=g.country $WHERE and EMAIL REGEXP '(.*)@(.*)\.(.*)'";
+        
+
+        $arg = array('query' => $query);
+        if ($this->showQry) print "<p class='s_notice top_msg'>$query</p>";
+        $result = dbQuery($db, $arg);
+        return $result;
+    }
     function searchGuests($db, $arg) {
         extract($arg);
 
@@ -204,6 +223,9 @@ class guest {
         if (isset($EMAIL)&&$EMAIL!="") array_push($arr," EMAIL LIKE '%{$EMAIL}%'");
         if (isset($PHONE)&&$PHONE!="") array_push($arr," PHONE LIKE '%{$PHONE}%'");
         if (isset($MAILING_LIST)&&$MAILING_LIST!="") array_push($arr," MAILING_LIST='{$MAILING_LIST}'");
+        //modprice
+        if (isset($GEO)&&$GEO!="") array_push($arr," COUNTRY='{$GEO}'");
+        //modprice
         $WHERE = count($arr)>0 ? "WHERE ".join(" AND ",$arr) : "";
 
         $query = "SELECT {$SELECT_FIELDS} FROM V_GUEST_SEARCH $WHERE ";
