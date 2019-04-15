@@ -845,7 +845,7 @@
             <form action="/er" id="aviailability_form">
                 <ul class="sb_menu">
                     <li class="first"><a href="#" class="active">Hotel</a></li>
-                    <li class="last"><a href="http://res.excellence.globalbookingsolutions.com/Search/Default.aspx?plcode=gbexcel" target="_blank">Vuelo</a></li>
+                    <li class="last"><a href="http://vacationsbyexcellence.poweredbygps.com/?utm_source=newsletter&utm;medium=email&utm_content=paquetes&gdp=cntv" target="_blank">Vuelo</a></li>
                 </ul><!--.sb_menu-->
                 <div class="form-item">
                	    <select class="sel_dest" name="RES_PROP_ID" id="prop_id">
