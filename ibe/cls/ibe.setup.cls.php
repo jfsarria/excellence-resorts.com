@@ -25,6 +25,20 @@ class setup {
         return $result;
     }
 
+    function save_global_setup_mod($db, $arg){
+        extract($arg);
+        //$arr = array();
+        for($i=0;$i<count($C_SYSTEM);$i++){
+            //array_push($arr,"PRIORITY = '{$C_PRIORITY[$i]}'");
+            $query = "UPDATE MODPRIORITY SET PRIORITY = '{$C_PRIORITY[$i]}' WHERE SYSTEM='{$C_SYSTEM[$i]}'";
+            if ($this->showQry) print "<p class='s_notice top_msg'>$query</p>";
+
+            $arr = array('query' => $query);
+            $result = dbExecute($db, $arr);
+        }
+        
+    }
+
     function getById($db, $arg) {
         global $PROP_ID;
         extract($arg);
@@ -80,7 +94,7 @@ class setup {
         //print "<pre>";print_r($arg);print "</pre>";
 
         if (isset($NAME)) array_push($arr," NAME = '$NAME'");
-
+        if (isset($LIMIT_MPRICE)) array_push($arr," LIMIT_MPRICE = '$LIMIT_MPRICE'");
         if (isset($BLOCK_IP)) array_push($arr," BLOCK_IP = '$BLOCK_IP'");
 
         if (isset($DESCR_EN)) array_push($arr," DESCR_EN = '$DESCR_EN'");
@@ -278,6 +292,17 @@ class setup {
             }
         }
 
+        return $result;
+    }
+    function getLimitmprice($db) {
+        $query = "SELECT ID,LIMIT_MPRICE FROM PROPERTIES";
+        $arg = array('query' => $query);
+        if ($this->showQry) print "<p class='s_notice top_msg'>$query</p>";
+        $RSET = dbQuery($db, $arg);
+        $result = array();
+        while ($row = $db->fetch_array($RSET['rSet'])) {
+            $result[$row['ID']] = $row['LIMIT_MPRICE'];
+        }
         return $result;
     }
 

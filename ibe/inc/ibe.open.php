@@ -65,6 +65,9 @@ include_once "cls/ibe.ta.cls.php";
 include_once "cls/ibe.guest.cls.php";
 include_once "cls/ibe.inventory.cls.php";
 include_once "cls/ibe.transfers.cls.php";
+include_once "cls/ibe.discounts.cls.php";
+include_once "cls/ibe.coupon.cls.php";
+include_once "cls/ibe.flashsale.cls.php";
 
 ob_start();
 

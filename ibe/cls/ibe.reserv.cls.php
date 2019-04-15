@@ -2,6 +2,7 @@
 /*
  * Revised: Jan 11, 2013
  *          Nov 05, 2017
+ *          Jan 29, 2019
  *
  */
 
@@ -186,6 +187,9 @@ class reserv {
                     `NAVISION_ERROR` text NOT NULL,
                     `CURRENCY_CODE` varchar(6) NOT NULL DEFAULT 'USDUSD',
                     `CURRENCY_QUOTE` float NOT NULL DEFAULT '1',
+                    `DINGUS_REPORTED` tinyint(1) NULL DEFAULT '0',
+                    `DINGUS_CANCELLED` tinyint(1) NULL DEFAULT '0',
+                    `DINGUS_SENT` datetime NULL DEFAULT NULL,
                     PRIMARY KEY (`ID`),
                     KEY `NUMBER` (`NUMBER`),
                     KEY `GUEST_ID` (`GUEST_ID`),
@@ -347,9 +351,11 @@ class reserv {
     function saveReservation($db, $arg) {
         extract($arg);
         $ID = isset($ID) ? (int)$ID : 0;
-
+         
         $result = $this->createReservationsTable($db, array("TABLENAME"=>$RES_TABLE));
-        if ((int)$result == 1) {
+        
+        if ((int)$result == 1 || $result=="Table '".strtolower($RES_TABLE)."' already exists" || $result=="Table '".$RES_TABLE."' already exists") {
+            
             if ($ID!=0) {
                 $result = $this->getReservationById($db, $arg);
             } else $result['iCount'] = 0;
@@ -550,7 +556,7 @@ class reserv {
     function saveReservationRoomOpts($db, $arg) {
         extract($arg);
         $result = $this->createReservationRoomOptsTable($db, array("TABLENAME"=>$RES_TABLE));
-        if ((int)$result == 1) {
+        if ((int)$result == 1 || $result=="Table '".strtolower($RES_TABLE)."' already exists" || $result=="Table '".$RES_TABLE."' already exists") {
             $result = $this->getReservationRoomOptsById($db, $arg);
             if ( $result['iCount'] == 0 ) {
                 $result = $this->addNewReservationRoomOpts($db, $arg);
@@ -671,7 +677,7 @@ class reserv {
         $ID = isset($ID) ? (int)$ID : 0;
 
         $result = $this->createReservationRoomInventoryTable($db, array("TABLENAME"=>$RES_TABLE));
-        if ((int)$result == 1) {
+        if ((int)$result == 1 || $result=="Table '".strtolower($RES_TABLE)."' already exists" || $result=="Table '".$RES_TABLE."' already exists") {
             if ($ID!=0) {
                 $result = $this->getReservationRoomInventoryById($db, $arg);
             } else $result['iCount'] = 0;

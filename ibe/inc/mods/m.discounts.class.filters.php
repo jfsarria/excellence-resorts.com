@@ -3,32 +3,40 @@
  * Revised: Aug 11, 2011
  */
 
-$_DATA['YEARS'] = (isset($_DATA['YEARS'])&&$_DATA['YEARS']!="") ? $_DATA['YEARS'] : (int)date("Y");
+
+$_DATA['YEARS'] = (isset($_DATA['YEARS'])&&$_DATA['YEARS']!="") ? $_DATA['YEARS'] : "";
 if (!is_array($_DATA['YEARS'])) $_DATA['YEARS'] = explode(",",$_DATA['YEARS']);
 
-$_DATA['GEOS'] =  (isset($_DATA['GEOS'])&&$_DATA['GEOS']!="") ? $_DATA['GEOS'] : "US";
+$_DATA['GEOS'] =  (isset($_DATA['GEOS'])&&$_DATA['GEOS']!="") ? $_DATA['GEOS'] : "";
 if (!is_array($_DATA['GEOS'])) $_DATA['GEOS'] = explode(",",$_DATA['GEOS']);
 
 $_DATA['SEASON'] = isset($_DATA['SEASON']) ? $_DATA['SEASON'] : "";
+
+
+//$_DATA['YEARS']=$fecha_det[0];
+//$_DATA['GEOS']="";
+//$_DATA['SEASON']="";
+//print_r($_DATA);
 ?>
 
 <div class="fieldset">
     <div class="label">
         <b>Filter By:</b><br>
-        <table id="YearsPickList" class="pickList">
+        <table id="YearsPickList" class="pickList" name="1020">
         <tr>
         <td nowrap>Year:&nbsp;</td>
         <?
+        
         $cnt=0;
-        for ($YEAR=2011; $YEAR <= date("Y")+2; ++$YEAR) {
-            $CHECKED = (in_array($YEAR,$_DATA['YEARS'])) ? "checked" : "";
-            print "<td nowrap class='pickListItem i{$cnt}'><span><input type='checkbox' name='YEARS[]' value='{$YEAR}' id='cb_{$YEAR}' {$CHECKED}>&nbsp;{$YEAR}&nbsp;&nbsp;&nbsp;&nbsp;<span></td>";
+        for ($YEAR=$fecha_det[0]; $YEAR <= date("Y"); ++$YEAR) {
+            $CHECKED = (in_array($YEAR,$fecha_det)) ? "checked" : "";
+            print "<td nowrap class='pickListItem i{$cnt}'><span><input type='checkbox' name='YEARS[]' value='{$YEAR}' id='cb_{$YEAR}' disabled {$CHECKED}>&nbsp;{$YEAR}&nbsp;&nbsp;&nbsp;&nbsp;<span></td>";
             if (fmod(++$cnt,5)==0) print "</tr><tr>";
         }
         ?>
         </tr>
         </table>
-
+<!--
         <table id="GeosPickList" class="pickList">
         <tr>
             <td nowrap>Geo:&nbsp;</td>
@@ -46,7 +54,7 @@ $_DATA['SEASON'] = isset($_DATA['SEASON']) ? $_DATA['SEASON'] : "";
             <td width="20%" nowrap class="pickListItem i2"><input type="checkbox" value="--" id="cb_--" name="GEOS[]">&nbsp;Rest of the world</td>
         </tr>
         </table>
-
+        
         <table id="GeosPickList" class="pickList">
         <tr>
             <td nowrap>Season:&nbsp;</td>
@@ -77,6 +85,7 @@ $_DATA['SEASON'] = isset($_DATA['SEASON']) ? $_DATA['SEASON'] : "";
             </td>
         </tr>
         </table>
+    -->
     </div>
 </div>
 

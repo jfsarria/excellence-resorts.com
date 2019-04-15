@@ -1,10 +1,10 @@
 <?
+
 /*
  * Revised: Dec 12, 2011
  *          Jul 31, 2014
  *          Apr 23, 2015
  *          Aug 10, 2016
- *          Sep 12, 2018 Cajica
  */
 
 class availability {
@@ -14,9 +14,10 @@ class availability {
     var $finalTotals = array();
     
     function get_Availability($db, $arg) {
-        global $isWEBSERVICE;
+        global $isWEBSERVICE;        
         global $clsSetup;
 
+        
         $BLOCKED_IPs = $clsSetup->getBlockedIPs($db);
         $arg['BLOCKED_IPs'] = $BLOCKED_IPs[$arg["RES_PROP_ID"]];
 
@@ -27,12 +28,12 @@ class availability {
         
         $this->get_Rooms_Total_Guests($db, $arg);        
         $this->get_Rooms_By_Occupancy($db, $arg);
-        $this->get_Month_Markup($db, $arg);
-        $this->get_Rooms_Classes($db, $arg);
-        $this->get_Rooms_Rates($db, $arg);
-        $this->get_Totals($db, $arg);
-        $this->get_Property($db, $arg);
-        $this->get_Properties($db, $arg);
+        $this->get_Month_Markup($db, $arg);  //por mes no encuentra algun valor, si tiene margen configurado por año
+        $this->get_Rooms_Classes($db, $arg);        
+        $this->get_Rooms_Rates($db, $arg);        
+        $this->get_Totals($db, $arg);        
+        $this->get_Property($db, $arg);        
+        $this->get_Properties($db, $arg);        
         $this->get_Trasnfer($db, $arg);
         $this->get_Custom_Data($db, $arg);
 
@@ -41,8 +42,7 @@ class availability {
             $this->get_Property_Images($db, $arg);
         }
 
-        $this->wrap_up($db, $arg);
-
+        $this->wrap_up($db, $arg);        
         return $arg;
     }
 
@@ -134,7 +134,7 @@ class availability {
         }
     }
 
- function get_Class_Special_rSet($db, &$arg, &$par, $RSET) {
+    function get_Class_Special_rSet($db, &$arg, &$par, $RSET){
         global $clsGlobal;
         $SPECIAL = "X";
         while ($row = $db->fetch_array($RSET['rSet'])) {
@@ -185,14 +185,14 @@ class availability {
                 {$WHERE}
         ";
         if ($this->showQry) print "<p class='s_notice top_msg'>$query</p>";
-        //mail("jaunsarria@gmail.com","spcieals",$query);
+        //mail("juanmcanul@gmail.com","spcieals",$query);        
         return dbQuery($db, array('query' => $query));
     }
 
-   
+    
     
     function get_Class_Special_rSet_Off($par, $row) {
-        return round((int)$par['RATE']['NET'] * ((int)$row['OFF'] / 100));
+        return (int)$par['RATE']['NET'] * ((int)$row['OFF'] / 100);
     }
 
     function get_Class_Special_Private($db, &$arg, $par) {
@@ -204,7 +204,7 @@ class availability {
             return $this->get_Class_Special_rSet($db, $arg, $par, $RSET);
         }
     }
-
+  
     function get_Class_Special_State($db, &$arg, $par) {
         $par['SELECT'] = ",SPECIAL_STATE.STATE_CODE";
         $par['JOIN'] = "JOIN SPECIAL_STATE ON SPECIAL_STATE.SPECIAL_ID = V_SPECIALS.ID ";
@@ -219,6 +219,7 @@ class availability {
         return $this->get_Class_Special_rSet($db, $arg, $par, $RSET);
     }
 
+
     function get_Class_Special($db, &$arg, $par) {
         /*
             1. Private
@@ -226,18 +227,20 @@ class availability {
             3. Regular
         */
         $SPECIAL = "X";
-
+        #echo "<pre>";print_r($arg);echo "</pre>";
         if (isset($arg['RES_SPECIAL_CODE']) && $arg['RES_SPECIAL_CODE']!="") {
             $SPECIAL = $this->get_Class_Special_Private($db, $arg, $par);
         }
-        if (!is_array($SPECIAL) && isset($arg['RES_COUNTRY_CODE']) && $arg['RES_COUNTRY_CODE']=="US" && isset($arg['RES_STATE_CODE']) && $arg['RES_STATE_CODE']!="") {
+        if (!is_array($SPECIAL)
+            && isset($arg['RES_COUNTRY_CODE'])
+            && $arg['RES_COUNTRY_CODE'] == "US"
+            && isset($arg['RES_STATE_CODE'])
+            && $arg['RES_STATE_CODE'] != "") {
             $SPECIAL = $this->get_Class_Special_State($db, $arg, $par);
         }
         if (!is_array($SPECIAL) && isset($arg['RES_COUNTRY_CODE'])) {
             $SPECIAL = $this->get_Class_Special_Regular($db, $arg, $par);
         }
-
-        $arg["DEBUGGING"]["COUNTRY_CODE"]["SPECIAL"] = isset($arg['RES_COUNTRY_CODE']) ? $arg['RES_COUNTRY_CODE'] : "*** NO RES_COUNTRY_CODE ***";
 
         $this->set_Class_Special($db, $arg, $par, $SPECIAL);
 
@@ -255,6 +258,11 @@ class availability {
             $SPECIAL['FINAL'] = round($net + $markup);
         }
     }
+
+    //function get_Class_Special_rSet_Off($par, $row) {
+    //    return round((int)$par['RATE']['NET'] * ((int)$row['OFF'] / 100));
+    //}
+	   
 
     function calculate_Room_Rates($db, &$arg, $par) {
         /*
@@ -311,17 +319,17 @@ class availability {
 
     function calculate_Final_Rate($db, &$arg, &$par) {
         $RATE = array();
-        if (isset($par['RATE'])&&is_array($par['RATE'])) {
+        if (isset($par['RATE'])&&is_array($par['RATE'])) { //solo usa el array que necesita, solo contepla especial y tarifa base
             $RATE['GROSS'] = $par['RATE']['GROSS'];
             $RATE['FINAL'] = (isset($par['SPECIAL'])&&is_array($par['SPECIAL'])) ? $par['SPECIAL']['FINAL'] : $RATE['GROSS'];
 
-            $arg["RES_ROOM_{$par['ROOM']}_ROOMS"][$par['ROOM_ID']]['TOTAL']['GROSS_PP'] += (int)$RATE['GROSS'];
-            $arg["RES_ROOM_{$par['ROOM']}_ROOMS"][$par['ROOM_ID']]['TOTAL']['FINAL_PP'] += (int)$RATE['FINAL'];
+            $arg["RES_ROOM_{$par['ROOM']}_ROOMS"][$par['ROOM_ID']]['TOTAL']['GROSS_PP'] += round($RATE['GROSS']);
+            $arg["RES_ROOM_{$par['ROOM']}_ROOMS"][$par['ROOM_ID']]['TOTAL']['FINAL_PP'] += round($RATE['FINAL']);
         }
         return $RATE;
     }
 
-   function get_Rooms_Rates($db, &$arg) {
+    function get_Rooms_Rates($db, &$arg) {
         global $clsDiscounts;
 
         #echo "<pre>";
@@ -334,8 +342,6 @@ class availability {
         for ($ROOM=1; $ROOM <= (int)$arg['RES_ROOMS_QTY']; ++$ROOM) {
             $cnt = 0;
             foreach ($arg["RES_ROOM_{$ROOM}_ROOMS"] AS $ROOM_ID => $DATA) {
-                //+MC 28-02-2019
-                $DISABLE_FS=array();
                 if ((int)$DATA["AVAILABLE_NIGHTS"]!=0) {
                     foreach ($DATA["NIGTHS"] AS $DATE => $ARRAY) {
                         if (is_array($ARRAY)&&isset($ARRAY['CLASS'])) {
@@ -345,7 +351,7 @@ class availability {
                                 "ROOM_ID"=>$ROOM_ID,
                                 "CLASS_ID"=>$ARRAY['CLASS']['ID']
                             );
-                            $par['RATE'] = $this->calculate_Room_Rates($db, $arg, $par);
+                            $par['RATE'] = $this->calculate_Room_Rates($db, $arg, $par);  //TARIFA BASE, CON MARGEN
                             $par['SPECIAL'] = $this->get_Class_Special($db, $arg, $par);
                             
                             
@@ -375,8 +381,7 @@ class availability {
                             $arg["RES_ROOM_{$ROOM}_ROOMS"][$ROOM_ID]["NIGTHS"][$DATE]['CLASS']["SPECIAL_OLD"] = $par['SPECIAL_OLD'];
                             $arg["RES_ROOM_{$ROOM}_ROOMS"][$ROOM_ID]["NIGTHS"][$DATE]['DISCOUNT'] = isset($par['DISCOUNT'])?$par['DISCOUNT']:"";
                             $arg["RES_ROOM_{$ROOM}_ROOMS"][$ROOM_ID]["NIGTHS"][$DATE]['RATE'] = $par['FINAL'];
-                            //$arg["RES_ROOM_{$ROOM}_ROOMS"][$ROOM_ID]["NIGTHS"]['Lineas_Eliminar_F']= isset($par['Lineas_Eliminar_F'])?$par['Lineas_Eliminar_F']:array();
-							$DISABLE_FS['Lineas_Eliminar_F'][]= isset($par['Lineas_Eliminar_F'])?$par['Lineas_Eliminar_F']:array();
+                            $arg["RES_ROOM_{$ROOM}_ROOMS"][$ROOM_ID]["NIGTHS"]['Lineas_Eliminar_F']= isset($par['Lineas_Eliminar_F'])?$par['Lineas_Eliminar_F']:array();
                             $arg['Lineas_Eliminar_C'][]= isset($par['Lineas_Eliminar_C'])?$par['Lineas_Eliminar_C']:array();
                             
                             
@@ -385,21 +390,9 @@ class availability {
                 }
                 
                 //marcar flash sale
-                
-				//+MC 28-02-2019
-				if(isset($DISABLE_FS['Lineas_Eliminar_F']) && (!empty($DISABLE_FS['Lineas_Eliminar_F']))){
-                    $n_list_flash=array();
-                    for($h=0;$h<count($DISABLE_FS['Lineas_Eliminar_F']);$h++){
-                        for($k=0;$k<count($DISABLE_FS['Lineas_Eliminar_F'][$h]);$k++){
-                            if(!in_array($DISABLE_FS['Lineas_Eliminar_F'][$h][$k],$n_list_flash)){
-                                $n_list_flash[]=$DISABLE_FS['Lineas_Eliminar_F'][$h][$k];
-                            }
-                        }
-                    }
-
-                    //$list_del=$DISABLE_FS['Lineas_Eliminar_F'];
-                    $list_del=$n_list_flash;
-                    //$this->escribe("query_F_array",print_r($list_del,true));
+                if(isset($arg["RES_ROOM_{$ROOM}_ROOMS"][$ROOM_ID]["NIGTHS"]['Lineas_Eliminar_F']) && (!empty($arg["RES_ROOM_{$ROOM}_ROOMS"][$ROOM_ID]["NIGTHS"]['Lineas_Eliminar_F']))){
+                    $list_del=$arg["RES_ROOM_{$ROOM}_ROOMS"][$ROOM_ID]["NIGTHS"]['Lineas_Eliminar_F'];
+                    
                         $hoy_aplica = date("Y-m-d H:i:s");
                         for($i=0;$i<count($list_del);$i++){
                             $list_del_det=explode(',',$list_del[$i]);
@@ -434,6 +427,7 @@ class availability {
                         }
         }
     }
+
     
 
     function get_Room_Class($db, &$arg, $par) {
@@ -441,21 +435,14 @@ class availability {
         extract($par);
 
         $RES_SRC = isset($arg['RES_SRC']) ? $arg['RES_SRC'] : "";
+        
         $blockIP = in_array($_SERVER["REMOTE_ADDR"],$arg['BLOCKED_IPs']) && $RES_SRC!="CC";
         //print $blockIP ? "Yes" : "No";
         //$blockIP = true;
-
+        
         $USERTYPE = array();
         foreach ($RES_USERTYPE AS $KEY=>$VAL) array_push($USERTYPE, "USERTYPE_ID = '$VAL'");
         $COUNTRY_CODE = isset($RES_GEO_COUNTRY_CODE) ? $RES_GEO_COUNTRY_CODE : $RES_COUNTRY_CODE;
-
-        // DEBUGGING CODE
-        $arg["DEBUGGING"]["COUNTRY_CODE"]["CLASS"] = array(
-            "RES_GEO_COUNTRY_CODE" => isset($RES_GEO_COUNTRY_CODE) ? $RES_GEO_COUNTRY_CODE : "*** X ***",
-            "RES_COUNTRY_CODE" => $RES_COUNTRY_CODE,
-            "COUNTRY_CODE" => $COUNTRY_CODE
-        );
-
         $query = "
             SELECT 
                 *,
@@ -470,16 +457,14 @@ class availability {
                 '{$THIS_DAY} 00:00:00' >= SEASON_FROM AND '{$THIS_DAY} 00:00:00' <= SEASON_TO AND
                 (".(implode(" OR ",$USERTYPE)).")
         ";
+        
         if ($this->showQry) print "<p class='s_notice top_msg'>$query</p>";
         $RSET = dbQuery($db, array('query' => $query));
 
-        //$arg["DEBUGGING"]["COUNTRY_CODE"]["CLASS"]["QUERY"] = "query"; // DEBUGGING GEO
-
         // SELECT THE ONE FOR THE COUNTRY OR US AS DEFAULT
         // $CLASS = ($RSET['iCount']!=0) ? $db->fetch_array($RSET['rSet']) : array();
-        $RETVAL = "";
         if ($RSET['iCount']==1) {
-            $RETVAL = $db->fetch_array($RSET['rSet']);
+            return $db->fetch_array($RSET['rSet']);
         } else {
             $CLASS = array();
             $USA = array();
@@ -487,17 +472,8 @@ class availability {
                 if (count($CLASS)==0 && $row['COUNTRY_CODE']!='US' && (int)$row['BLACKOUT']!=1) $CLASS = $row;
                 if (count($USA)==0 && $row['COUNTRY_CODE']=='US' && (int)$row['BLACKOUT']!=1) $USA = $row;
             }
-            $RETVAL = (count($CLASS)==0 || $blockIP) ? $USA : $CLASS;
+            return (count($CLASS)==0 || $blockIP) ? $USA : $CLASS; //cuando encuentro los margenes por habitacion, respaldo todo en $CLASS
         }
-
-        $arg["DEBUGGING"]["COUNTRY_CODE"]["CLASS"]["RETVAL"] = array(
-            "iCount" => $RSET['iCount'] . " Record Found",
-            "blockIP" => $blockIP,
-            "RES_SRC" => $RES_SRC,
-            "RETVAL" => $RETVAL
-        ); // DEBUGGING GEO
-
-        return $RETVAL;
     }
 
     function get_Rooms_Classes($db, &$arg) {
@@ -531,13 +507,14 @@ class availability {
         global $clsGlobal;
         global $isWEBSERVICE;
 
+        $RES_LANGUAGE = !isset($RES_LANGUAGE)||empty($RES_LANGUAGE) ? "EN" : $RES_LANGUAGE;
+
         extract($arg);
         //print "<pre>";print_r($arg);print "</pre>";
-        $RES_LANGUAGE = !isset($RES_LANGUAGE)||empty($RES_LANGUAGE) ? "EN" : $RES_LANGUAGE;
 
         for ($ROOM=1; $ROOM <= (int)$arg['RES_ROOMS_QTY']; ++$ROOM) {
             $GUEST = $arg["RES_ROOM_{$ROOM}_GUESTS_QTY"];
-            $ADULTS = isset($arg["RES_ROOM_{$ROOM}_ADULTS_QTY"])?$arg["RES_ROOM_{$ROOM}_ADULTS_QTY"]:2;
+            $ADULTS = $arg["RES_ROOM_{$ROOM}_ADULTS_QTY"];
             $CHILDREN = (isset($arg["RES_ROOM_{$ROOM}_CHILDREN_QTY"])) ? (int)$arg["RES_ROOM_{$ROOM}_CHILDREN_QTY"] : 0;
             $INFANTS = (isset($arg["RES_ROOM_{$ROOM}_IGNORE_QTY"])) ? (int)$arg["RES_ROOM_{$ROOM}_IGNORE_QTY"] : 0;
             $KIDS = max(0, $CHILDREN - $INFANTS);
@@ -595,18 +572,16 @@ class availability {
 
     function get_Rooms_Total_Guests($db, &$arg) {
         for ($ROOM=1; $ROOM <= (int)$arg['RES_ROOMS_QTY']; ++$ROOM) {
-            $arg["RES_ROOM_{$ROOM}_GUESTS_QTY"] = isset($arg["RES_ROOM_{$ROOM}_ADULTS_QTY"]) ? (int)$arg["RES_ROOM_{$ROOM}_ADULTS_QTY"] : 2;
+            $arg["RES_ROOM_{$ROOM}_GUESTS_QTY"] = (int)$arg["RES_ROOM_{$ROOM}_ADULTS_QTY"];
             $arg["RES_ROOM_{$ROOM}_IGNORE_QTY"] = 0;
             if (isset($arg["RES_ROOM_{$ROOM}_CHILDREN_QTY"])) {
                 for ($CHILD=1; $CHILD <= (int)$arg["RES_ROOM_{$ROOM}_CHILDREN_QTY"]; ++$CHILD) {
-                  if (isset($arg["RES_ROOM_{$ROOM}_CHILD_AGE_{$CHILD}"])) {
                     $age = (int)$arg["RES_ROOM_{$ROOM}_CHILD_AGE_{$CHILD}"];
                     if ($this->child_Age_Counts($db,array("PROP_ID"=>$arg["RES_PROP_ID"],"AGE"=>$age))) {
                         $arg["RES_ROOM_{$ROOM}_GUESTS_QTY"] += 1;
                     } else {
                         $arg["RES_ROOM_{$ROOM}_IGNORE_QTY"] += 1;
                     }
-                  }
                 }
             }
         }

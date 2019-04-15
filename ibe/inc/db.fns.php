@@ -93,6 +93,22 @@
 
         return $nextId;
     }
+    function dbNextIdMod($db) {
+        $arg = array('query' => "SELECT * FROM IBE_NEXT_ID");
+        $result = dbQuery($db, $arg);
+
+        $row = $db->fetch_array($result['rSet']);
+        $nextId = (int)$row['NEXT_ID_MOD'];
+
+        if ($nextId < 100000) {
+          mail("jaunsarria@gmail.com","*** ERROR WITH NEXT_ID: $nextId ***","dbNextId \nnextId: $nextId");
+        }
+
+        $arg = array('query' => "UPDATE IBE_NEXT_ID SET NEXT_ID_MOD=".($nextId+1));
+        $result = dbExecute($db, $arg);
+
+        return $nextId;
+    }
 
     function query_string_2_array($str){
         $retval = array();
