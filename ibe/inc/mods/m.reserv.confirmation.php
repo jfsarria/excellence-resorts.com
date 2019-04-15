@@ -88,6 +88,7 @@ if (!isset($_SESSION['AVAILABILITY']['RESERVATION'])) {
     if (!function_exists('stylePropertyName'))  {
         function stylePropertyName($NAME, $RES_PROP_ID) {
             $retVal = $NAME;
+            /*
             if ($RES_PROP_ID!=4) {
                 $retVal = str_replace("Excellence ","<span style='color:#9f7c32;'>Excellence</span> <span style='color:colorName'>", $retVal)."</span>";
                 if ($RES_PROP_ID==1) $retVal = str_replace("colorName","#f78214",$retVal);
@@ -96,12 +97,14 @@ if (!isset($_SESSION['AVAILABILITY']['RESERVATION'])) {
                 if ($RES_PROP_ID==6) $retVal = str_replace("colorName","#754d9f",$retVal);
                 if ($RES_PROP_ID==7) $retVal = str_replace("colorName","#23cdb8",$retVal);
             }
+            */
             return $retVal;
         }
     }
 
     if (!function_exists('propertyColor'))  {
         function propertyColor($STR, $RES_PROP_ID) {
+            /*
             $COLOR = "";
             if ($RES_PROP_ID==1) $COLOR = "#f78214";
             if ($RES_PROP_ID==2) $COLOR = "#eb087e";
@@ -111,6 +114,7 @@ if (!isset($_SESSION['AVAILABILITY']['RESERVATION'])) {
             if (!empty($COLOR)) {
               $STR = "<span style='color:$COLOR'>{$STR}</span>";
             }
+            */
             return $STR;
         }
     }

@@ -3,6 +3,7 @@
     <div id="summary" class="right-side-box">
         <?
           $PROP_NAME = "";
+          /*
           if ($results['RES_PROP_ID']=="1") {
             $PROP_NAME = "Excellence <span style='color:#f78214'>Riviera Cancun</span>";
           } else if ($results['RES_PROP_ID']=="2") {
@@ -14,6 +15,18 @@
           } else if ($results['RES_PROP_ID']=="7") {
             $PROP_NAME = "Excellence <span style='color:#23cdb8'>Oyster Bay</span>";
           }
+          */
+          if ($results['RES_PROP_ID']=="1") {
+            $PROP_NAME = "Excellence Riviera Cancun";
+          } else if ($results['RES_PROP_ID']=="2") {
+            $PROP_NAME = "Excellence Playa Mujeres";
+          } else if ($results['RES_PROP_ID']=="3") {
+            $PROP_NAME = "Excellence Punta Cana";
+          } else if ($results['RES_PROP_ID']=="6") {
+            $PROP_NAME = "Excellence El Carmen";
+          } else if ($results['RES_PROP_ID']=="7") {
+            $PROP_NAME = "Excellence Oyster Bay";
+          }          
           print "<b>$PROP_NAME</b>";
         ?><br><br>
         <?=ln("Check In","Llegada")?>: <?=shortDate($results['RES_CHECK_IN'])?><br>

@@ -181,7 +181,12 @@
             <div id="popover_terms" class="popover" style="display:none">
                 <div class="close"><a href="javascript:void(0)" onclick="$(this).parents('.popover:first').hide();"><?=ln("Close","Cerrar")?></a></div>
                 <div class="text">
-                    <? include "terms_$RES_LANGUAGE.html"; ?>
+                    <? 
+                        ob_start();
+                            include "terms_$RES_LANGUAGE.html"; 
+                        $TERMS = ob_get_clean();                    
+                        print str_replace(array("\r\n","\n"),array("<br>","<br>"),$TERMS);
+                    ?>
                 </div>
             </div>
             <div id="popover_transfer_rules" class="popover" style="display:none">

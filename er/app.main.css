@@ -30,7 +30,9 @@ a:hover {
 }
 #top-logo {
 	float:left;
-	background-image:url(top-logo-tablet.png);
+	background-image: url("Header -512x186_ER.png");
+	background-size: 186px auto;
+	background-position-y: 31px;
 	background-repeat:no-repeat;
 	width:186px;
 	height:122px;
@@ -679,9 +681,11 @@ td.w235 {
 	}
 
 	#top-logo {
-		background-image:url(top-logo-desktop.png);
-		width:256px;
-		height:93px;
+		background-image: url("Header -512x186_ER.png");
+		background-size: 256px auto;
+		background-position: 5px 0px;
+		width: 256px;
+		height: 93px;
 	}
 	#top-nav {
 		width:501px;

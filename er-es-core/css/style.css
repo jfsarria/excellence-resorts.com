@@ -79,7 +79,10 @@ input, select, textarea {
 		position:absolute;
 		top:22px;
 		left:0;
-		background:url(../img/logo_er.png) top left no-repeat;
+		background-image: url("/er/Header -512x186_ER.png");
+		background-position: 48px 0;
+		background-size: auto 58px;
+		background-repeat: no-repeat;
 	}
 	
 	.top_menu {
