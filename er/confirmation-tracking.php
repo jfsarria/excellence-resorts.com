@@ -171,7 +171,7 @@
 <script src='https://www.thehotelsnetwork.com/js/hotel_price_widget.js?hotel_id=<?=$thehotelsnetwork["hotel_id"]?>&property_id=<?=$thehotelsnetwork["property_id"]?>&account_key=FFE895D3DDDD5B887404088E861E3D23'></script>
 
 <? //if ($CODE=='XPC') { ?>
-
+    <!--
 	<script>
 		(function(f,a,c,d,g,b,h,e){if(f.taq){return}b=f.taq=function(){b.queue.push(arguments)};b.queue=[];if(/bot|googlebot|crawler|spider|robot|crawling/i.test(c.userAgent)){return}h=a.createElement(d);h.async=true;h.src=g;e=a.getElementsByTagName(d)[0];e.parentNode.insertBefore(h,e)})(window,document,navigator,"script","//static.tacdn.com/js3/taevents-c.js");
 
@@ -188,6 +188,6 @@
 		})
 
 	</script>
-
+    -->
 <? //} ?>
 
