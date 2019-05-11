@@ -73,6 +73,9 @@ if (!isset($RES_ITEMS['PROPERTY']['CODE'])) {
         <input type="hidden" name="RES_CHECK_OUT" value="<? print $RES_CHECK_OUT ?>" />
         <input type="hidden" name="RES_ROOMS_QTY" value="<? print $RES_ROOMS_QTY ?>" />
         <input type="hidden" name="RES_SPECIAL_CODE" value="<? print $RES_SPECIAL_CODE ?>" />
+<!--    <input type="hidden" name="RES_COUPON_CODE" value="<? print $RES_COUPON_CODE ?>" /> -->
+        <input type="hidden" name="T_ACCESO" value="<? print $T_ACCESO?>">
+        <input type="hidden" name="ENTORNO" value="<? print $ENTORNO?>">
         <? 
         for ($RNUM=1;$RNUM<=$RES_ROOMS_QTY;++$RNUM) { 
             $aID = "RES_ROOM_".$RNUM."_ADULTS_QTY";

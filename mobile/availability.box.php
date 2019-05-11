@@ -15,6 +15,10 @@
     $RES_COUNTRY_CODE = (isset($_GET['RES_COUNTRY_CODE'])&&$_GET['RES_COUNTRY_CODE']!="") ? $_GET['RES_COUNTRY_CODE'] : "";
     $RES_SPECIAL_CODE = (isset($_GET['RES_SPECIAL_CODE'])&&$_GET['RES_SPECIAL_CODE']!="") ? $_GET['RES_SPECIAL_CODE'] : "";
 
+ //   $RES_COUPON_CODE = (isset($_GET['RES_COUPON_CODE'])&&$_GET['RES_COUPON_CODE']!="") ? $_GET['RES_COUPON_CODE'] : "";
+
+    $T_ACCESO = (isset($_GET['T_ACCESO'])&&$_GET['T_ACCESO']!="") ? $_GET['T_ACCESO'] : "";
+    $ENTORNO = (isset($_GET['ENTORNO'])&&$_GET['ENTORNO']!="") ? $_GET['ENTORNO'] : "";
 
 ?>
 
@@ -39,7 +43,8 @@
         <input type="hidden" name="RES_NIGHTS" id="RES_NIGHTS" value="<? print $RES_NIGHTS ?>" />
         <input type="hidden" name="RES_CHECK_IN" id="RES_CHECK_IN" value="<? print $RES_CHECK_IN ?>" />
         <input type="hidden" name="RES_CHECK_OUT" id="RES_CHECK_OUT" value="<? print $RES_CHECK_OUT ?>" />
-
+        <input type="hidden" name="T_ACCESO" value="<? print $T_ACCESO?>">
+        <input type="hidden" name="ENTORNO" value="<? print $ENTORNO?>">
         <div style="<? if ($RES_PROP_ID==4) print "display:none" ?>">
             <label for="RES_PROP_ID" class="select"><? print _l("Select Destination","Destino",$RES_LANGUAGE) ?></label>
             <select name="RES_PROP_ID" id="RES_PROP_ID">
@@ -197,6 +202,11 @@
         <label for="basic"><b><? print _l("Promo Code","Código Promocional",$RES_LANGUAGE) ?></b></label>
         <input type="text" name="RES_SPECIAL_CODE" id="RES_SPECIAL_CODE" value="<? print $RES_SPECIAL_CODE ?>"  />
 
+        <br>
+        <!--
+        <label for="basic"><b><? print _l("Coupon", "Cupón", $RES_LANGUAGE) ?></b></label>
+        <input type="text" name="RES_COUPON_CODE" id="RES_COUPON_CODE" value="<? print $RES_COUPON_CODE ?>"  />
+        -->
         <br>
         <a href="javascript:void(0)" onClick="if (ibemobile.availability.submit()) $('#frmCheckAvailability').submit()" data-role="button" data-theme="x"><? print _l("Check Availability","Ver Disponibilidad",$RES_LANGUAGE) ?></a>
 

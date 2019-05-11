@@ -6,8 +6,8 @@ if (isset($_REQUEST['PAGE_CODE'])&&$_REQUEST['PAGE_CODE']=="ws.availability") {
     $QUERY_ARRAY = query_string_2_array($_SERVER["QUERY_STRING"]);
 
     //if (!isset($QUERY_ARRAY['RES_COUNTRY_CODE'])||$QUERY_ARRAY['RES_COUNTRY_CODE']=="") {
-        include "geo.php";
-        $QUERY_ARRAY['RES_COUNTRY_CODE']=$RES_COUNTRY_CODE;
+        //include "geo.php";   //----------->dev
+        //$QUERY_ARRAY['RES_COUNTRY_CODE']=$RES_COUNTRY_CODE; ///----------dev
     //}
 
     //print "<pre>";print_r($QUERY_ARRAY);print "</pre>";
@@ -18,13 +18,14 @@ if (isset($_REQUEST['PAGE_CODE'])&&$_REQUEST['PAGE_CODE']=="ws.availability") {
             $QUERY_ARRAY["RES_ROOM_{$RNUM}_CHILD_AGE_{$CHILDREN_QTY}"] = 1;
         }
     }
-    //print "<pre>";print_r($QUERY_ARRAY);print "</pre>";
+    $QUERY_ARRAY['T_ACCESO']='Movil';
 
     $JSON_URL = $_SERVER_URL.'/ibe/index.php?' . array_2_query_string($QUERY_ARRAY);
 
     print "<!-- {$QUERY_ARRAY['RES_COUNTRY_CODE']} \n ==>\n$JSON_URL\n-->";
 
     $JSON = file_get_contents($JSON_URL);
+  
     $_SESSION['AVAILABILITY'] = json_decode($JSON, true);
     $_SESSION['AVAILABILITY']['RESERVATION']['RES_ROOMS_SELECTED'] = array();
 }

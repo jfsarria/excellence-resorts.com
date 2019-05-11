@@ -173,7 +173,7 @@ ibemobile.validate.reservation = function() {
         err += "Please enter guest address"+"\n";
         $("#ADDRESS")[0].focus();
     }
-    if (err=="" && $.trim($("#RES_GUEST_STATE").val())=="") {
+    if (err=="" && $.trim($("#RES_GUEST_STATE").val())=="" || $.trim($("#RES_GUEST_STATE").val())=="Select State") {
         err += "Please enter guest state"+"\n";
         $("#RES_GUEST_STATE")[0].focus();
     }
