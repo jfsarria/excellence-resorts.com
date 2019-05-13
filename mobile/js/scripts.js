@@ -220,11 +220,26 @@ ibemobile.validate.reservation = function() {
         alert(err)
         return false;
     } else {
+        pushDatalayerStep2()
         return true;
     }
 
     //return false;
     //return true;
+}
+
+pushDatalayerStep2 = function() {
+    var dataLayerStr = localStorage.getItem("dataLayerObjMob");
+    var dataLayerObjMob = JSON.parse(dataLayerStr);
+
+    dataLayerObjMob.ibe_step = "step-2",
+    dataLayerObjMob.ecommerce.checkout.actionField = {
+        "step": 2,
+        "option": "Guest Information"
+    };
+
+    console.log("dataLayer step 2", dataLayerObjMob);
+    dataLayer.push(dataLayerObjMob);
 }
 
 isValidCreditCard = function(type, ccnum) {

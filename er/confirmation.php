@@ -68,27 +68,15 @@
             }
         </style>
 
+
         <script>
-            dataLayer = [{
-                'Page' : 'Thank you page',
-                'Prop_ID' : '<?=$DATA["RES_ITEMS"]["PROPERTY"]["NAME"]?>',
-                'Room_name' : '<?= implode(",",$DATA["RESERVATION"]["RES_ROOMS_SELECTED_NAMES"])?>',
-                'Checkin_date' : '<?=$DATA["RES_CHECK_IN"]?>',
-                'Checkout_data' : '<?=$DATA["RES_CHECK_OUT"]?>',
-                'Promotion' : '<?=$GIVEN_SPECIALS?>', 
-                'Number_of_rooms' : '<?=$DATA["RES_ROOMS_QTY"]?>',
-                'Guests' : '<?= ( (int)$DATA["RES_ROOMS_ADULTS_QTY"] + (int)$DATA["RES_ROOMS_CHILDREN_QTY"] ) ?>',
-                'GuestName' : '<?=$DATA["RESERVATION"]["GUEST"]["FIRSTNAME"]." ".$DATA["RESERVATION"]["GUEST"]["LASTNAME"]?>',
-                'GuestEmail' : '<?=$DATA["RESERVATION"]["GUEST"]["EMAIL"]?>',
-                'Country' : '<?=$DATA["RESERVATION"]["GUEST"]["COUNTRY"]?>',
-                'State' : '<?=$DATA["RESERVATION"]["GUEST"]["STATE"]?>',
-                'Transaction_ID' : '<?=$DATA["RESERVATION"]["RES_NUMBER"]?>',
-                'Sales' : '<?=$DATA["RESERVATION"]["RES_TOTAL_CHARGE"]?>',
-                'Transport' : '<?= isset($DATA["RESERVATION"]["TRANSFER_CAR"]) && (int)$DATA["RESERVATION"]["TRANSFER_CAR"]!=0 ? $DATA["RESERVATION"]["TRANSFER_FEE"] : 0 ?>',
-                'Special Ocasion' : '<?=$DATA["RESERVATION"]["ROOMS"][0]["GUEST_OCCASION"]?>',
-                'Hear_about_us' : '<?=$DATA["RESERVATION"]["HEAR_ABOUT_US"]?>'
-            }];
-        </script>
+            dataLayer = [];
+            dataLayerStr = localStorage.getItem("dataLayerObj");
+            dataLayerObj = JSON.parse(dataLayerStr);
+            console.log("dataLayer step 3", dataLayerObj);
+            dataLayer.push(dataLayerObj);
+            localStorage.removeItem('dataLayerObj');
+        </script>        
 
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

@@ -6,6 +6,9 @@ var errTEXT = new Array();
 var BOOK = {};
 var TOTAL_COST = 0;
 var TA_CLIENTS = {};
+var roomNamesArr = [];
+var specialOccasionArr = [];
+var dataLayerObj = {};
 
 $(document).ready(function() {
   $(".vip_0:last, .vip_1:last, .vip_2:last").addClass("last-in-list");
@@ -143,6 +146,7 @@ function select_room(ITEM_ID, track) {
     }
 
     track_selection(room_num, room_id, total_price_was, total_price_is, vip);
+
     update_totals(room_num);
 
 }
@@ -156,7 +160,8 @@ function track_selection(room_num, room_id, total_price_was, total_price_is, vip
     };
     room_options(room_num, vip);
 
-	//console.log('ibe_price_'+room_num + " : " + total_price_is)
+    //console.log('ibe_price_'+room_num + " : " + total_price_is)
+    /*
 	if (room_num==1) {
 		dataLayer.push({"ibe_price_1" : total_price_is});
 	} else if (room_num==2) {
@@ -164,7 +169,7 @@ function track_selection(room_num, room_id, total_price_was, total_price_is, vip
 	} else if (room_num==3) {
 		dataLayer.push({"ibe_price_3" : total_price_is});
 	}
-	
+	*/
 }
 
 function room_options(room_num, vip) {
@@ -241,9 +246,11 @@ function select_continue(args) {
 			$("#select-rooms").addClass("hidden");
 			$("#guest-info").removeClass("hidden");
 
-			dataLayer.push({"ibe_step": "step-2"});
+            //dataLayer.push({"ibe_step": "step-2"});
+            pushDatalayerStep1(ROOMS_QTY);
 
-			select_nav_step(2);
+            select_nav_step(2);
+
 		}
 		if (ROOM_NUM==ROOMS_QTY-1) {
 			$("#totals").removeClass("hidden");
@@ -263,7 +270,7 @@ function select_continue(args) {
 		}); 
 		*/
 
-		//console.log(data.RES_CHECK_IN, data.RES_CHECK_OUT)
+        //console.log(data.RES_CHECK_IN, data.RES_CHECK_OUT)
 
 	} else {
 		if (args.LN=="EN") {
@@ -272,6 +279,65 @@ function select_continue(args) {
 			alert("Desafortunadamente, no hay disponibilidad para los criterios de búsqueda indicados");
 		}
 	}
+}
+
+function pushDatalayerStep1(ROOMS_QTY) {
+    
+    dataLayerObj = {
+        'Page' : 'IBE',
+        'Prop_ID' : data["RES_ITEMS"]["PROPERTY"]["NAME"],
+        'Checkin_date' : data["RES_CHECK_IN"],
+        'Checkout_date' : data["RES_CHECK_OUT"],
+        'Number_of_rooms' : data["RES_ROOMS_QTY"],
+        'Guests' : data["RES_ROOMS_ADULTS_QTY"] + data["RES_ROOMS_CHILDREN_QTY"],
+        'Country' : data["RES_COUNTRY_CODE"],
+        'ibe_step' : 'step-1',
+        "event": "checkout",
+        "ibe_price" : TOTAL_COST,
+        "ecommerce": {
+            "checkout": {
+                "actionField": {
+                    "step": 1,
+                    "option": "Availability and Rates"
+                },
+                "products": []
+            }
+        }                
+    };           
+    
+    roomNamesArr = [];
+    for (var ROOM_NUM=1; ROOM_NUM<=ROOMS_QTY; ++ROOM_NUM) {
+        var ROOM_LIST = $("#list-room-num-"+ROOM_NUM),
+            SELECTED = ROOM_LIST.find(".selected"),
+            SELECTED_ID = SELECTED.attr("id").substr(2),
+            ROOM = data["RES_ROOM_"+ROOM_NUM+"_ROOMS"][SELECTED_ID];
+
+        roomNamesArr.push(ROOM.NAME);
+
+        dataLayerObj.ecommerce.checkout.products[ROOM_NUM-1] = {
+            "name": data["RES_ITEMS"]["PROPERTY"]["NAME"],
+            "id": data["RES_ITEMS"]["PROPERTY"]["ID"],
+            "price": ROOM.TOTAL.FINAL,
+            "brand": "Excellence Resorts",
+            "category": data.RES_ITEMS[SELECTED_ID].IS_VIP == 0 ? "Suite" : "Club",
+            "variant": ROOM.NAME,
+            "quantity": 1,
+            "currencyCode": "USD",
+            "dimension1": data["RES_CHECK_IN"],
+            "dimension2": data["RES_CHECK_OUT"],
+            "dimension3": "RoomOnly",
+            'dimension4':  "NA",
+            "metric1": parseInt(data["RES_ROOM_"+ROOM_NUM+"_ADULTS_QTY"],10) + parseInt(data["RES_ROOM_"+ROOM_NUM+"_CHILDREN_QTY"],10),
+            "metric3": parseInt(data["RES_ROOM_"+ROOM_NUM+"_CHILDREN_QTY"],10),
+            "metric4": parseInt(data["RES_ROOM_"+ROOM_NUM+"_ADULTS_QTY"],10),
+            "metric5": parseInt(data["RES_NIGHTS"],10)                   
+        }
+
+    }
+
+    console.log("dataLayer step 1", dataLayerObj);
+    dataLayer.push(dataLayerObj);
+    
 }
 
 function quote_Change(ele, val) {
@@ -754,6 +820,7 @@ function book_now() {
 
         for (var ROOM_NUM=1; ROOM_NUM<=ROOMS_QTY; ++ROOM_NUM) {
             var ROOM_LIST = $("#list-room-num-"+ROOM_NUM),
+                OCCASION = $("#ROOM_"+ROOM_NUM+"_GUEST_OCCASION").val(),
                 SELECTED = ROOM_LIST.find(".selected"),
                 SELECTED_ID = SELECTED.attr("id").substr(2);
 
@@ -768,6 +835,9 @@ function book_now() {
               "GUEST_BABYCRIB": $("#ROOM_"+ROOM_NUM+"_GUEST_BABYCRIB")[0].checked?"1":"0"
               //"GUEST_REPEATED": [$("#ROOM_"+ROOM_NUM+"_GUEST_REPEATED")[0].checked?"5":"0"]
             });
+            OCCASION = OCCASION!=""?OCCASION:"NA";
+            specialOccasionArr.push(OCCASION);
+            dataLayerObj.ecommerce.checkout.products[ROOM_NUM-1].dimension4 = OCCASION;
         }
 
         BOOK.GUEST = {
@@ -839,12 +909,41 @@ function book_now() {
             BOOK.TRANSFER_TYPE = RES_TRANSFER_TYPE;
             BOOK.TRANSFER_CAR = _book.transfers.carId;
             BOOK.TRANSFER_FEE = _book.transfers.carPrice;
+
+            dataLayerObj.ecommerce.checkout.products[ROOMS_QTY] = {
+                "name": "Transfer",
+                "id": "0",
+                "price": BOOK.TRANSFER_FEE,
+                "brand": "Seasons",
+                "category": RES_TRANSFER_TYPE=="ROUNDT"?"Round Trip":"One Way",
+                "variant": $("#carId_" + _book.transfers.carId + " .nm").text(),
+                "quantity": 1,
+                "currencyCode": "USD",
+                "dimension1": data["RES_CHECK_IN"],
+                "dimension2": data["RES_CHECK_OUT"],
+                "dimension3": "RoomOnly",
+                'dimension4':  "NA",
+                "metric1": 0, //parseInt(data["RES_ROOMS_ADULTS_QTY"],10) + parseInt(data["RES_ROOMS_CHILDREN_QTY"],10),
+                "metric3": 0, //parseInt(data["RES_ROOMS_CHILDREN_QTY"],10),
+                "metric4": 0, //parseInt(data["RES_ROOMS_ADULTS_QTY"],10),
+                "metric5": 0
+            }              
         }
 
 		BOOK.CURRENCY_CODE = $("#QUOTE").val();
 		BOOK.CURRENCY_QUOTE = CURRENCY[BOOK.CURRENCY_CODE];
 
-		//console.log(search_qry)
+        //console.log(search_qry)
+        
+        dataLayerObj.ibe_step = "step-2",
+        dataLayerObj.ecommerce.checkout.actionField = {
+            "step": 2,
+            "option": "Guest Information"
+        };
+
+        //console.log("_book.transfers", _book.transfers);
+        console.log("dataLayer step 2", dataLayerObj);
+        dataLayer.push(dataLayerObj);
 
         var make =  $.post('make-booking.php', {
 			QRYSTR: search_qry+"&makebooking=1",
@@ -854,7 +953,48 @@ function book_now() {
 
 			if (typeof result.RES_NUMBER != "undefined") {
                 //document.location.href = "confirmation.php?"+JSON.stringify(result);
-                document.location.href = "confirmation.php";
+
+                var REVENUE = TOTAL_COST + (RES_TRANSFER_TYPE!=""?BOOK.TRANSFER_FEE:0);
+
+                dataLayerObj.Page = "Thank you page";
+                dataLayerObj.Room_name = roomNamesArr.join(",");
+                dataLayerObj.Promotion = "";
+                dataLayerObj.Number_of_rooms = ROOMS_QTY;
+                dataLayerObj.Guests = parseInt(data["RES_ROOMS_ADULTS_QTY"],10) + parseInt(data["RES_ROOMS_CHILDREN_QTY"],10);
+                dataLayerObj.GuestName = BOOK.GUEST.FIRSTNAME + " " + BOOK.GUEST.LASTNAME;
+                dataLayerObj.GuestEmail = BOOK.GUEST.EMAIL;
+                dataLayerObj.Country = BOOK.GUEST.COUNTRY;
+                dataLayerObj.State = BOOK.GUEST.STATE;
+                dataLayerObj.Transaction_ID = result.RES_NUMBER;
+                dataLayerObj.Sales = TOTAL_COST;
+                dataLayerObj.Transport = BOOK.TRANSFER_FEE;
+                dataLayerObj.Special_Occasion = specialOccasionArr.join(",");
+                dataLayerObj.Hear_about_us = BOOK.HEAR_ABOUT_US;
+                dataLayerObj.event = "transaction-complete";
+
+                dataLayerObj.ecommerce.purchase = dataLayerObj.ecommerce.checkout;
+
+                dataLayerObj.ecommerce.purchase.actionField = {
+                    "id": result.RES_NUMBER,
+                    "affiliation": "Online",
+                    "revenue": REVENUE,
+                    "tax": "",
+                    "shipping": "0",
+                    "coupon": data.RES_SPECIAL_CODE,
+                    "currencyCode": "USD",
+                    "metric2": ROOMS_QTY,
+                    "metric6": data.RES_NIGHTS
+                },
+
+                delete dataLayerObj.ecommerce.checkout;
+                delete dataLayerObj.ibe_price;
+                delete dataLayerObj.ibe_step;
+
+                //console.log("dataLayer step 3", dataLayerObj);
+                //console.log("data ", data, BOOK);
+                localStorage.setItem("dataLayerObj",JSON.stringify(dataLayerObj));
+
+                document.location.href = "confirmation.php"; // Uncomment
 			} else {
 				alert(typeof result.error == "undefined" ? "Room is not longer available." : result.error.join(", "));
 				$("#btn-book-now").removeClass("hidden");

@@ -7,6 +7,9 @@ extract($_SESSION['AVAILABILITY']);
 function printit($STR) {
     print str_replace(array("\n","\r\n"),array("<br>","<br>"),$STR);
 }
+
+$roomNamesArr = array();
+$specialOccasionArr = array();
 ?>
 
 <style>
@@ -30,6 +33,7 @@ function printit($STR) {
         <div class="ui-collapsible-box">
             Hotel: 
             <? 
+                $ADULTS = (isset($RES_ROOMS_ADULTS_QTY) && (int)$RES_ROOMS_ADULTS_QTY!=0) ? (int)$RES_ROOMS_ADULTS_QTY : 0;
                 $CHILDREN = (isset($RES_ROOMS_CHILDREN_QTY) && (int)$RES_ROOMS_CHILDREN_QTY!=0) ? (int)$RES_ROOMS_CHILDREN_QTY : 0;
                 $INFANTS = (isset($RES_ROOMS_INFANTS_QTY) && (int)$RES_ROOMS_INFANTS_QTY!=0) ? (int)$RES_ROOMS_INFANTS_QTY : 0;
 
@@ -58,7 +62,9 @@ function printit($STR) {
                     $ADULTS = (int)$_SESSION['AVAILABILITY']["RES_ROOM_".($ind+1)."_ADULTS_QTY"];
                     $CHILDREN = isset($_SESSION['AVAILABILITY']["RES_ROOM_".($ind+1)."_CHILDREN_QTY"]) ? (int)$_SESSION['AVAILABILITY']["RES_ROOM_".($ind+1)."_CHILDREN_QTY"] : 0;
                     $INFANTS = isset($_SESSION['AVAILABILITY']["RES_ROOM_".($ind+1)."_INFANTS_QTY"]) ? (int)$_SESSION['AVAILABILITY']["RES_ROOM_".($ind+1)."_INFANTS_QTY"] : 0;
-                    $_SESSION['AVAILABILITY']['TMP']['ROOMS'][$ind]['TXT'] = "<br><b>Room ".($ind+1).":</b><br>".$_SESSION['AVAILABILITY']["RES_ROOM_".($ind+1)."_ROOMS"][$ROOM_ID]["NAME"].",<br>";
+                    $ROOM_NAME = $_SESSION['AVAILABILITY']["RES_ROOM_".($ind+1)."_ROOMS"][$ROOM_ID]["NAME"];
+                    $roomNamesArr[] = $ROOM_NAME;
+                    $_SESSION['AVAILABILITY']['TMP']['ROOMS'][$ind]['TXT'] = "<br><b>Room ".($ind+1).":</b><br>".$ROOM_NAME.",<br>";
                     if ($CHILDREN!=0 || $INFANTS!=0) {
                         $_SESSION['AVAILABILITY']['TMP']['ROOMS'][$ind]['TXT'] .= $ADULTS." "._l("Adult","Adulto",$RES_LANGUAGE).($ADULTS==1?"":"s").",<br>";
                         if ($CHILDREN - $INFANTS!=0) $_SESSION['AVAILABILITY']['TMP']['ROOMS'][$ind]['TXT'] .= ($CHILDREN - $INFANTS).(($CHILDREN - $INFANTS == 1)?" "._l("Child","Niño",$RES_LANGUAGE):" "._l("Children","Niños",$RES_LANGUAGE)).",<br>";
@@ -110,6 +116,7 @@ function printit($STR) {
 
                 $ROOM_NUM = 1;
                 foreach ($RESERVATION['ROOMS'] as $ind => $PROOM) {
+                    $OCCASION = !empty($PROOM['GUEST_OCCASION']) ? $PROOM['GUEST_OCCASION'] : "NA";
                     $ROOM_ID = $RESERVATION['RES_ROOMS_SELECTED'][$ind];
                     $ROOM = $_SESSION['AVAILABILITY']["RES_ROOM_".($ind+1)."_ROOMS"][$ROOM_ID];
                     if ($iRooms>1) {
@@ -122,6 +129,8 @@ function printit($STR) {
                         "._l("Special Occasion","Ocasión Especial",$RES_LANGUAGE).": ".((isset($PROOM['GUEST_SMOKING'])&&$PROOM['GUEST_OCCASION']!="")?_pref($PROOM['GUEST_OCCASION'],$RES_LANGUAGE):"No")."<br>
                     ";
                     ++$ROOM_NUM;
+
+                    $specialOccasionArr[] = $OCCASION;
                 } 
 
                 print printit($OUTOUT);
@@ -160,3 +169,52 @@ function printit($STR) {
 
 
 </div>
+
+<script>
+    var dataLayerStr = localStorage.getItem("dataLayerObjMob");
+    var dataLayerObjMob = JSON.parse(dataLayerStr);
+
+    localStorage.removeItem('dataLayerObjMob');
+
+    dataLayerObjMob.Page = "Thank you page";
+    dataLayerObjMob.Room_name = '<?=implode(",", $roomNamesArr)?>';
+    dataLayerObjMob.Promotion = "";
+    dataLayerObjMob.Number_of_rooms = <?=$RES_ROOMS_QTY?>;
+    dataLayerObjMob.Guests = <?=$ADULTS + $CHILDREN?>;
+    dataLayerObjMob.GuestName = '<?=$GUEST['FIRSTNAME'] + " " + $GUEST['LASTNAME']?>';
+    dataLayerObjMob.GuestEmail = '<?=$GUEST['EMAIL']?>';
+    dataLayerObjMob.Country = '<?=$GUEST['COUNTRY']?>';
+    dataLayerObjMob.State = '<?=$GUEST['STATE']?>';
+    dataLayerObjMob.Transaction_ID = '<?=$RESERVATION['RES_NUMBER']?>';
+    dataLayerObjMob.Sales = <?=$RESERVATION['RES_TOTAL_CHARGE']?>;
+    dataLayerObjMob.Transport = 0;
+    dataLayerObjMob.Special_Occasion = '<?=implode(",", $specialOccasionArr)?>';
+    dataLayerObjMob.Hear_about_us = '<?//=$HEAR_ABOUT_US?>';
+    dataLayerObjMob.event = "transaction-complete";
+
+    dataLayerObjMob.Special_Occasion.split(",").forEach(function(occasion, i) {
+        dataLayerObjMob.ecommerce.checkout.products[i].dimension4 = occasion;
+    })    
+
+    dataLayerObjMob.ecommerce.purchase = dataLayerObjMob.ecommerce.checkout;
+
+    dataLayerObjMob.ecommerce.purchase.actionField = {
+        "id": '<?=$RESERVATION['RES_NUMBER']?>',
+        "affiliation": "Online",
+        "revenue": <?=$RESERVATION['RES_TOTAL_CHARGE']?>,
+        "tax": "",
+        "shipping": "0",
+        "coupon": '<?=$RES_SPECIAL_CODE?>',
+        "currencyCode": "USD",
+        "metric2": '<?=$RES_ROOMS_QTY?>',
+        "metric6": <?=$RES_NIGHTS?>
+    },
+
+    delete dataLayerObjMob.ecommerce.checkout;
+    delete dataLayerObjMob.ibe_price;
+    delete dataLayerObjMob.ibe_step;
+
+    console.log("dataLayer step 3", dataLayerObjMob);
+    dataLayer.push(dataLayerObjMob);
+
+</script>

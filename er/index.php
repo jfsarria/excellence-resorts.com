@@ -100,16 +100,7 @@ $ENTORNO="Front";
         </script>
         
 		<script>
-				dataLayer = [{
-						'Page' : 'IBE',
-						'Prop_ID' : '<?=$results["RES_ITEMS"]["PROPERTY"]["NAME"]?>',
-						'Checkin_date' : '<?=$results["RES_CHECK_IN"]?>',
-						'Checkout_date' : '<?=$results["RES_CHECK_OUT"]?>',
-						'Number_of_rooms' : '<?=$results["RES_ROOMS_QTY"]?>',
-						'Guests' : '<?= ( (int)$results["RES_ROOMS_ADULTS_QTY"] + (int)$results["RES_ROOMS_CHILDREN_QTY"] ) ?>',
-						'Country' : '<?=$results["RES_COUNTRY_CODE"]?>',
-						'ibe_step' : 'step-1'
-				}];
+            dataLayer = [];
 
 				var CURRENCY = <? print json_encode($results['CURRENCY']) ?>;
 

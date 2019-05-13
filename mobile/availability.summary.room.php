@@ -20,6 +20,32 @@ extract($_SESSION['AVAILABILITY']);
 
 ?>
 
+<script>
+    var dataLayerObjMob = {
+        'Page' : 'IBE',
+        'Prop_ID' : '<?=$RES_ITEMS["PROPERTY"]["NAME"]?>',
+        'Checkin_date' : '<?=$RES_CHECK_IN?>',
+        'Checkout_date' : '<?=$RES_CHECK_OUT?>',
+        'Number_of_rooms' : <?=$RES_ROOMS_QTY?>,
+        'Guests' : <?=(int)$RES_ROOMS_ADULTS_QTY + (int)$RES_ROOMS_CHILDREN_QTY?>,
+        'Country' : '<?=$RES_COUNTRY_CODE?>',
+        'ibe_step' : 'step-1',
+        "event": "checkout",
+        "ibe_price" : <?=$RESERVATION['RES_TOTAL_CHARGE']?>,
+        "ecommerce": {
+            "checkout": {
+                "actionField": {
+                    "step": 1,
+                    "option": "Availability and Rates"
+                },
+                "products": []
+            }
+        }                
+    }; 
+
+
+</script>
+
 <div data-role="header" data-theme="x">
     <h1><? print _l("Reservation Summary","Información de Reserva",$RES_LANGUAGE) ?></h1>
     <a href="#" data-rel="back" data-direction="reverse" data-role="button" data-icon="back" data-iconpos="notext"></a>
@@ -57,6 +83,29 @@ extract($_SESSION['AVAILABILITY']);
                     <div class='price'>$".(number_format($ROOM_TOTAL))." (USD)</div>
                 </div>
             ";
+            ?>
+            <script>
+                dataLayerObjMob.ecommerce.checkout.products[<?=$ROOM_NUM?>] = {
+                    "name": '<?=$RES_ITEMS["PROPERTY"]["NAME"]?>',
+                    "id": '<?=$RES_ITEMS["PROPERTY"]["ID"]?>',
+                    "price": <?=$ROOM_TOTAL?>,
+                    "brand": "Excellence Resorts",
+                    "category": '<?=$RES_ITEMS[$ROOM_ID]['IS_VIP'] == 0 ? "Suite" : "Club" ?>',
+                    "variant": '<?=$ROOM_NAME?>',
+                    "quantity": 1,
+                    "currencyCode": "USD",
+                    "dimension1": '<?=$RES_CHECK_IN?>',
+                    "dimension2": '<?=$RES_CHECK_OUT?>',
+                    "dimension3": "RoomOnly",
+                    'dimension4': "NA",
+                    "metric1": <?=(int)$ADULTS + (int)$CHILDREN + (int)$INFANTS?>,
+                    "metric3": <?=(int)$CHILDREN + (int)$INFANTS?>,
+                    "metric4": <?=(int)$ADULTS?>,
+                    "metric5": <?=$RES_NIGHTS?>
+                }
+                
+            </script>
+            <?      
         }
         ?>
         <div class='room'>
@@ -72,3 +121,8 @@ extract($_SESSION['AVAILABILITY']);
 
 </div>
 
+<script>
+    console.log("dataLayer step 1", dataLayerObjMob);
+    localStorage.setItem("dataLayerObjMob",JSON.stringify(dataLayerObjMob));    
+    dataLayer.push(dataLayerObjMob);
+</script>

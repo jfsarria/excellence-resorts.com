@@ -146,7 +146,7 @@
                           <div class="rooms-left"><?=$ROOMS_LEFT<10?$ROOMS_LEFT." ".ln("rooms left","disponible"):""?></div>
 
                           <script>
-                              dataLayer.push({"Room_List_<?=$ROOM_CNT?>": "<?=$ROOM_DETAILS['NAME_EN']?>"});
+                              // dataLayer.push({"Room_List_<?=$ROOM_CNT?>": "<?=$ROOM_DETAILS['NAME_EN']?>"});
                           </script>
                         <? } else { ?>
                           <div class="room-not-available"><?=ln("Not Available","No Disponible")?></div>
